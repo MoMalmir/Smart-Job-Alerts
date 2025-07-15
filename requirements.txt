@@ -1,0 +1,7 @@
+pylint
+pytest
+black
+
+pdfplumber
+sentence-transformers
+scikit-learn
