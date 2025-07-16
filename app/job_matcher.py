@@ -1,4 +1,4 @@
-from semantic_matcher import compute_similarity
+from app.semantic_matcher import compute_similarity
 
 
 def match_job_to_resume(

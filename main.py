@@ -2,13 +2,11 @@ import yaml
 import os
 from pathlib import Path
 from dotenv import load_dotenv
-from job_tracker import load_seen_jobs, save_seen_jobs, is_new_job
-from job_fetcher import fetch_jobs
-from job_matcher import match_job_to_resume
+from app.job_tracker import load_seen_jobs, save_seen_jobs, is_new_job
+from app.job_fetcher import fetch_jobs
+from app.job_matcher import match_job_to_resume
 from app.utils import extract_text_from_pdf
-
-# from job_summary import generate_summary
-from email_utils import send_job_matches_email
+from app.email_utils import send_job_matches_email
 
 # Ensure the required environment variables are set
 # Uncomment the line below if using a .env file instead of Codespaces secrets
