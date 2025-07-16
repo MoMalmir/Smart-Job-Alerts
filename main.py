@@ -106,8 +106,9 @@ for keyword in keywords:
             sender_email=sender_email,
             sender_password=sender_password,
             receiver_email="malmir.edumail@gmail.com",
-            job_matches=matched_jobs
+            job_matches=matched_jobs,
             keyword=keyword
+
         )
         print("\n Email sent successfully!")
 
