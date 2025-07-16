@@ -53,7 +53,7 @@ with open("jobs.json", 'r', encoding='utf-8') as f:
     extracted_jobs = json.load(f)
 
 # --- Extract and score a specific job ---
-example = 4
+example = 0
 job = extracted_jobs["data"][example]
 
 def get_full_description(job):
@@ -73,11 +73,11 @@ resume_text = extract_text_from_pdf(resume_pdf_path)
 print("\nParsed Resume Text:\n", resume_text[:500])  # Just show first 500 chars
 
 # --- Check similarity score ---
-SIMILARITY_THRESHOLD = 0.3
+Similarity_Threshold = 0.1
 sender_email = os.environ["EMAIL_USERNAME"]
 sender_password = os.environ["EMAIL_PASSWORD"]
 
-score = match_job_to_resume(job_desc, resume_text, SIMILARITY_THRESHOLD)
+score = match_job_to_resume(job_desc, resume_text, Similarity_Threshold)
 print("\nSimilarity Score:", score)
 
 # --- Create mock match if relevant ---

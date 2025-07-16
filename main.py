@@ -10,7 +10,7 @@ from utils import extract_text_from_pdf
 from email_utils import send_job_matches_email
 
 
-SIMILARITY_THRESHOLD = 0.3
+Similarity_Threshold = 0.2
 
 # Load environment variables from Codespaces secrets or .env
 load_dotenv()
@@ -80,13 +80,13 @@ for keyword in keywords:
         job_id = job["job_id"]
         if is_new_job(job_id, seen):
             job_desc = get_full_description(job)
-            result = match_job_to_resume(job_desc, resume_text, SIMILARITY_THRESHOLD)
+            result = match_job_to_resume(job_desc, resume_text, Similarity_Threshold)
             if result["match"]:
                 matched_jobs.append({
                 "job_keyword" : keyword,
-                "title": job['title'],
+                "title": job['job_title'],
                 "employer": job['employer_name'],
-                "url": job['url'],
+                "url": job['job_apply_link'],
                 "reason": result['reason'],
                 })
 
@@ -97,21 +97,26 @@ for keyword in keywords:
                 print(f"job_id: {job_id}")
                 print(f"URL: {job['job_apply_link']}")
                 print(f"job_description: {job_desc}")
-                #summary = generate_summary(job_desc, resume_text)
-                #print(f"Summary: {summary}")
+                
                 print("=" * 60)
             new_seen.add(job_id)
+    # Send the email
+    if matched_jobs:
+        send_job_matches_email(
+            sender_email=sender_email,
+            sender_password=sender_password,
+            receiver_email="malmir.edumail@gmail.com",
+            job_matches=matched_jobs
+            keyword=keyword
+        )
+        print("\n Email sent successfully!")
+
+    else:
+        print("\n No match found — email not sent.")
 
 # Save updated seen list
 save_seen_jobs(new_seen)
 
 
 
-# Send the email
-if matched_jobs:
-    send_job_matches_email(
-        sender_email=sender_email,
-        sender_password=sender_password,
-        receiver_email="malmir.edumail@gmail.com",
-        job_matches=matched_jobs
-    )
+

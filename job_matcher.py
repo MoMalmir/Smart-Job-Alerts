@@ -1,10 +1,10 @@
 from semantic_matcher import compute_similarity
  
 
-def match_job_to_resume(job_description: str, resume_text: str) -> dict:
-    score = compute_similarity(resume_text, job_description, SIMILARITY_THRESHOLD)
+def match_job_to_resume(job_description: str, resume_text: str, threshold: float) -> dict:
+    score = compute_similarity(resume_text, job_description)
 
-    if score >= SIMILARITY_THRESHOLD:
+    if score >= threshold:
         return {
             "match": True,
             "reason": f"Semantic similarity score: {score:.2f} (above threshold)"
