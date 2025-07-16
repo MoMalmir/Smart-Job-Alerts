@@ -1,4 +1,3 @@
-
 import yaml
 import os
 from pathlib import Path
@@ -6,8 +5,9 @@ from dotenv import load_dotenv
 from job_tracker import load_seen_jobs, save_seen_jobs, is_new_job
 from job_fetcher import fetch_jobs
 from job_matcher import match_job_to_resume
-from utils import extract_text_from_pdf
-#from job_summary import generate_summary
+from app.utils import extract_text_from_pdf
+
+# from job_summary import generate_summary
 from email_utils import send_job_matches_email
 
 # Ensure the required environment variables are set
@@ -22,7 +22,9 @@ sender_password = os.environ["EMAIL_PASSWORD"]
 
 
 if not RAPIDAPI_KEY or not RAPIDAPI_HOST:
-    raise EnvironmentError("Missing RAPIDAPI_KEY or RAPIDAPI_HOST. Set them in Codespaces secrets or .env")
+    raise EnvironmentError(
+        "Missing RAPIDAPI_KEY or RAPIDAPI_HOST. Set them in Codespaces secrets or .env"
+    )
 
 # Load config
 with open("config.yaml", "r") as f:
@@ -48,7 +50,7 @@ else:
 # Load resume
 resume_pdf_path = "resume.pdf"
 resume_text = extract_text_from_pdf(resume_pdf_path)
-print (f"resume_text: {resume_text}")  
+print(f"resume_text: {resume_text}")
 # Load seen jobs
 seen = load_seen_jobs()
 new_seen = set(seen)
@@ -65,14 +67,16 @@ def get_full_description(job):
 # Process each keyword
 for keyword in keywords:
     print(f"\n Searching for: {keyword}")
-    jobs = fetch_jobs(RAPIDAPI_KEY, RAPIDAPI_HOST, keyword, location, remote, date_posted, num_pages)
+    jobs = fetch_jobs(
+        RAPIDAPI_KEY, RAPIDAPI_HOST, keyword, location, remote, date_posted, num_pages
+    )
     print(len(jobs), "jobs found")
 
     # Collect matched jobs
     matched_jobs = []
 
     for job in jobs:
-        
+
         employer = job["employer_name"].strip()
 
         # Skip blocked employers
@@ -85,14 +89,15 @@ for keyword in keywords:
             job_desc = get_full_description(job)
             result = match_job_to_resume(job_desc, resume_text, Similarity_Threshold)
             if result["match"]:
-                matched_jobs.append({
-                "job_keyword" : keyword,
-                "title": job['job_title'],
-                "employer": job['employer_name'],
-                "url": job['job_apply_link'],
-                "reason": result['reason'],
-                })
-
+                matched_jobs.append(
+                    {
+                        "job_keyword": keyword,
+                        "title": job["job_title"],
+                        "employer": job["employer_name"],
+                        "url": job["job_apply_link"],
+                        "reason": result["reason"],
+                    }
+                )
 
                 print(f"\n MATCH: {job['job_title']}")
                 print(f"employer: {employer}")
@@ -119,7 +124,3 @@ for keyword in keywords:
 
 # Save updated seen list
 save_seen_jobs(new_seen)
-
-
-
-
