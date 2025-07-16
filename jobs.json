@@ -1,0 +1,1021 @@
+{
+    "status": "OK",
+    "request_id": "72c8eee7-0247-46fc-a552-a6c0860afa48",
+    "parameters": {
+        "query": "machine learning engineer",
+        "page": 1,
+        "num_pages": 1,
+        "country": "us",
+        "language": "en"
+    },
+    "data": [
+        {
+            "job_id": "oG26C93uiSDJMSGoAAAAAA==",
+            "job_title": "Lead Machine Learning Engineer, Voice Group",
+            "employer_name": "Comcast",
+            "employer_logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS47fcxIrA0o8KlE84LTIAXdpZjXwrMZ1TkOd17&s=0",
+            "employer_website": "https://corporate.comcast.com",
+            "job_publisher": "LinkedIn",
+            "job_employment_type": "Full-time",
+            "job_employment_types": [
+                "FULLTIME"
+            ],
+            "job_apply_link": "https://www.linkedin.com/jobs/view/lead-machine-learning-engineer-voice-group-at-comcast-4265691849?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic",
+            "job_apply_is_direct": false,
+            "apply_options": [
+                {
+                    "publisher": "LinkedIn",
+                    "apply_link": "https://www.linkedin.com/jobs/view/lead-machine-learning-engineer-voice-group-at-comcast-4265691849?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic",
+                    "is_direct": false
+                },
+                {
+                    "publisher": "Glassdoor",
+                    "apply_link": "https://www.glassdoor.com/job-listing/lead-machine-learning-engineer-voice-group-comcast-JV_IC1138213_KO0,42_KE43,50.htm?jl=1009810377772&utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic",
+                    "is_direct": false
+                },
+                {
+                    "publisher": "Jooble",
+                    "apply_link": "https://jooble.org/jdp/5498563245927717105?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic",
+                    "is_direct": false
+                },
+                {
+                    "publisher": "ZipRecruiter",
+                    "apply_link": "https://www.ziprecruiter.com/c/Comcast/Job/Lead-Machine-Learning-Engineer,-Voice-Group/-in-Washington,DC?jid=61ef7b5157652762&utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic",
+                    "is_direct": false
+                },
+                {
+                    "publisher": "Indeed",
+                    "apply_link": "https://www.indeed.com/viewjob?jk=9370a60455d3b7ef&utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic",
+                    "is_direct": false
+                },
+                {
+                    "publisher": "Experteer",
+                    "apply_link": "https://us.experteer.com/career/view-jobs/lead-machine-learning-engineer-voice-group-washington-dc-usa-52908303?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic",
+                    "is_direct": false
+                },
+                {
+                    "publisher": "Notify",
+                    "apply_link": "https://notify.careers/postings/5d004bcc-2d67-44cf-9329-cd8eed45db0c?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic",
+                    "is_direct": false
+                },
+                {
+                    "publisher": "SimplyHired",
+                    "apply_link": "https://www.simplyhired.com/job/vHRfiLSS2-17NJDGAg4jTm2Bee4cjRrIoagV0E3zDPSL472nOHCWyA?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic",
+                    "is_direct": false
+                }
+            ],
+            "job_description": "Make your mark at Comcast -- a Fortune 30 global media and technology company. From the connectivity and platforms we provide, to the content and experiences we create, we reach hundreds of millions of customers, viewers, and guests worldwide. Become part of our award-winning technology team that turns big ideas into cutting-edge products, platforms, and solutions that our customers love. We create space to innovate, and we recognize, reward, and invest in your ideas, while ensuring you can proudly bring your authentic self to the workplace. Join us. You’ll do the best work of your career right here at Comcast. (In most cases, Comcast prefers to have employees on-site collaborating unless the team has been designated as virtual due to the nature of their work. If a position is listed with both office locations and virtual offerings, Comcast may be willing to consider candidates who live greater than 100 miles from the office for the remote option.)\n\nJob Summary\n\nComcast brings together the best in media and technology. We drive innovation to create the world’s best entertainment and online experiences. As a Fortune 50 leader, we set the pace in a variety of innovative and fascinating businesses and create career opportunities across a wide range of locations and disciplines. We are at the forefront of change and move at an amazing pace, thanks to our remarkable people, who bring innovative products and services to life for millions of customers every day. If you share in our passion for teamwork, our vision to revolutionize industries and our goal to lead the future in media and technology, we want you to fast-forward your career at Comcast. Role Description The Applied AI group in Comcast’s Global Entertainment Engineering organization is seeking a passionate and skilled Machine Learning Engineer with expertise in Natural Language Processing (NLP) to join a team of researchers and engineers powering a voice platform used by millions of people every day across the world. We create the technology that powers the voice remote and allows our customers to interact with their TV to do things like search for content, control connected devices or find entertainment-related information. As a member of the NLP team, you will focus on building scalable, real-time data pipelines and feedback loops that help us train, tune and evaluate the models serving production traffic as well as the architecture that supports this. We own the full process for taking an idea from a prototype to production. You will collaborate with the team to identify the best solution to a problem, implement it, deploy it, and continuously monitor its performance. The ideal candidate has a foundation in software development, experience building high performance production systems, and a robust background in machine learning particularly in multi-lingual NLP and current Generative AI techniques.\n\nJob Description\n\nCore Responsibilities\n• Work as part of a team of software engineers in conjunction with product stakeholders to understand business objectives, define technical requirements and build features for production.\n• Apply NLP and ML knowledge to analyze and process voice queries using techniques like pattern matching, entity extraction and intent classification.\n• Support the application and fine-tuning of Generative AI models like Phi, Qwen, Llama and Gemma to further our platform capabilities.\n• Follow current LLM developments and apply best practices to our products.\n• Contribute to building a scalable architecture that handles millions of requests per day.\n• Ensure the stability of our platform to serve our customers and assist with the deployment, monitoring, and troubleshooting of production systems.\n• Collaborate with teammates and contribute to design discussions, project planning and code reviews.\n• Demonstrate a keen sense of responsibility and accountability towards the team’s work, its quality and timely delivery.\n\nQualifications\n• Bachelor’s or Master’s degree in Computer Science, Machine Learning or a related field.\n• 7-10 years of relevant work experience.\n• Proficiency in programming languages like Python, Kotlin and Java, and experience with machine learning frameworks such as TensorFlow, PyTorch and Keras.\n• Experience with natural language processing, machine learning, deep learning, optimization techniques and evaluation methodologies.\n• Demonstrated experience with LLMs and integrating them with complex real-time data processing and low-latency systems including methods for optimizing LLM prompts and using a RAG architecture\n• Experience with cloud platforms (AWS) for deploying and managing ML models and its supporting architecture.\n• Experience with handling multi-lingual data and building systems that support multiple languages.\n• Experience researching new ideas, formulating creative solutions and presenting sophisticated ideas to technical and non-technical audiences.\n\nComcast is proud to be an equal opportunity workplace. We will consider all qualified applicants for employment without regard to race, color, religion, age, sex, sexual orientation, gender identity, national origin, disability, veteran status, genetic information, or any other basis protected by applicable law.\n\nSkills\n\nMachine Learning; Team Lead Experience; Full Stack Development; Communication\n\nSalary\n\nPrimary Location Pay Range: $159,927.44 - $239,891.17\n\nComcast intends to offer the selected candidate base pay within this range, dependent on job-related, non-discriminatory factors such as experience. The application window is 30 days from the date job is posted, unless the number of applicants requires it to close sooner or later.\n\nBase pay is one part of the Total Rewards that Comcast provides to compensate and recognize employees for their work. Most sales positions are eligible for a Commission under the terms of an applicable plan, while most non-sales positions are eligible for a Bonus. Additionally, Comcast provides best-in-class Benefits to eligible employees. We believe that benefits should connect you to the support you need when it matters most, and should help you care for those who matter most. That’s why we provide an array of options, expert guidance and always-on tools, that are personalized to meet the needs of your reality – to help support you physically, financially and emotionally through the big milestones and in your everyday life. Please visit the compensation and benefits summary on our careers site for more details.\n\nEducation\n\nBachelor's Degree\n\nWhile possessing the stated degree is preferred, Comcast also may consider applicants who hold some combination of coursework and experience, or who have extensive related professional experience.\n\nRelevant Work Experience\n\n7-10 Years",
+            "job_is_remote": false,
+            "job_posted_at": "3 days ago",
+            "job_posted_at_timestamp": 1752364800,
+            "job_posted_at_datetime_utc": "2025-07-13T00:00:00.000Z",
+            "job_location": "Washington, DC",
+            "job_city": "Washington",
+            "job_state": "District of Columbia",
+            "job_country": "US",
+            "job_latitude": 38.9071923,
+            "job_longitude": -77.0368707,
+            "job_benefits": null,
+            "job_google_link": "https://www.google.com/search?q=jobs&gl=us&hl=en&udm=8#vhid=vt%3D20/docid%3DoG26C93uiSDJMSGoAAAAAA%3D%3D&vssid=jobs-detail-viewer",
+            "job_min_salary": 159927.44,
+            "job_max_salary": 239891.17,
+            "job_salary_period": "YEAR",
+            "job_highlights": {
+                "Qualifications": [
+                    "The ideal candidate has a foundation in software development, experience building high performance production systems, and a robust background in machine learning particularly in multi-lingual NLP and current Generative AI techniques",
+                    "Bachelor’s or Master’s degree in Computer Science, Machine Learning or a related field",
+                    "7-10 years of relevant work experience",
+                    "Proficiency in programming languages like Python, Kotlin and Java, and experience with machine learning frameworks such as TensorFlow, PyTorch and Keras",
+                    "Experience with natural language processing, machine learning, deep learning, optimization techniques and evaluation methodologies",
+                    "Demonstrated experience with LLMs and integrating them with complex real-time data processing and low-latency systems including methods for optimizing LLM prompts and using a RAG architecture",
+                    "Experience with cloud platforms (AWS) for deploying and managing ML models and its supporting architecture",
+                    "Experience with handling multi-lingual data and building systems that support multiple languages",
+                    "Experience researching new ideas, formulating creative solutions and presenting sophisticated ideas to technical and non-technical audiences",
+                    "Machine Learning; Team Lead Experience; Full Stack Development; Communication",
+                    "Bachelor's Degree",
+                    "7-10 Years"
+                ],
+                "Benefits": [
+                    "Primary Location Pay Range: $159,927.44 - $239,891.17",
+                    "Comcast intends to offer the selected candidate base pay within this range, dependent on job-related, non-discriminatory factors such as experience",
+                    "Most sales positions are eligible for a Commission under the terms of an applicable plan, while most non-sales positions are eligible for a Bonus",
+                    "Additionally, Comcast provides best-in-class Benefits to eligible employees"
+                ],
+                "Responsibilities": [
+                    "You will collaborate with the team to identify the best solution to a problem, implement it, deploy it, and continuously monitor its performance",
+                    "Work as part of a team of software engineers in conjunction with product stakeholders to understand business objectives, define technical requirements and build features for production",
+                    "Apply NLP and ML knowledge to analyze and process voice queries using techniques like pattern matching, entity extraction and intent classification",
+                    "Support the application and fine-tuning of Generative AI models like Phi, Qwen, Llama and Gemma to further our platform capabilities",
+                    "Follow current LLM developments and apply best practices to our products",
+                    "Contribute to building a scalable architecture that handles millions of requests per day",
+                    "Ensure the stability of our platform to serve our customers and assist with the deployment, monitoring, and troubleshooting of production systems",
+                    "Collaborate with teammates and contribute to design discussions, project planning and code reviews",
+                    "Demonstrate a keen sense of responsibility and accountability towards the team’s work, its quality and timely delivery"
+                ]
+            },
+            "job_onet_soc": "15111100",
+            "job_onet_job_zone": "5"
+        },
+
+
+
+
+
+
+
+        {
+            "job_id": "f_jhhzojNdakyQXnAAAAAA==",
+            "job_title": "Multimodal Machine Learning Engineer Jobs",
+            "employer_name": "Booz Allen Hamilton",
+            "employer_logo": null,
+            "employer_website": "https://www.boozallen.com",
+            "job_publisher": "Security Clearance Jobs",
+            "job_employment_type": "Full-time",
+            "job_employment_types": [
+                "FULLTIME"
+            ],
+            "job_apply_link": "https://www.clearancejobs.com/jobs/8362457/multimodal-machine-learning-engineer?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic",
+            "job_apply_is_direct": false,
+            "apply_options": [
+                {
+                    "publisher": "Security Clearance Jobs",
+                    "apply_link": "https://www.clearancejobs.com/jobs/8362457/multimodal-machine-learning-engineer?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic",
+                    "is_direct": false
+                }
+            ],
+            "job_description": "Job Number: R0219888\n\nMultimodal Machine Learning Engineer\n\nThe Opportunity:\n\nAs an experienced machine learning engineer, you understand good sof tware is more than just a good user experience. To compete in today's technical landscape, mission-oriented machine learning solutions must be architected, designed, and built to handle fast-moving data, to seamlessly scale with infrastructure based on system usage, and to expand based on evolving mission requirements. We're looking for an engineer like you to create artifi cia l intelligence (AI) and machine learning ( ML ) enabled solutions that help solve our toughest challenges facing the Defense and Intelligence sectors.\n\nOn our team, you'll design, create, and implement complete AI systems that will transform client operations, increase data accessibility, and optimize AI and ML systems. You'll ensure that your team's solutions consider the broader ecosystem and operating environment as well as future functionality and enhancements. Additionally, you'll deepen your skill set in areas like sof tware engineering, machine learning operations ( MLOps ) , and sof tware deployment and integration into a variety of different mission environments.\n\nReady to transform the Defense and Intelligence sectors with sof tware systems to aid data accessibility and AI and ML operationalization?\n\nJoin us. The world can't wait.\n\nYou Have:\n• 3+ years of experience as an ML engineer and building production-grade ML solutions with a programming language, such as Python, Rus t, Go, Scala, or Java\n• 3+ years of experience working within data science or data research in a professional or academic environment, and training and deploying models across multiple modalities of data\n• 3+ years of experience working in cloud environments, including AWS and Azure\n• 2+ years of experience deploying and integrating production-grade ML models using tools, such as Docker and Kubernetes\n• 2+ years of experience with Generative AI, including transformers or LLM project work\n• 1+ years of experience building or deploying production-grade RESTful APIs or sof tware interfaces\n• Experience evaluating architectural tradeoffs and designing robust service-based sof tware applications for scalable use\n• Experience with MLOps, GitOps, and CI / CD tooling\n• Top Secret\n• Bachelor's degree\n\nNice If You Have:\n• Experience with programming, including ML frameworks such as TensorFlow, PyTorch, llama.cpp, and vLLM\n• Experience with client e nga gements, client-facing project work, and business development\n• Experience with project work in deep learning, computer vision, NLP, or signal processing\n• Experience deploying and managing data brokering solutions, including Kafka, Red Panda, Confluent, and other related services\n• Knowledge of Databricks, LangChain, or Kubernetes\n• Ability to adapt in a rapidly changing environment\n• Possession of excellent verbal and written communication skills\n• Possession of excellent interpersonal, analytical, problem-solving, and organizational skills\n• Master's degree\n\nClearance:\n\nApplicants selected will be subject to a security investigation and may need to meet eligibility requirements for access to classified information ; Top Secret clearance is required.\n\nCompensation\n\nAt Booz Allen, we celebrate your contributions, provide you with opportunities and choices, and support your total well-being. Our offerings include health, life, disability, financial, and retirement benefits, as well as paid leave, professional development, tuition assistance, work-life programs, and dependent care. Our recognition awards program acknowledges employees for exceptional performance and superior demonstration of our values. Full-time and part-time employees working at least 20 hours a week on a regular basis are eligible to participate in Booz Allen's benefit programs. Individuals that do not meet the threshold are only eligible for select offerings, not inclusive of health benefits. We encourage you to learn more about our total benefits by visiting the Resource page on our Careers site and reviewing Our Employee Benefits page.\n\nSalary at Booz Allen is determined by various factors, including but not limited to location, the individual's particular combination of education, knowledge, skills, competencies, and experience, as well as contract-specific affordability and organizational requirements. The projected compensation range for this position is $99,000.00 to $225,000.00 (annualized USD). The estimate displayed represents the typical salary range for this position and is just one component of Booz Allen's total compensation package for employees. This posting will close within 90 days from the Posting Date.\n\nIdentity Statement\n\nAs part of the application process, you are expected to be on camera during interviews and assessments. We reserve the right to take your picture to verify your identity and prevent fraud.\n\nWork Model\n\nOur people-first culture prioritizes the benefits of flexibility and collaboration, whether that happens in person or remotely.\n• If this position is listed as remote or hybrid, you'll periodically work from a Booz Allen or client site facility.\n• If this position is listed as onsite, you'll work with colleagues and clients in person, as needed for the specific role.\n\nCommitment to Non-Discrimination\n\nAll qualified applicants will receive consideration for employment without regard to disability, status as a protected veteran or any other status protected by applicable federal, state, local, or international law.",
+            "job_is_remote": false,
+            "job_posted_at": "1 day ago",
+            "job_posted_at_timestamp": 1752537600,
+            "job_posted_at_datetime_utc": "2025-07-15T00:00:00.000Z",
+            "job_location": "Washington, DC",
+            "job_city": "Washington",
+            "job_state": "District of Columbia",
+            "job_country": "US",
+            "job_latitude": 38.9071923,
+            "job_longitude": -77.0368707,
+            "job_benefits": [
+                "health_insurance"
+            ],
+            "job_google_link": "https://www.google.com/search?q=jobs&gl=us&hl=en&udm=8#vhid=vt%3D20/docid%3Df_jhhzojNdakyQXnAAAAAA%3D%3D&vssid=jobs-detail-viewer",
+            "job_salary": null,
+            "job_min_salary": null,
+            "job_max_salary": null,
+            "job_salary_period": null,
+            "job_highlights": {
+                "Qualifications": [
+                    "As an experienced machine learning engineer, you understand good sof tware is more than just a good user experience",
+                    "To compete in today's technical landscape, mission-oriented machine learning solutions must be architected, designed, and built to handle fast-moving data, to seamlessly scale with infrastructure based on system usage, and to expand based on evolving mission requirements",
+                    "3+ years of experience as an ML engineer and building production-grade ML solutions with a programming language, such as Python, Rus t, Go, Scala, or Java",
+                    "3+ years of experience working within data science or data research in a professional or academic environment, and training and deploying models across multiple modalities of data",
+                    "3+ years of experience working in cloud environments, including AWS and Azure",
+                    "2+ years of experience deploying and integrating production-grade ML models using tools, such as Docker and Kubernetes",
+                    "2+ years of experience with Generative AI, including transformers or LLM project work",
+                    "1+ years of experience building or deploying production-grade RESTful APIs or sof tware interfaces",
+                    "Experience evaluating architectural tradeoffs and designing robust service-based sof tware applications for scalable use",
+                    "Experience with MLOps, GitOps, and CI / CD tooling",
+                    "Top Secret",
+                    "Bachelor's degree",
+                    "Experience with programming, including ML frameworks such as TensorFlow, PyTorch, llama.cpp, and vLLM",
+                    "Experience with client e nga gements, client-facing project work, and business development",
+                    "Experience with project work in deep learning, computer vision, NLP, or signal processing",
+                    "Experience deploying and managing data brokering solutions, including Kafka, Red Panda, Confluent, and other related services",
+                    "Knowledge of Databricks, LangChain, or Kubernetes",
+                    "Ability to adapt in a rapidly changing environment",
+                    "Possession of excellent verbal and written communication skills",
+                    "Possession of excellent interpersonal, analytical, problem-solving, and organizational skills",
+                    "Master's degree",
+                    "Applicants selected will be subject to a security investigation and may need to meet eligibility requirements for access to classified information ; Top Secret clearance is required"
+                ],
+                "Benefits": [
+                    "At Booz Allen, we celebrate your contributions, provide you with opportunities and choices, and support your total well-being",
+                    "Our offerings include health, life, disability, financial, and retirement benefits, as well as paid leave, professional development, tuition assistance, work-life programs, and dependent care",
+                    "Full-time and part-time employees working at least 20 hours a week on a regular basis are eligible to participate in Booz Allen's benefit programs",
+                    "Individuals that do not meet the threshold are only eligible for select offerings, not inclusive of health benefits",
+                    "Salary at Booz Allen is determined by various factors, including but not limited to location, the individual's particular combination of education, knowledge, skills, competencies, and experience, as well as contract-specific affordability and organizational requirements",
+                    "The projected compensation range for this position is $99,000.00 to $225,000.00 (annualized USD)"
+                ],
+                "Responsibilities": [
+                    "On our team, you'll design, create, and implement complete AI systems that will transform client operations, increase data accessibility, and optimize AI and ML systems",
+                    "You'll ensure that your team's solutions consider the broader ecosystem and operating environment as well as future functionality and enhancements",
+                    "Additionally, you'll deepen your skill set in areas like sof tware engineering, machine learning operations ( MLOps ) , and sof tware deployment and integration into a variety of different mission environments",
+                    "If this position is listed as remote or hybrid, you'll periodically work from a Booz Allen or client site facility",
+                    "If this position is listed as onsite, you'll work with colleagues and clients in person, as needed for the specific role"
+                ]
+            },
+            "job_onet_soc": "15111100",
+            "job_onet_job_zone": "5"
+        },
+
+
+
+
+
+
+
+
+
+
+        {
+            "job_id": "T6fniDHUkzi9tYpfAAAAAA==",
+            "job_title": "AI & Machine Learning Engineer - Manager - Consulting - Open Location",
+            "employer_name": "EY",
+            "employer_logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTlZ66B6ghniNTEFs4o7QLTG1RvcBKx1cs9hzyP&s=0",
+            "employer_website": null,
+            "job_publisher": "LinkedIn",
+            "job_employment_type": "Full-time",
+            "job_employment_types": [
+                "FULLTIME"
+            ],
+            "job_apply_link": "https://www.linkedin.com/jobs/view/ai-machine-learning-engineer-manager-consulting-open-location-at-ey-4249979264?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic",
+            "job_apply_is_direct": false,
+            "apply_options": [
+                {
+                    "publisher": "LinkedIn",
+                    "apply_link": "https://www.linkedin.com/jobs/view/ai-machine-learning-engineer-manager-consulting-open-location-at-ey-4249979264?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic",
+                    "is_direct": false
+                },
+                {
+                    "publisher": "Jobs",
+                    "apply_link": "https://ey.jobs/arlington-va/ai-machine-learning-engineer-manager-consulting-open-location/996555D5D5D84655854AE968DCF15C88/job/?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic",
+                    "is_direct": false
+                },
+                {
+                    "publisher": "JobGet",
+                    "apply_link": "https://www.jobget.com/jobs/job/150db863-de40-43fd-92f0-bc1dccff4b5c?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic",
+                    "is_direct": false
+                },
+                {
+                    "publisher": "WhatJobs",
+                    "apply_link": "https://www.whatjobs.com/gfj/2018453686?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic",
+                    "is_direct": false
+                }
+            ],
+            "job_description": "Location: Anywhere in Country\n\nAt EY, we’re all in to shape your future with confidence.\n\nWe’ll help you succeed in a globally connected powerhouse of diverse teams and take your career wherever you want it to go. Join EY and help to build a better working world.\n\nTechnology – Data and Decision Science – AI Native Engineering\n\nAI/Machine Learning Engineer, Manager Consultant\n\nThe opportunity\n\nOur Artificial Intelligence and Data team helps apply cutting edge technology and techniques to bring solutions to our clients. As part of that, you'll sit side-by-side with clients and diverse teams from EY to create a well-rounded approach to advising and solving challenging problems, some of which have not been solved before. No two days will be the same, and with constant research and development, you'll find yourself building knowledge that can be applied across a wide range of projects now, and in the future. You'll need to have a passion for continuous learning, stay ahead of the trends, and influence new ways of working so you can position solutions in the most relevant and innovative way for our clients. You can expect heavy client interaction in a fast-paced environment and the opportunity to develop your own career path for your unique skills and ambitions.\n\nIn this role, you will research, build, and implement scalable artificial intelligence systems that learn and make predictions tailored to business requirements across various environments, including cloud and on-premises. You will enhance data pipelines and storage, ensuring data is clean, accurate, and optimized for XOps processes. Additionally, you will monitor and evaluate learning processes to continuously improve high-performance models, collaborating with other data and analytics professionals to industrialize analysis into effective analytics solutions.\n\nYour Key Responsibilities\n\nAs a Manager in AI Native Engineering, you will play a pivotal role in delivering innovative solutions that drive business success. You will work with a wide variety of clients to deliver the latest data science and big data technologies. Your teams will design and build scalable solutions that unify, enrich, and derive insights from varied data sources across a broad technology landscape. You will help our clients navigate the complex world of modern data science, analytics, and software engineering. We'll look to you to provide guidance and perform technical development tasks to ensure data science solutions are properly engineered and maintained to support the ongoing business needs of our clients.\n\nYou will be joining a dynamic and interdisciplinary team of scientists and engineers who love to tackle the most challenging computational problems for our clients. We love to think creatively, build applications efficiently, and collaborate in both the ideation of solutions and the pursuit of new opportunities. Many on our team have advanced academic degrees or equivalent experience in industry.\n\nYour responsibilities will include:\n• Leading workstream delivery and ensuring the effective management of processes and projects.\n• Continuously improving processes by identifying innovative solutions through research and analysis.\n• Managing professional employees and supervising teams to deliver complex technical initiatives, with accountability for performance and results.\n• Engaging actively with clients, participating in daily working sessions, and leading workstreams from planning through execution to closure.\n• Identifying opportunities for additional services and managing engagement economics.\n\nSkills And Attributes For Success\n\nTo excel in this role, you will need a blend of technical expertise and strong interpersonal skills. This role will work to deliver tech at speed, innovate at scale and put humans at the center. Provide technical guidance and share knowledge with team members with diverse skills and backgrounds. Consistently deliver quality client services focusing on more complex, judgmental and/or specialized issues surrounding emerging technology. Demonstrate technical capabilities and professional knowledge. Learn about EY and its service lines and actively assess and present ways to apply knowledge and services\n\nThe following attributes will make a significant impact:\n• Proven ability to develop solutions to complex problems and recommend changes to policies and procedures.\n• Strong judgment in selecting methods and techniques for obtaining results.\n• Experience in managing client relationships and delivering high-quality service.\n• Ability to lead teams effectively and manage change within the organization.\n\nTo qualify for the role, you must have\n• A Bachelor’s degree required (4-year degree).\n• 6-10 years of relevant experience of full-time working experience in AI, Data Science, and/or Machine Learning\n• 2-4 years of experience directly managing technical teams\n• Strong skills in Python.\n• Experience using Generative AI models and frameworks e.g. OpenAI family, open source LLMs, Dall-e, LlamaIndex, Langchain, Retrieval Augmented Generation (RAG).\n• Experience working with popular ML packages such as scikit-learn, Pytorch and ONNX, or related ML libraries.\n• Extensive experience using DevOps tools like GIT, Azure Devops and Agile tools such as Jira to develop and deploy analytical solutions with multiple features, pipelines, and releases.\n• A solid understanding of Machine Learning (ML) workflows including ingesting, analysing, transforming data and evaluating results to make meaningful predictions.\n• Experience with MLOps methods and platforms such as MLFlow.\n• Experience with CI/CD and test-driven development.\n• Experience designing, building, and maintaining ML models, frameworks, and pipelines.\n• Experience designing and deploying end to end ML workflows on at least one major cloud computing platform.\n• Understanding of data structures, data modelling and software engineering best practices.\n• Proficiency using data manipulation tools and libraries such as SQL, Pandas, and Spark.\n• Clearly communicating findings, recommendations, and opportunities to improve data systems and solutions.\n• Experience with containerization and scaling models.\n• Integrating models and feedback from downstream consumption systems - reporting and dashboards, AI driven applications.\n• Deep Learning expertise.\n• Proficiency in Mathematics, Statistics, and Operations Research.\n• Experience with Machine Learning techniques.\n• Knowledge of Data Architecture Design and Modelling.\n• Familiarity with Cloud Computing environments.\n• Skills in Technical Design Optimization.\n• Experience with Continuous Integration and Continuous Delivery/Deployment.\n• Understanding of Natural Language Processing and Generation.\n• Knowledge in Image Processing and Analysis.\n• Skills in Speech and Audio Processing and Analysis.\n• Ability to scale models effectively.\n• Strong relationship-building skills.\n• Demonstrated client trust and value.\n• Effective communication skills with impact.\n• Digital fluency and emotional agility.\n• Experience in hybrid collaboration.\n• Commercial acumen and negotiation skills.\n• Proven ability to lead teams and manage change.\n• Strong mathematical and quantitative skills including calculus, linear algebra, and statistics.\n• Willingness to travel to meet client obligations.\n\nIdeally, you’ll also have\n• A deep understanding of and ability to teach concepts, tools, features, functions, and benefits of different approaches to apply them.\n• Master's degree Computer Science, Mathematics, Physical Sciences, or other quantitative field.\n• Experience working with diverse teams to deliver complex solutions.\n• Strong skills in languages beyond Python: R, JavaScript, Java, C++, C.\n• Experience fine-tuning Generative AI models.\n• Experience in managing complex projects with multiple stakeholders.\n• A strong understanding of industry trends and emerging technologies.\n• Skills in data visualization and storytelling with data.\n\nWhat We Look For\n\nWe seek individuals who are not only technically proficient but also possess the ability to think critically and creatively. Top performers demonstrate a commitment to excellence, a collaborative spirit, and a passion for driving innovation in the field of AI and data science. Your ability to collaborate effectively and communicate with clarity will set you apart as a leader in our team.\n\n#FY26NATAID\n\nWhat We Offer You\n\nAt EY, we’ll develop you with future-focused skills and equip you with world-class experiences. We’ll empower you in a flexible environment, and fuel you and your extraordinary talents in a diverse and inclusive culture of globally connected teams. Learn more.\n• We offer a comprehensive compensation and benefits package where you’ll be rewarded based on your performance and recognized for the value you bring to the business. The base salary range for this job in all geographic locations in the US is $124,300 to $227,900. The base salary range for New York City Metro Area, Washington State and California (excluding Sacramento) is $149,200 to $259,000. Individual salaries within those ranges are determined through a wide variety of factors including but not limited to education, experience, knowledge, skills and geography. In addition, our Total Rewards package includes medical and dental coverage, pension and 401(k) plans, and a wide range of paid time off options.\n• Join us in our team-led and leader-enabled hybrid model. Our expectation is for most people in external, client serving roles to work together in person 40-60% of the time over the course of an engagement, project or year.\n• Under our flexible vacation policy, you’ll decide how much vacation time you need based on your own personal circumstances. You’ll also be granted time off for designated EY Paid Holidays, Winter/Summer breaks, Personal/Family Care, and other leaves of absence when needed to support your physical, financial, and emotional well-being.\n\nAre you ready to shape your future with confidence? Apply today.\n\nEY accepts applications for this position on an on-going basis.\n\nFor those living in California, please click here for additional information.\n\nEY focuses on high-ethical standards and integrity among its employees and expects all candidates to demonstrate these qualities.\n\nEY | Building a better working world\n\nEY is building a better working world by creating new value for clients, people, society and the planet, while building trust in capital markets.\n\nEnabled by data, AI and advanced technology, EY teams help clients shape the future with confidence and develop answers for the most pressing issues of today and tomorrow.\n\nEY teams work across a full spectrum of services in assurance, consulting, tax, strategy and transactions. Fueled by sector insights, a globally connected, multi-disciplinary network and diverse ecosystem partners, EY teams can provide services in more than 150 countries and territories.\n\nEY provides equal employment opportunities to applicants and employees without regard to race, color, religion, age, sex, sexual orientation, gender identity/expression, pregnancy, genetic information, national origin, protected veteran status, disability status, or any other legally protected basis, including arrest and conviction records, in accordance with applicable law. \n\nEY is committed to providing reasonable accommodation to qualified individuals with disabilities including veterans with disabilities. If you have a disability and either need assistance applying online or need to request an accommodation during any part of the application process, please call 1-800-EY-HELP3, select Option 2 for candidate related inquiries, then select Option 1 for candidate queries and finally select Option 2 for candidates with an inquiry which will route you to EY’s Talent Shared Services Team (TSS) or email the TSS at ssc.customersupport@ey.com.",
+            "job_is_remote": false,
+            "job_posted_at": "7 days ago",
+            "job_posted_at_timestamp": 1752019200,
+            "job_posted_at_datetime_utc": "2025-07-09T00:00:00.000Z",
+            "job_location": "Arlington, VA",
+            "job_city": "Arlington",
+            "job_state": "Virginia",
+            "job_country": "US",
+            "job_latitude": 38.8816208,
+            "job_longitude": -77.09098089999999,
+            "job_benefits": [
+                "health_insurance",
+                "paid_time_off",
+                "dental_coverage"
+            ],
+            "job_google_link": "https://www.google.com/search?q=jobs&gl=us&hl=en&udm=8#vhid=vt%3D20/docid%3DT6fniDHUkzi9tYpfAAAAAA%3D%3D&vssid=jobs-detail-viewer",
+            "job_min_salary": 124000,
+            "job_max_salary": 228000,
+            "job_salary_period": "YEAR",
+            "job_highlights": {
+                "Qualifications": [
+                    "To excel in this role, you will need a blend of technical expertise and strong interpersonal skills",
+                    "Proven ability to develop solutions to complex problems and recommend changes to policies and procedures",
+                    "Strong judgment in selecting methods and techniques for obtaining results",
+                    "Experience in managing client relationships and delivering high-quality service",
+                    "Ability to lead teams effectively and manage change within the organization",
+                    "A Bachelor’s degree required (4-year degree)",
+                    "6-10 years of relevant experience of full-time working experience in AI, Data Science, and/or Machine Learning",
+                    "2-4 years of experience directly managing technical teams",
+                    "Strong skills in Python",
+                    "Experience using Generative AI models and frameworks e.g",
+                    "Experience working with popular ML packages such as scikit-learn, Pytorch and ONNX, or related ML libraries",
+                    "Extensive experience using DevOps tools like GIT, Azure Devops and Agile tools such as Jira to develop and deploy analytical solutions with multiple features, pipelines, and releases",
+                    "A solid understanding of Machine Learning (ML) workflows including ingesting, analysing, transforming data and evaluating results to make meaningful predictions",
+                    "Experience with MLOps methods and platforms such as MLFlow",
+                    "Experience with CI/CD and test-driven development",
+                    "Experience designing, building, and maintaining ML models, frameworks, and pipelines",
+                    "Experience designing and deploying end to end ML workflows on at least one major cloud computing platform",
+                    "Understanding of data structures, data modelling and software engineering best practices",
+                    "Proficiency using data manipulation tools and libraries such as SQL, Pandas, and Spark",
+                    "Clearly communicating findings, recommendations, and opportunities to improve data systems and solutions",
+                    "Integrating models and feedback from downstream consumption systems - reporting and dashboards, AI driven applications",
+                    "Deep Learning expertise",
+                    "Proficiency in Mathematics, Statistics, and Operations Research",
+                    "Experience with Machine Learning techniques",
+                    "Knowledge of Data Architecture Design and Modelling",
+                    "Familiarity with Cloud Computing environments",
+                    "Skills in Technical Design Optimization",
+                    "Experience with Continuous Integration and Continuous Delivery/Deployment",
+                    "Understanding of Natural Language Processing and Generation",
+                    "Knowledge in Image Processing and Analysis",
+                    "Skills in Speech and Audio Processing and Analysis",
+                    "Ability to scale models effectively",
+                    "Strong relationship-building skills",
+                    "Demonstrated client trust and value",
+                    "Effective communication skills with impact",
+                    "Digital fluency and emotional agility",
+                    "Experience in hybrid collaboration",
+                    "Commercial acumen and negotiation skills",
+                    "Proven ability to lead teams and manage change",
+                    "Strong mathematical and quantitative skills including calculus, linear algebra, and statistics",
+                    "Willingness to travel to meet client obligations",
+                    "A deep understanding of and ability to teach concepts, tools, features, functions, and benefits of different approaches to apply them",
+                    "Master's degree Computer Science, Mathematics, Physical Sciences, or other quantitative field",
+                    "Experience working with diverse teams to deliver complex solutions",
+                    "Strong skills in languages beyond Python: R, JavaScript, Java, C++, C",
+                    "Experience fine-tuning Generative AI models",
+                    "Experience in managing complex projects with multiple stakeholders",
+                    "A strong understanding of industry trends and emerging technologies",
+                    "Skills in data visualization and storytelling with data",
+                    "We seek individuals who are not only technically proficient but also possess the ability to think critically and creatively",
+                    "Top performers demonstrate a commitment to excellence, a collaborative spirit, and a passion for driving innovation in the field of AI and data science",
+                    "Your ability to collaborate effectively and communicate with clarity will set you apart as a leader in our team"
+                ],
+                "Benefits": [
+                    "At EY, we’ll develop you with future-focused skills and equip you with world-class experiences",
+                    "We offer a comprehensive compensation and benefits package where you’ll be rewarded based on your performance and recognized for the value you bring to the business",
+                    "The base salary range for this job in all geographic locations in the US is $124,300 to $227,900",
+                    "The base salary range for New York City Metro Area, Washington State and California (excluding Sacramento) is $149,200 to $259,000",
+                    "Individual salaries within those ranges are determined through a wide variety of factors including but not limited to education, experience, knowledge, skills and geography",
+                    "In addition, our Total Rewards package includes medical and dental coverage, pension and 401(k) plans, and a wide range of paid time off options",
+                    "Under our flexible vacation policy, you’ll decide how much vacation time you need based on your own personal circumstances",
+                    "You’ll also be granted time off for designated EY Paid Holidays, Winter/Summer breaks, Personal/Family Care, and other leaves of absence when needed to support your physical, financial, and emotional well-being"
+                ],
+                "Responsibilities": [
+                    "As part of that, you'll sit side-by-side with clients and diverse teams from EY to create a well-rounded approach to advising and solving challenging problems, some of which have not been solved before",
+                    "No two days will be the same, and with constant research and development, you'll find yourself building knowledge that can be applied across a wide range of projects now, and in the future",
+                    "You'll need to have a passion for continuous learning, stay ahead of the trends, and influence new ways of working so you can position solutions in the most relevant and innovative way for our clients",
+                    "You can expect heavy client interaction in a fast-paced environment and the opportunity to develop your own career path for your unique skills and ambitions",
+                    "In this role, you will research, build, and implement scalable artificial intelligence systems that learn and make predictions tailored to business requirements across various environments, including cloud and on-premises",
+                    "You will enhance data pipelines and storage, ensuring data is clean, accurate, and optimized for XOps processes",
+                    "Additionally, you will monitor and evaluate learning processes to continuously improve high-performance models, collaborating with other data and analytics professionals to industrialize analysis into effective analytics solutions",
+                    "As a Manager in AI Native Engineering, you will play a pivotal role in delivering innovative solutions that drive business success",
+                    "You will work with a wide variety of clients to deliver the latest data science and big data technologies",
+                    "Your teams will design and build scalable solutions that unify, enrich, and derive insights from varied data sources across a broad technology landscape",
+                    "You will help our clients navigate the complex world of modern data science, analytics, and software engineering",
+                    "We'll look to you to provide guidance and perform technical development tasks to ensure data science solutions are properly engineered and maintained to support the ongoing business needs of our clients",
+                    "You will be joining a dynamic and interdisciplinary team of scientists and engineers who love to tackle the most challenging computational problems for our clients",
+                    "Leading workstream delivery and ensuring the effective management of processes and projects",
+                    "Continuously improving processes by identifying innovative solutions through research and analysis",
+                    "Managing professional employees and supervising teams to deliver complex technical initiatives, with accountability for performance and results",
+                    "Engaging actively with clients, participating in daily working sessions, and leading workstreams from planning through execution to closure",
+                    "Identifying opportunities for additional services and managing engagement economics",
+                    "This role will work to deliver tech at speed, innovate at scale and put humans at the center",
+                    "Provide technical guidance and share knowledge with team members with diverse skills and backgrounds",
+                    "Consistently deliver quality client services focusing on more complex, judgmental and/or specialized issues surrounding emerging technology",
+                    "Demonstrate technical capabilities and professional knowledge",
+                    "Learn about EY and its service lines and actively assess and present ways to apply knowledge and services",
+                    "OpenAI family, open source LLMs, Dall-e, LlamaIndex, Langchain, Retrieval Augmented Generation (RAG)",
+                    "Experience with containerization and scaling models"
+                ]
+            },
+            "job_onet_soc": "15111100",
+            "job_onet_job_zone": "5"
+        },
+
+
+
+
+
+        {
+            "job_id": "LEYz1tJFWE8qHHymAAAAAA==",
+            "job_title": "Machine Learning Engineer",
+            "employer_name": "Steampunk",
+            "employer_logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTcgrA_5tXsdWYtOjm90gnrADmi3HX_dO7jE5Nw&s=0",
+            "employer_website": "https://steampunk.digital",
+            "job_publisher": "Indeed",
+            "job_employment_type": "Full-time",
+            "job_employment_types": [
+                "FULLTIME"
+            ],
+            "job_apply_link": "https://www.indeed.com/viewjob?jk=22fd45582515e18b&utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic",
+            "job_apply_is_direct": false,
+            "apply_options": [
+                {
+                    "publisher": "Indeed",
+                    "apply_link": "https://www.indeed.com/viewjob?jk=22fd45582515e18b&utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic",
+                    "is_direct": false
+                },
+                {
+                    "publisher": "LinkedIn",
+                    "apply_link": "https://www.linkedin.com/jobs/view/machine-learning-engineer-at-steampunk-inc-4253966758?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic",
+                    "is_direct": false
+                },
+                {
+                    "publisher": "Bandana.com",
+                    "apply_link": "https://bandana.com/jobs/66805283-1c9d-4877-883e-aeec7076e9a3?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic",
+                    "is_direct": false
+                },
+                {
+                    "publisher": "SimplyHired",
+                    "apply_link": "https://www.simplyhired.com/job/Rif260irBuYn456xSJDA4sjGscbu80ManjC9fQrq4dNPbPXbkiCfnQ?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic",
+                    "is_direct": false
+                },
+                {
+                    "publisher": "Ladders",
+                    "apply_link": "https://www.theladders.com/job/machine-learning-engineer-avidtechnology-mc-lean-va_77631750?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic",
+                    "is_direct": false
+                },
+                {
+                    "publisher": "JobzMall",
+                    "apply_link": "https://www.jobzmall.com/salesforce/job/machine-learning-engineer-189?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic",
+                    "is_direct": true
+                },
+                {
+                    "publisher": "JobLeads",
+                    "apply_link": "https://www.jobleads.com/us/job/machine-learning-engineer--mclean--e23c82174fcdfee7467e6f424f55179d2?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic",
+                    "is_direct": false
+                },
+                {
+                    "publisher": "Talentify",
+                    "apply_link": "https://www.talentify.io/job/machine-learning-engineer-mclean-virginia-us-steampunk-6285?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic",
+                    "is_direct": false
+                }
+            ],
+            "job_description": "Overview:\n\nWe are looking for seasoned Machine Learning Engineer to work with our existing team of Data Scientists and Engineers to use AI/ML technology in supporting Federal use cases. We are looking for a more than just a \"Machine Learning Engineer\", but a technologist with excellent communication and customer service skills and a passion for data and problem solving.\n\nContributions:\n\nResponsibilities\n• Collaborate with cross-functional teams to design and develop machine learning models and algorithms to address business needs.\n• Analyze and process large datasets to extract meaningful insights and patterns.\n• Collaborate with cross-functional teams to integrate machine learning solutions into existing systems and workflows.\n• Optimize and fine-tune machine learning models for performance, scalability, and accuracy.\n• Implement and maintain data pipelines to support machine learning workflows.\n• Evaluate the effectiveness of machine learning models using appropriate metrics and validation techniques.\n• Document processes, experiments, and results to ensure reproducibility and knowledge sharing.\n• Deploy machine learning models to production environments and monitor their performance.\n• Stay updated with the latest research and trends in AI to implement cutting-edge solutions.\n• Support an Agile software development lifecycle\n• You will contribute to the growth of our AI & Data Exploitation Practice!\n\nQualifications:\n\nRequired\n• Ability to obtain a U.S. government Security Clearance\n• Master's Degree and 3 years of relevant experience; OR\n• Bachelor's Degree and 5 years of relevant experience; OR\n• No degree and 9 years of relevant experience\n• Possesses at least one professional certification relevant to the technical service provided. Maintain a certification relevant to the product being deployed and/or maintained.\n• 2-4 years industry experience developing ML/AI solutions and a passion for solving complex problems.\n• 2-4 years industry experience with machine learning frameworks and libraries such as TensorFlow, PyTorch, or scikit-learn.\n• Strong programming skills in languages such as Python, R, or Java.\n• Solid understanding of statistical methods, data structures, and algorithms.\n• Experience with data preprocessing, feature engineering, and model evaluation techniques.\n\nPreferred\n• Familiarity with big data technologies like Hadoop, Spark, or similar.\n• Knowledge of cloud platforms such as AWS, Google Cloud, or Azure.\n• Experience with version control systems, such as Git, and continuous integration/continuous deployment (CI/CD) practices.\n• Excellent problem-solving skills and attention to detail.\n• Strong communication skills and ability to work collaboratively in a team environment.\n• Ability to manage multiple tasks and projects simultaneously while meeting deadlines.\n\nAbout steampunk:\n\nSteampunk relies on several factors to determine salary, including but not limited to geographic location, contractual requirements, education, knowledge, skills, competencies, and experience. The projected compensation range for this position is $115,000 to $150,000. The estimate displayed represents a typical annual salary range for this position. Annual salary is just one aspect of Steampunk’s total compensation package for employees. Learn more about additional Steampunk benefits here.\n\nIdentity Statement\n\nAs part of the application process, you are expected to be on camera during interviews and assessments. We reserve the right to take your picture to verify your identity and prevent fraud.\n\nSteampunk is a Change Agent in the Federal contracting industry, bringing new thinking to clients in the Homeland, Federal Civilian, Health and DoD sectors. Through our Human-Centered delivery methodology, we are fundamentally changing the expectations our Federal clients have for true shared accountability in solving their toughest mission challenges. As an employee-owned company, we focus on investing in our employees to enable them to do the greatest work of their careers – and rewarding them for outstanding contributions to our growth. If you want to learn more about our story, visit http://www.steampunk.com.\n\nWe are an equal opportunity employer, and all qualified applicants will receive consideration for employment without regard to race, color, religion, sex, national origin, disability status, protected veteran status, or any other characteristic protected by law. Steampunk participates in the E-Verify program.",
+            "job_is_remote": false,
+            "job_posted_at": "13 days ago",
+            "job_posted_at_timestamp": 1751500800,
+            "job_posted_at_datetime_utc": "2025-07-03T00:00:00.000Z",
+            "job_location": "McLean, VA",
+            "job_city": "McLean",
+            "job_state": "Virginia",
+            "job_country": "US",
+            "job_latitude": 38.9338676,
+            "job_longitude": -77.1772604,
+            "job_benefits": null,
+            "job_google_link": "https://www.google.com/search?q=jobs&gl=us&hl=en&udm=8#vhid=vt%3D20/docid%3DLEYz1tJFWE8qHHymAAAAAA%3D%3D&vssid=jobs-detail-viewer",
+            "job_min_salary": 115000,
+            "job_max_salary": 150000,
+            "job_salary_period": "YEAR",
+            "job_highlights": {
+                "Qualifications": [
+                    "Ability to obtain a U.S. government Security Clearance",
+                    "Master's Degree and 3 years of relevant experience; OR",
+                    "Bachelor's Degree and 5 years of relevant experience; OR",
+                    "No degree and 9 years of relevant experience",
+                    "Possesses at least one professional certification relevant to the technical service provided",
+                    "Maintain a certification relevant to the product being deployed and/or maintained",
+                    "2-4 years industry experience developing ML/AI solutions and a passion for solving complex problems",
+                    "2-4 years industry experience with machine learning frameworks and libraries such as TensorFlow, PyTorch, or scikit-learn",
+                    "Strong programming skills in languages such as Python, R, or Java",
+                    "Solid understanding of statistical methods, data structures, and algorithms",
+                    "Experience with data preprocessing, feature engineering, and model evaluation techniques"
+                ],
+                "Benefits": [
+                    "Steampunk relies on several factors to determine salary, including but not limited to geographic location, contractual requirements, education, knowledge, skills, competencies, and experience",
+                    "The projected compensation range for this position is $115,000 to $150,000",
+                    "The estimate displayed represents a typical annual salary range for this position",
+                    "Annual salary is just one aspect of Steampunk’s total compensation package for employees"
+                ],
+                "Responsibilities": [
+                    "Collaborate with cross-functional teams to design and develop machine learning models and algorithms to address business needs",
+                    "Analyze and process large datasets to extract meaningful insights and patterns",
+                    "Collaborate with cross-functional teams to integrate machine learning solutions into existing systems and workflows",
+                    "Optimize and fine-tune machine learning models for performance, scalability, and accuracy",
+                    "Implement and maintain data pipelines to support machine learning workflows",
+                    "Evaluate the effectiveness of machine learning models using appropriate metrics and validation techniques",
+                    "Document processes, experiments, and results to ensure reproducibility and knowledge sharing",
+                    "Deploy machine learning models to production environments and monitor their performance",
+                    "Stay updated with the latest research and trends in AI to implement cutting-edge solutions",
+                    "Support an Agile software development lifecycle",
+                    "You will contribute to the growth of our AI & Data Exploitation Practice!"
+                ]
+            },
+            "job_onet_soc": "15111100",
+            "job_onet_job_zone": "5"
+        },
+
+
+
+
+
+
+
+    
+        {
+            "job_id": "aDFqs9B4dFpVGxcJAAAAAA==",
+            "job_title": "Machine Learning Engineer II, Sponsored Products Search Sourcing, Amazon Advertising",
+            "employer_name": "Amazon",
+            "employer_logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTifI4qApXZgV_Uz8tSiGZXIaES6fcOxT554DO&s=0",
+            "employer_website": "https://www.amazon.com",
+            "job_publisher": "LinkedIn",
+            "job_employment_type": "Full-time",
+            "job_employment_types": [
+                "FULLTIME"
+            ],
+            "job_apply_link": "https://www.linkedin.com/jobs/view/machine-learning-engineer-ii-sponsored-products-search-sourcing-amazon-advertising-at-amazon-4256823373?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic",
+            "job_apply_is_direct": false,
+            "apply_options": [
+                {
+                    "publisher": "LinkedIn",
+                    "apply_link": "https://www.linkedin.com/jobs/view/machine-learning-engineer-ii-sponsored-products-search-sourcing-amazon-advertising-at-amazon-4256823373?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic",
+                    "is_direct": false
+                },
+                {
+                    "publisher": "Recruit.net",
+                    "apply_link": "https://www.recruit.net/job/machine-learning-engineer-sponsored-products-jobs/B916AB4CD88F75BD?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic",
+                    "is_direct": false
+                }
+            ],
+            "job_description": "Description\n\nAmazon Advertising is one of Amazon's fastest growing and most profitable businesses, responsible for defining and delivering a collection of advertising products that drive discovery and sales. As a core product offering within our advertising portfolio, Sponsored Products (SP) helps merchants, retail vendors, and brand owners succeed via native advertising, which grows incremental sales of their products sold through Amazon. The SP team's primary goals are to help shoppers discover new products they love, be the most efficient way for advertisers to meet their business objectives, and build a sustainable business that continuously innovates on behalf of customers. Our products and solutions are strategically important to enable our Retail and Marketplace businesses to drive long-term growth. We deliver billions of ad impressions and millions of clicks and break fresh ground in product and technical innovations every day!\n\nDoes serving ads to billions of search requests daily and finding the most relevant ads for a search page from billions of ads in 10s of milliseconds excite you? The Sponsored Products Demand Utilization team is responsible for retrieving relevant and engaging ads to surface to customers when they search for products on Amazon. We strive to understand our customers’ intent and identify relevant ads which enable them to discover new and alternate products. This also enables sellers on Amazon to showcase their products to customers, which may at times be buried deeper in the search results.\n\nOur systems and algorithms operate on one of the world's largest product catalogs, matching shoppers with products - with a high relevance bar and strict latency constraints. We are a team of applied scientists and machine learning engineers working on complex solutions to understand the customer intent and present them with ads that are not only relevant to their actual shopping experience, but also non-obtrusive. This area is of strategic importance to Amazon Retail and Marketplace business, driving long term-growth.\n\nWe are looking for a Machine Learning Engineer II who can drive appropriate technology choices for the business, lead the way for continuous innovation, and shape the future of ad serving on Amazon search. You will build services to handle billions of requests per day, while maintaining response latency in milliseconds and meeting strict SLA requirements. It is quite routine for our systems to operate on massive datasets using distributed frameworks. You will design and code, troubleshoot, and support high volume and low latency distributed systems. The solutions you create would ensure relevant ads are served to Amazon's customers. You will directly impact our customers’ shopping experience while helping our sellers get the maximum ROI from advertising on Amazon. This role will provide exposure to cutting-edge innovations in product search, information retrieval, natural language processing (NLP), LLM training, deep learning, and image processing. In addition to being a strongly motivated IC, you will also be responsible for mentoring junior engineers and guiding them to deliver high impacting products and services for Amazon customers and sellers.\n\nKey job responsibilities\n\nJob Responsibilities\n• Drive the direction of our technical solutions, and work on many different technologies such as deep learning, AWS, Auto ML, real-time ML serving systems.\n• Design, develop, and production software to support scalable offline machine-learning pipelines and online serving components.\n• Work closely with applied scientists to optimize the performance of machine-learning models, improve the team’s machine learning productivity, and advance the technical foundation to empower our science innovation. What you create is also what you own.\n\nBasic Qualifications\n• 3+ years of non-internship professional software development experience\n• 2+ years of non-internship design or architecture (design patterns, reliability and scaling) of new and existing systems experience\n• Experience programming with at least one software programming language\n• Experience building complex software systems that have been successfully delivered to customers\n\nPreferred Qualifications\n• 3+ years of full software development life cycle, including coding standards, code reviews, source control management, build processes, testing, and operations experience\n• Bachelor's degree in computer science or equivalent\n• Experience in machine learning, data mining, information retrieval, statistics or natural language processing\n• Experiences with LLM, prompt engineering\n\nAmazon is an equal opportunity employer and does not discriminate on the basis of protected veteran status, disability, or other legally protected status.\n\nOur inclusive culture empowers Amazonians to deliver the best results for our customers. If you have a disability and need a workplace accommodation or adjustment during the application and hiring process, including support for the interview or onboarding process, please visit https://amazon.jobs/content/en/how-we-hire/accommodations for more information. If the country/region you’re applying in isn’t listed, please contact your Recruiting Partner.\n\nOur compensation reflects the cost of labor across several US geographic markets. The base pay for this position ranges from $129,300/year in our lowest geographic market up to $223,600/year in our highest geographic market. Pay is based on a number of factors including market location and may vary depending on job-related knowledge, skills, and experience. Amazon is a total compensation company. Dependent on the position offered, equity, sign-on payments, and other forms of compensation may be provided as part of a total compensation package, in addition to a full range of medical, financial, and/or other benefits. For more information, please visit https://www.aboutamazon.com/workplace/employee-benefits. This position will remain posted until filled. Applicants should apply via our internal or external career site.\n\nCompany - Amazon.com Services LLC\n\nJob ID: A3017064",
+            "job_is_remote": false,
+            "job_posted_at": "21 days ago",
+            "job_posted_at_timestamp": 1750809600,
+            "job_posted_at_datetime_utc": "2025-06-25T00:00:00.000Z",
+            "job_location": "Arlington, VA",
+            "job_city": "Arlington",
+            "job_state": "Virginia",
+            "job_country": "US",
+            "job_latitude": 38.8816208,
+            "job_longitude": -77.09098089999999,
+            "job_benefits": [
+                "health_insurance"
+            ],
+            "job_google_link": "https://www.google.com/search?q=jobs&gl=us&hl=en&udm=8#vhid=vt%3D20/docid%3DaDFqs9B4dFpVGxcJAAAAAA%3D%3D&vssid=jobs-detail-viewer",
+            "job_min_salary": 129000,
+            "job_max_salary": 224000,
+            "job_salary_period": "YEAR",
+            "job_highlights": {
+                "Qualifications": [
+                    "3+ years of non-internship professional software development experience",
+                    "2+ years of non-internship design or architecture (design patterns, reliability and scaling) of new and existing systems experience",
+                    "Experience programming with at least one software programming language",
+                    "Experience building complex software systems that have been successfully delivered to customers"
+                ],
+                "Benefits": [
+                    "The base pay for this position ranges from $129,300/year in our lowest geographic market up to $223,600/year in our highest geographic market",
+                    "Dependent on the position offered, equity, sign-on payments, and other forms of compensation may be provided as part of a total compensation package, in addition to a full range of medical, financial, and/or other benefits"
+                ],
+                "Responsibilities": [
+                    "The Sponsored Products Demand Utilization team is responsible for retrieving relevant and engaging ads to surface to customers when they search for products on Amazon",
+                    "We strive to understand our customers’ intent and identify relevant ads which enable them to discover new and alternate products",
+                    "This also enables sellers on Amazon to showcase their products to customers, which may at times be buried deeper in the search results",
+                    "You will build services to handle billions of requests per day, while maintaining response latency in milliseconds and meeting strict SLA requirements",
+                    "It is quite routine for our systems to operate on massive datasets using distributed frameworks",
+                    "You will design and code, troubleshoot, and support high volume and low latency distributed systems",
+                    "The solutions you create would ensure relevant ads are served to Amazon's customers",
+                    "You will directly impact our customers’ shopping experience while helping our sellers get the maximum ROI from advertising on Amazon",
+                    "This role will provide exposure to cutting-edge innovations in product search, information retrieval, natural language processing (NLP), LLM training, deep learning, and image processing",
+                    "In addition to being a strongly motivated IC, you will also be responsible for mentoring junior engineers and guiding them to deliver high impacting products and services for Amazon customers and sellers",
+                    "Drive the direction of our technical solutions, and work on many different technologies such as deep learning, AWS, Auto ML, real-time ML serving systems",
+                    "Design, develop, and production software to support scalable offline machine-learning pipelines and online serving components",
+                    "Work closely with applied scientists to optimize the performance of machine-learning models, improve the team’s machine learning productivity, and advance the technical foundation to empower our science innovation"
+                ]
+            },
+            "job_onet_soc": "15111100",
+            "job_onet_job_zone": "5"
+        },
+
+
+
+
+
+
+
+
+
+
+
+        {
+            "job_id": "VQdNMvspStKEOMqrAAAAAA==",
+            "job_title": "AI/ML Machine Learning Engineer Senior",
+            "employer_name": "Lockheed Martin",
+            "employer_logo": null,
+            "employer_website": "https://www.lockheedmartin.com",
+            "job_publisher": "Lockheed Martin",
+            "job_employment_type": "Full-time",
+            "job_employment_types": [
+                "FULLTIME"
+            ],
+            "job_apply_link": "https://www.lockheedmartinjobs.com/job/herndon/ai-ml-machine-learning-engineer-senior/694/83578837712?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic",
+            "job_apply_is_direct": false,
+            "apply_options": [
+                {
+                    "publisher": "Lockheed Martin",
+                    "apply_link": "https://www.lockheedmartinjobs.com/job/herndon/ai-ml-machine-learning-engineer-senior/694/83578837712?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic",
+                    "is_direct": false
+                },
+                {
+                    "publisher": "ClearedJobs.Net",
+                    "apply_link": "https://clearedjobs.net/job/ai-ml-machine-learning-engineer-senior-herndon-virginia-1769331?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic",
+                    "is_direct": false
+                },
+                {
+                    "publisher": "Security Clearance Jobs",
+                    "apply_link": "https://www.clearancejobs.com/jobs/8430982/aiml-machine-learning-engineer-senior?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic",
+                    "is_direct": false
+                },
+                {
+                    "publisher": "ZipRecruiter",
+                    "apply_link": "https://www.ziprecruiter.com/c/Amazon/Job/ADC-Engineer-I,-AI-ML-ADC/-in-Herndon,VA?jid=cbe3c74778463a66&utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic",
+                    "is_direct": false
+                },
+                {
+                    "publisher": "Aijobs.net",
+                    "apply_link": "https://aijobs.net/job/1269165-senior-computer-vision-aiml-engineer/?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic",
+                    "is_direct": false
+                },
+                {
+                    "publisher": "SimplyHired",
+                    "apply_link": "https://www.simplyhired.com/job/7WH5VmV16fxTZchZ75pmrF2y9e2T_7iE9s6Y80RTYQWkgGtnwb3h_g?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic",
+                    "is_direct": false
+                },
+                {
+                    "publisher": "Indeed",
+                    "apply_link": "https://www.indeed.com/viewjob?jk=b112ba2dad4057fc&utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic",
+                    "is_direct": false
+                },
+                {
+                    "publisher": "Experteer.at",
+                    "apply_link": "https://www.experteer.at/career/view-jobs/adc-engineer-i-ai-ml-adc-herndon-va-usa-52858119?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic",
+                    "is_direct": false
+                }
+            ],
+            "job_description": "Description:By bringing together people that use their passion for purposeful innovation, at Lockheed Martin we keep people safe and solve the world's most complex challenges. Our people are some of the greatest minds in the industry and truly make Lockheed Martin a great place to work.\n\nWith our employees as our priority, we provide diverse career opportunities designed to propel development and boost agility. Our flexible schedules, competitive pay, and comprehensive benefits enable our employees to live a healthy, fulfilling life at and outside of work.\n\nAt Lockheed Martin, we place an emphasis on empowering our employees by fostering innovation, integrity, and exemplifying the epitome of corporate responsibility.\n\nYour Mission is Ours.\n\nLockheed Martin Space is seeking a highly skilled AI/ML Machine Learning Engineer to join a cross-functional team of experts in research, data science, software development, physics, and mathematics. As a key member of this team, you will leverage cutting-edge AI/ML tools and techniques to tackle the most complex challenges in Space - all in support of our national security.\n\nThis role offers a unique opportunity to collaborate with a diverse group of professionals, drive innovation, and contribute to the development of solutions that address critical problems in the Space domain.\n\nThe successful candidate will have advanced experience with and/or knowledge of: AI/ML, Deep Learning, or Computer Vision, modern software development practices/languages, and a passion for math and science.\nBasic Qualifications:\n• Bachelor's degree in a STEM discipline (e.g. Electrical Engineering, Computer Science, Computer Engineering, Mathematics, Physics, etc.)\n\n• Advanced experience in Artificial Intelligence, Machine Learning, Deep Learning, Computer Vision, or Image Processing\n\n• Experience with modern software development tools and practices\n\n• TS/SCI clearance required to start\nDesired Skills:\n• Advanced degree in a STEM discipline\n\n• Proficiency in one or more of the following programming languages: Python, Java, C++, C#, or MATLAB\n\n• Experience with TensorFlow, PyTorch, Keras, or Scikit-learn\n\n• Experience with RF, SAR or EO image processing algorithms/techniques\n\n• Experience with AWS or another cloud computing platform\n\n• Excellent written and verbal communication skills\n\n• Ability to work in a collaborative and team-based environment\n\n#LMSpaceAI\nSecurity Clearance Statement: This position requires a government security clearance, you must be a US Citizen for consideration.\nClearance Level: TS/SCI\nOther Important Information You Should Know\nExpression of Interest: By applying to this job, you are expressing interest in this position and could be considered for other career opportunities where similar skills and requirements have been identified as a match. Should this match be identified you may be contacted for this and future openings.\nAbility to Work Remotely: Onsite Full-time: The work associated with this position will be performed onsite at a designated Lockheed Martin facility.\nWork Schedules: Lockheed Martin supports a variety of alternate work schedules that provide additional flexibility to our employees. Schedules range from standard 40 hours over a five day work week while others may be condensed. These condensed schedules provide employees with additional time away from the office and are in addition to our Paid Time off benefits.\nSchedule for this Position: 4x10 hour day, 3 days off per week\nPay Rate: The annual base salary range for this position in California and New York (excluding most major metropolitan areas), Colorado, Hawaii, Illinois, Maryland, Minnesota, New Jersey, Vermont, Washington or Washington DC is $104,900 - $184,920. For states not referenced above, the salary range for this position will reflect the candidate’s final work location. Please note that the salary information is a general guideline only. Lockheed Martin considers factors such as (but not limited to) scope and responsibilities of the position, candidate's work experience, education/ training, key skills as well as market and business considerations when extending an offer. Benefits offered: Medical, Dental, Vision, Life Insurance, Short-Term Disability, Long-Term Disability, 401(k) match, Flexible Spending Accounts, EAP, Education Assistance, Parental Leave, Paid time off, and Holidays. (Washington state applicants only) Non-represented full-time employees: accrue at least 10 hours per month of Paid Time Off (PTO) to be used for incidental absences and other reasons; receive at least 90 hours for holidays. Represented full time employees accrue 6.67 hours of Vacation per month; accrue up to 52 hours of sick leave annually; receive at least 96 hours for holidays. PTO, Vacation, sick leave, and holiday hours are prorated based on start date during the calendar year. This position is incentive plan eligible.\nLockheed Martin is an equal opportunity employer. Qualified candidates will be considered without regard to legally protected characteristics.\nThe application window will close in 90 days; applicants are encouraged to apply within 5 - 30 days of the requisition posting date in order to receive optimal consideration.\nJoin us at Lockheed Martin, where your mission is ours. Our customers tackle the hardest missions. Those that demand extraordinary amounts of courage, resilience and precision. They’re dangerous. Critical. Sometimes they even provide an opportunity to change the world and save lives. Those are the missions we care about.\n\nAs a leading technology innovation company, Lockheed Martin’s vast team works with partners around the world to bring proven performance to our customers’ toughest challenges. Lockheed Martin has employees based in many states throughout the U.S., and Internationally, with business locations in many nations and territories.\nExperience Level: Experienced Professional\nBusiness Unit: SPACE\nRelocation Available: Possible\nCareer Area: Artificial Intelligence\nType: Full-Time\nShift: First",
+            "job_is_remote": false,
+            "job_posted_at": "7 days ago",
+            "job_posted_at_timestamp": 1752019200,
+            "job_posted_at_datetime_utc": "2025-07-09T00:00:00.000Z",
+            "job_location": "Herndon, VA",
+            "job_city": "Herndon",
+            "job_state": "Virginia",
+            "job_country": "US",
+            "job_latitude": 38.9695545,
+            "job_longitude": -77.3860976,
+            "job_benefits": [
+                "health_insurance",
+                "paid_time_off",
+                "dental_coverage"
+            ],
+            "job_google_link": "https://www.google.com/search?q=jobs&gl=us&hl=en&udm=8#vhid=vt%3D20/docid%3DVQdNMvspStKEOMqrAAAAAA%3D%3D&vssid=jobs-detail-viewer",
+            "job_salary": null,
+            "job_min_salary": null,
+            "job_max_salary": null,
+            "job_salary_period": null,
+            "job_highlights": {
+                "Qualifications": [
+                    "The successful candidate will have advanced experience with and/or knowledge of: AI/ML, Deep Learning, or Computer Vision, modern software development practices/languages, and a passion for math and science",
+                    "Bachelor's degree in a STEM discipline (e.g. Electrical Engineering, Computer Science, Computer Engineering, Mathematics, Physics, etc.)",
+                    "Advanced experience in Artificial Intelligence, Machine Learning, Deep Learning, Computer Vision, or Image Processing",
+                    "Experience with modern software development tools and practices",
+                    "TS/SCI clearance required to start",
+                    "Security Clearance Statement: This position requires a government security clearance, you must be a US Citizen for consideration"
+                ],
+                "Benefits": [
+                    "Our flexible schedules, competitive pay, and comprehensive benefits enable our employees to live a healthy, fulfilling life at and outside of work",
+                    "Schedules range from standard 40 hours over a five day work week while others may be condensed",
+                    "These condensed schedules provide employees with additional time away from the office and are in addition to our Paid Time off benefits",
+                    "Pay Rate: The annual base salary range for this position in California and New York (excluding most major metropolitan areas), Colorado, Hawaii, Illinois, Maryland, Minnesota, New Jersey, Vermont, Washington or Washington DC is $104,900 - $184,920",
+                    "Benefits offered: Medical, Dental, Vision, Life Insurance, Short-Term Disability, Long-Term Disability, 401(k) match, Flexible Spending Accounts, EAP, Education Assistance, Parental Leave, Paid time off, and Holidays",
+                    "(Washington state applicants only) Non-represented full-time employees: accrue at least 10 hours per month of Paid Time Off (PTO) to be used for incidental absences and other reasons; receive at least 90 hours for holidays",
+                    "Represented full time employees accrue 6.67 hours of Vacation per month; accrue up to 52 hours of sick leave annually; receive at least 96 hours for holidays",
+                    "PTO, Vacation, sick leave, and holiday hours are prorated based on start date during the calendar year",
+                    "This position is incentive plan eligible"
+                ],
+                "Responsibilities": [
+                    "Schedule for this Position: 4x10 hour day, 3 days off per week"
+                ]
+            },
+            "job_onet_soc": "15111100",
+            "job_onet_job_zone": "5"
+        },
+
+
+
+
+
+
+
+
+
+
+        {
+            "job_id": "WTNA0MlRYqIF5XWFAAAAAA==",
+            "job_title": "Sr. Machine Learning Engineer, Monetization Engineering",
+            "employer_name": "TieTalent",
+            "employer_logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRFBa5_KIk0pBYIlv_Raelm8bt-Fu47LFOGlMv&s=0",
+            "employer_website": "https://tietalent.com",
+            "job_publisher": "LinkedIn",
+            "job_employment_type": "Full-time",
+            "job_employment_types": [
+                "FULLTIME"
+            ],
+            "job_apply_link": "https://www.linkedin.com/jobs/view/sr-machine-learning-engineer-monetization-engineering-at-tietalent-4259257931?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic",
+            "job_apply_is_direct": false,
+            "apply_options": [
+                {
+                    "publisher": "LinkedIn",
+                    "apply_link": "https://www.linkedin.com/jobs/view/sr-machine-learning-engineer-monetization-engineering-at-tietalent-4259257931?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic",
+                    "is_direct": false
+                },
+                {
+                    "publisher": "TieTalent",
+                    "apply_link": "https://tietalent.com/en/jobs/p-2754506/district-of-columbia-sr-machine-learning-engineer-monetization-engineering?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic",
+                    "is_direct": false
+                },
+                {
+                    "publisher": "Recruiter Jobs",
+                    "apply_link": "https://jobs.recruiter.com/jobs/20365925245-sr-machine-learning-engineer-monetization-engineering?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic",
+                    "is_direct": false
+                },
+                {
+                    "publisher": "Jobs Trabajo.org",
+                    "apply_link": "https://us.trabajo.org/job-2850-880a69de06d2cbbe294d2a1f942420dc?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic",
+                    "is_direct": false
+                }
+            ],
+            "job_description": "About\n\nAbout Pinterest:\n\nMillions of people around the world come to our platform to find creative ideas, dream about new possibilities and plan for memories that will last a lifetime. At Pinterest, we're on a mission to bring everyone the inspiration to create a life they love, and that starts with the people behind the product.\n\nDiscover a career where you ignite innovation for millions, transform passion into growth opportunities, celebrate each other's unique experiences and embrace theflexibility to do your best work. Creating a career you love? It's Possible. With more than 500 million users around the world and 300 billion ideas saved, Pinterest Machine Learning engineers build personalized experiences to help Pinners create a life they love. With just over 4,000 global employees, our teams are small, mighty, and still growing. At Pinterest, you'll experience hands-on access to an incredible vault of data and contribute large-scale recommendation systems in ways you won't find anywhere else.\n\nWithin the Monetization ML Engineering team, we try to connect the dots between the aspirations of Pinners and the products offered by our partners. In this role, you will be responsible for developing and executing a vision for the evolution of the machine learning technology stack within Ads.\n\nWhat You'll Do\n\nBuild cutting edge technology using the latest advances in deep learning and machine learning to personalize Pinterest\n\nPartner closely with teams across Pinterest to experiment and improve ML models for various product surfaces (Homefeed, Ads, Growth, Shopping, and Search), while gaining knowledge of how ML works in different areas\n\nUse data driven methods and leverage the unique properties of our data to improve candidates retrieval\n\nWork in a high-impact environment with quick experimentation and product launches\n\nKeep up with industry trends in recommendation systems\n\nLeverage LLMs to enhance content understanding\n\nWhat We're Looking For\n\n2+ years of industry experience applying machine learning methods (e.g., user modeling, personalization, recommender systems, search, ranking, natural language processing, reinforcement learning, and graph representation learning)\n\nDegree in computer science, statistics, or related field\n\nEnd-to-end hands-on experience with building data processing pipelines, large scale machine learning systems, and big data technologies (e.g., Hadoop/Spark)\n\nPractical knowledge of large scale recommender systems, or modern ads ranking, retrieval, targeting, marketplace systems\n\nNice To Have\n\nM.S. or PhD in Machine Learning or related areas\n\nPublications at top ML conferences\n\nExpertise in scalable realtime systems that process stream data\n\nPassion for applied ML and the Pinterest product\n\nBackground in computational advertising\n\nRelocation Statement:\n\nThis position is not eligible for relocation assistance. Visit our\n\nPinFlex\n\npage to learn more about our working model.\n\nAt Pinterest we believe the workplace should be equitable, inclusive, and inspiring for every employee. In an effort to provide greater transparency, we are sharing the base salary range for this position. The position is also eligible for equity. Final salary is based on a number of factors including location, travel, relevant prior experience, or particular skills and expertise.\n\nInformation regarding the culture at Pinterest and benefits available for this position can be found here. US based applicants only\n\n$177,309\n\n—\n\n$310,291 USD\n\nOur Commitment To Inclusion\n\nPinterest is an equal opportunity employer and makes employment decisions on the basis of merit. We want to have the best qualified people in every job. All qualified applicants will receive consideration for employment without regard to race, color, ancestry, national origin, religion or religious creed, sex (including pregnancy, childbirth, or related medical conditions), sexual orientation, gender, gender identity, gender expression, age, marital status, status as a protected veteran, physical or mental disability, medical condition, genetic information or characteristics (or those of a family member) or any other consideration made unlawful by applicable federal, state or local laws. We also consider qualified applicants regardless of criminal histories, consistent with legal requirements. If you require a medical or religious accommodation during the job application process, please completethis formfor support.\n\n#J-18808-Ljbffr\n\nNice-to-have skills\n• Deep Learning\n• Machine Learning\n• Search\n• Hadoop\n• Spark\n• District of Columbia, United States\n\nWork experience\n• Machine Learning\n• Data Engineer\n• Fullstack\n\nLanguages\n• English",
+            "job_is_remote": false,
+            "job_posted_at": "16 days ago",
+            "job_posted_at_timestamp": 1751241600,
+            "job_posted_at_datetime_utc": "2025-06-30T00:00:00.000Z",
+            "job_location": "Washington, DC",
+            "job_city": "Washington",
+            "job_state": "District of Columbia",
+            "job_country": "US",
+            "job_latitude": 38.9071923,
+            "job_longitude": -77.0368707,
+            "job_benefits": null,
+            "job_google_link": "https://www.google.com/search?q=jobs&gl=us&hl=en&udm=8#vhid=vt%3D20/docid%3DWTNA0MlRYqIF5XWFAAAAAA%3D%3D&vssid=jobs-detail-viewer",
+            "job_salary": null,
+            "job_min_salary": null,
+            "job_max_salary": null,
+            "job_salary_period": null,
+            "job_highlights": {
+                "Qualifications": [
+                    "2+ years of industry experience applying machine learning methods (e.g., user modeling, personalization, recommender systems, search, ranking, natural language processing, reinforcement learning, and graph representation learning)",
+                    "Degree in computer science, statistics, or related field",
+                    "End-to-end hands-on experience with building data processing pipelines, large scale machine learning systems, and big data technologies (e.g., Hadoop/Spark)",
+                    "Practical knowledge of large scale recommender systems, or modern ads ranking, retrieval, targeting, marketplace systems",
+                    "M.S. or PhD in Machine Learning or related areas",
+                    "Expertise in scalable realtime systems that process stream data",
+                    "Passion for applied ML and the Pinterest product",
+                    "Deep Learning",
+                    "Machine Learning",
+                    "Search",
+                    "Hadoop",
+                    "District of Columbia, United States",
+                    "Machine Learning",
+                    "Fullstack",
+                    "English"
+                ],
+                "Benefits": [
+                    "In an effort to provide greater transparency, we are sharing the base salary range for this position",
+                    "The position is also eligible for equity",
+                    "Final salary is based on a number of factors including location, travel, relevant prior experience, or particular skills and expertise",
+                    "$310,291 USD"
+                ],
+                "Responsibilities": [
+                    "In this role, you will be responsible for developing and executing a vision for the evolution of the machine learning technology stack within Ads",
+                    "Build cutting edge technology using the latest advances in deep learning and machine learning to personalize Pinterest",
+                    "Partner closely with teams across Pinterest to experiment and improve ML models for various product surfaces (Homefeed, Ads, Growth, Shopping, and Search), while gaining knowledge of how ML works in different areas",
+                    "Use data driven methods and leverage the unique properties of our data to improve candidates retrieval",
+                    "Work in a high-impact environment with quick experimentation and product launches",
+                    "Keep up with industry trends in recommendation systems",
+                    "Leverage LLMs to enhance content understanding"
+                ]
+            },
+            "job_onet_soc": "15111100",
+            "job_onet_job_zone": "5"
+        },
+
+
+
+
+
+
+
+
+
+        {
+            "job_id": "Fghza0delLiGZAgvAAAAAA==",
+            "job_title": "AI & Machine Learning Engineer (Remote)",
+            "employer_name": "SynergisticIT",
+            "employer_logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-1OJeonynfXvsEjtnqvn3XB7x3ZNPsleGoH57&s=0",
+            "employer_website": "https://www.synergisticit.com",
+            "job_publisher": "ZipRecruiter",
+            "job_employment_type": "Full-time",
+            "job_employment_types": [
+                "FULLTIME"
+            ],
+            "job_apply_link": "https://www.ziprecruiter.com/c/SynergisticIT/Job/AI-&-Machine-Learning-Engineer-(Remote)/-in-Mclean,VA?jid=486600d22e7f14bd&utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic",
+            "job_apply_is_direct": true,
+            "apply_options": [
+                {
+                    "publisher": "ZipRecruiter",
+                    "apply_link": "https://www.ziprecruiter.com/c/SynergisticIT/Job/AI-&-Machine-Learning-Engineer-(Remote)/-in-Mclean,VA?jid=486600d22e7f14bd&utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic",
+                    "is_direct": true
+                },
+                {
+                    "publisher": "Lensa",
+                    "apply_link": "https://lensa.com/job-v1/synergisticit/mclean-va/machine-learning-engineer/a9823e1d5c678cd8658a71454a2e3b2b?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic",
+                    "is_direct": false
+                }
+            ],
+            "job_description": "Since 2010 Synergisticit has helped Jobseekers get employed in the tech Job market by providing candidates the requisite skills, experience and technical competence to outperform at interviews and at clients. Here at SynergisticIT We just don't focus on getting you a tech Job we make careers.\nIn this Job market also, our candidates are able to achieve multiple job offers and $100k + salaries.\n\nplease check the below links :\n\nSynergisticit Pics /Salaries of Successful Candidates\n\nSynergisticit at Oracle Cloudworld 2023\n\nSynergisticit at Gartner Data & Analytics summit\n\nWhy do Tech Companies not Hire recent Computer Science Graduates | SynergisticIT\n\nTechnical Skills or Experience? | Which one is important to get a Job? | SynergisticIT\n\nAll Positions are open for all visas and US citizens\nWe at Synergisticit understand the problem of the mismatch between employer's requirements and Employee skills and that's why since 2010 we have helped 1000's of candidates get jobs at technology clients like apple, google, Paypal, western union, Client, visa, walmart labs etc to name a few.\nCurrently, We are looking for entry-level software programmers, Java Full stack developers, Python/Java developers, Data analysts/ Data Scientists, Machine Learning engineers for full time positions with clients.\nWho Should Apply Recent Computer science/Engineering /Mathematics/Statistics or Science Graduates or People looking to switch careers or who have had gaps in employment and looking to make their careers in the Tech Industry.\nWe assist in filing for STEM extension and also for H1b and Green card filing to Candidates\nWe want Data Science/Machine learning/Data Analyst and Java Full stack candidates\nFor data Science/Machine learning Positions\nREQUIRED SKILLS\nBachelors degree or Masters degree in Computer Science, Computer Engineering, Electrical Engineering, Information Systems, IT\nProject work on the technologies needed\nHighly motivated, self-learner, and technically inquisitive\nExperience in programming language Java and understanding of the software development life cycle\nKnowledge of Statistics, Gen AI, LLM, Python, Computer Vision, data visualization tools\nExcellent written and verbal communication skills\nPreferred skills: NLP, Text mining, Tableau, PowerBI, Databricks, Tensorflow\nREQUIRED SKILLS For Java /Full stack/Software Positions\nBachelors degree or Masters degree in Computer Science, Computer Engineering, Electrical Engineering, Information Systems, IT\nHighly motivated, self-learner, and technically inquisitive\nExperience in programming language Java and understanding of the software development life cycle\nProject work on the skills\nKnowledge of Core Java , javascript , C++ or software programming\nSpring boot, Microservices, Docker, Jenkins, Github, Kubernates and REST API's experience\nExcellent written and verbal communication skills\nIf you get emails from our Job Placement team and are not interested please email them or ask them to take you off their distribution list and make you unavailable as they share the same database with the client servicing team who only connect with candidates who are matching client requirements.\nNo phone calls please. Shortlisted candidates would be reached out. No third party or agency candidates or c2c candidates",
+            "job_is_remote": false,
+            "job_posted_at": null,
+            "job_posted_at_timestamp": null,
+            "job_posted_at_datetime_utc": null,
+            "job_location": "McLean, VA",
+            "job_city": "McLean",
+            "job_state": "Virginia",
+            "job_country": "US",
+            "job_latitude": 38.9338676,
+            "job_longitude": -77.1772604,
+            "job_benefits": null,
+            "job_google_link": "https://www.google.com/search?q=jobs&gl=us&hl=en&udm=8#vhid=vt%3D20/docid%3DFghza0delLiGZAgvAAAAAA%3D%3D&vssid=jobs-detail-viewer",
+            "job_salary": null,
+            "job_min_salary": null,
+            "job_max_salary": null,
+            "job_salary_period": null,
+            "job_highlights": {
+                "Qualifications": [
+                    "Who Should Apply Recent Computer science/Engineering /Mathematics/Statistics or Science Graduates or People looking to switch careers or who have had gaps in employment and looking to make their careers in the Tech Industry",
+                    "For data Science/Machine learning Positions",
+                    "Bachelors degree or Masters degree in Computer Science, Computer Engineering, Electrical Engineering, Information Systems, IT",
+                    "Project work on the technologies needed",
+                    "Highly motivated, self-learner, and technically inquisitive",
+                    "Experience in programming language Java and understanding of the software development life cycle",
+                    "Knowledge of Statistics, Gen AI, LLM, Python, Computer Vision, data visualization tools",
+                    "Excellent written and verbal communication skills",
+                    "REQUIRED SKILLS For Java /Full stack/Software Positions",
+                    "Bachelors degree or Masters degree in Computer Science, Computer Engineering, Electrical Engineering, Information Systems, IT",
+                    "Highly motivated, self-learner, and technically inquisitive",
+                    "Experience in programming language Java and understanding of the software development life cycle",
+                    "Project work on the skills",
+                    "Knowledge of Core Java , javascript , C++ or software programming",
+                    "Spring boot, Microservices, Docker, Jenkins, Github, Kubernates and REST API's experience",
+                    "Excellent written and verbal communication skills"
+                ],
+                "Benefits": [
+                    "In this Job market also, our candidates are able to achieve multiple job offers and $100k + salaries"
+                ]
+            },
+            "job_onet_soc": "15111100",
+            "job_onet_job_zone": "5"
+        },
+
+
+
+
+
+
+
+
+
+
+        {
+            "job_id": "bmfmD-CQVGXfCLnDAAAAAA==",
+            "job_title": "Manager II, Machine Learning Engineering, Monetization",
+            "employer_name": "TieTalent",
+            "employer_logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRFBa5_KIk0pBYIlv_Raelm8bt-Fu47LFOGlMv&s=0",
+            "employer_website": "https://tietalent.com",
+            "job_publisher": "LinkedIn",
+            "job_employment_type": "Full-time",
+            "job_employment_types": [
+                "FULLTIME"
+            ],
+            "job_apply_link": "https://www.linkedin.com/jobs/view/manager-ii-machine-learning-engineering-monetization-at-tietalent-4259228163?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic",
+            "job_apply_is_direct": false,
+            "apply_options": [
+                {
+                    "publisher": "LinkedIn",
+                    "apply_link": "https://www.linkedin.com/jobs/view/manager-ii-machine-learning-engineering-monetization-at-tietalent-4259228163?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic",
+                    "is_direct": false
+                },
+                {
+                    "publisher": "Recruiter Jobs",
+                    "apply_link": "https://jobs.recruiter.com/jobs/20367495241-manager-ii-machine-learning-engineering-monetization?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic",
+                    "is_direct": false
+                }
+            ],
+            "job_description": "About\n\nAbout Pinterest:\n\nMillions of people around the world come to our platform to find creative ideas, dream about new possibilities and plan for memories that will last a lifetime. At Pinterest, we're on a mission to bring everyone the inspiration to create a life they love, and that starts with the people behind the product.\n\nDiscover a career where you ignite innovation for millions, transform passion into growth opportunities, celebrate each other's unique experiences and embrace theflexibility to do your best work. Creating a career you love? It's Possible. Pinterest is one of the fastest growing online ad platforms, and our success depends on mining rich user interest data that helps us connect users with highly relevant advertisers / products. We're looking for an Engineering Manager with experience in machine learning, data mining, recommender systems to lead a team that develop and execute a vision for the evolution of the machine learning technology stack for ads lightweight ranking models, ads retrieval candidate generation models, and/or ads engagement models.\n\nIn this role, you will be leading a world-class ML team on tackling new challenges, such as sequential recommenders for modeling user's shopping journey, dedicated candidate generator to optimize for ads conversions, exploring model architectures beyond the traditional two-tower structure, etc., and leveraging LLMs to enhance our recommendation systems. As well as large CTR / conversion models, user sequence modeling, representation learning embeddings, new ads engagement objective modeling, GPU based retrieval, and many more to advance the ML models that power the ads engagement and delivery that bring together pinners and partners in this unique marketplace.\n\nWhat You'll Do\n\nManage and grow the engineering team, providing technical vision and long-term roadmap development.\n\nDesign and build large-scale ML models to improve ads engagement prediction, ads retrieval and ranking efficiency & performance,\n\nEffectively collaborate and partner with several cross functional teams to build the next generation of lightweight ranking and engagement models, and/or ads retrieval candidate generation models, especially those related to conversion optimization.\n\nEnable teams to do cross functional work with engineers from ranking/retrieval and ML infra teams.\n\nStay informed of emerging ML research and industry trends, identify relevant techniques, and inspire the team in evaluating and incorporating these approaches.\n\nRecruit, mentor, and retain top ML talent, fostering a culture of growth, collaboration, and technical excellence.\n\nWhat We're Looking For\n\nM.S. or Ph.D. in Computer Science, Machine Learning, or a related field.\n\n6+ years of industry experience in building production machine learning systems at scale, data mining, search, recommendations, with related background in recommender systems, ranking/retrieval or representation learning domains\n\n1-2 years of experience managing engineering teams as a TLM or EM cross-functional collaborator and strong communicator\n\nHands-on experience with large-scale online ranking/recommendation systems.\n\nAds domain experience is a plus.\n\nRelocation Statement:\n\nThis position is not eligible for relocation assistance. Visit our PinFlex page to learn more about our working model.\n\nIn-Office Requirement Statement\n\nWe let the type of work you do guide the collaboration style. That means we're not always working in an office, but we continue to gather for key moments of collaboration and connection.\n\nThis role will need to be in the office for in-person collaboration once a week and therefore needs to be in a commutable distance from one of the following offices: San Francisco / Palo Alto / Seattle.\n\nAt Pinterest we believe the workplace should be equitable, inclusive, and inspiring for every employee. In an effort to provide greater transparency, we are sharing the base salary range for this position. The position is also eligible for equity. Final salary is based on a number of factors including location, travel, relevant prior experience, or particular skills and expertise.\n\nInformation regarding the culture at Pinterest and benefits available for this position can be found here. US based applicants only\n\n$208,145\n\n—\n\n$364,254 USD\n\nOur Commitment To Inclusion\n\nPinterest is an equal opportunity employer and makes employment decisions on the basis of merit. We want to have the best qualified people in every job. All qualified applicants will receive consideration for employment without regard to race, color, ancestry, national origin, religion or religious creed, sex (including pregnancy, childbirth, or related medical conditions), sexual orientation, gender, gender identity, gender expression, age, marital status, status as a protected veteran, physical or mental disability, medical condition, genetic information or characteristics (or those of a family member) or any other consideration made unlawful by applicable federal, state or local laws. We also consider qualified applicants regardless of criminal histories, consistent with legal requirements. If you require a medical or religious accommodation during the job application process, please completethis formfor support.\n\n#J-18808-Ljbffr\n\nNice-to-have skills\n• Machine Learning\n• Data Mining\n• District of Columbia, United States\n\nWork experience\n• Machine Learning\n• NLP\n• Software Architect\n\nLanguages\n• English",
+            "job_is_remote": false,
+            "job_posted_at": "16 days ago",
+            "job_posted_at_timestamp": 1751241600,
+            "job_posted_at_datetime_utc": "2025-06-30T00:00:00.000Z",
+            "job_location": "Washington, DC",
+            "job_city": "Washington",
+            "job_state": "District of Columbia",
+            "job_country": "US",
+            "job_latitude": 38.9071923,
+            "job_longitude": -77.0368707,
+            "job_benefits": null,
+            "job_google_link": "https://www.google.com/search?q=jobs&gl=us&hl=en&udm=8#vhid=vt%3D20/docid%3DbmfmD-CQVGXfCLnDAAAAAA%3D%3D&vssid=jobs-detail-viewer",
+            "job_salary": null,
+            "job_min_salary": null,
+            "job_max_salary": null,
+            "job_salary_period": null,
+            "job_highlights": {
+                "Qualifications": [
+                    "M.S. or Ph.D. in Computer Science, Machine Learning, or a related field",
+                    "6+ years of industry experience in building production machine learning systems at scale, data mining, search, recommendations, with related background in recommender systems, ranking/retrieval or representation learning domains",
+                    "1-2 years of experience managing engineering teams as a TLM or EM cross-functional collaborator and strong communicator",
+                    "Hands-on experience with large-scale online ranking/recommendation systems",
+                    "Machine Learning",
+                    "Data Mining",
+                    "District of Columbia, United States",
+                    "Machine Learning",
+                    "NLP",
+                    "Software Architect",
+                    "English"
+                ],
+                "Benefits": [
+                    "In an effort to provide greater transparency, we are sharing the base salary range for this position",
+                    "The position is also eligible for equity",
+                    "Final salary is based on a number of factors including location, travel, relevant prior experience, or particular skills and expertise",
+                    "$364,254 USD"
+                ],
+                "Responsibilities": [
+                    "In this role, you will be leading a world-class ML team on tackling new challenges, such as sequential recommenders for modeling user's shopping journey, dedicated candidate generator to optimize for ads conversions, exploring model architectures beyond the traditional two-tower structure, etc., and leveraging LLMs to enhance our recommendation systems",
+                    "Manage and grow the engineering team, providing technical vision and long-term roadmap development",
+                    "Design and build large-scale ML models to improve ads engagement prediction, ads retrieval and ranking efficiency & performance,",
+                    "Effectively collaborate and partner with several cross functional teams to build the next generation of lightweight ranking and engagement models, and/or ads retrieval candidate generation models, especially those related to conversion optimization",
+                    "Enable teams to do cross functional work with engineers from ranking/retrieval and ML infra teams",
+                    "Stay informed of emerging ML research and industry trends, identify relevant techniques, and inspire the team in evaluating and incorporating these approaches",
+                    "Recruit, mentor, and retain top ML talent, fostering a culture of growth, collaboration, and technical excellence",
+                    "That means we're not always working in an office, but we continue to gather for key moments of collaboration and connection",
+                    "This role will need to be in the office for in-person collaboration once a week and therefore needs to be in a commutable distance from one of the following offices: San Francisco / Palo Alto / Seattle"
+                ]
+            },
+            "job_onet_soc": "15111100",
+            "job_onet_job_zone": "5"
+        },
+
+
+
+
+
+
+
+
+
+
+
+
+        
+        {
+            "job_id": "F2Yva8qD1SJlWF3vAAAAAA==",
+            "job_title": "Machine Learning Engineer",
+            "employer_name": "WILLIAM C BROWN INC (WCBinc)",
+            "employer_logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSouxsxFE53VaI7sbIyazR1X_Ii8vytez7cBvLY&s=0",
+            "employer_website": null,
+            "job_publisher": "Glassdoor",
+            "job_employment_type": "Full-time",
+            "job_employment_types": [
+                "FULLTIME"
+            ],
+            "job_apply_link": "https://www.glassdoor.com/job-listing/machine-learning-engineer-william-c-brown-inc-wcbinc-JV_IC1130409_KO0,25_KE26,52.htm?jl=1009412428316&utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic",
+            "job_apply_is_direct": true,
+            "apply_options": [
+                {
+                    "publisher": "Glassdoor",
+                    "apply_link": "https://www.glassdoor.com/job-listing/machine-learning-engineer-william-c-brown-inc-wcbinc-JV_IC1130409_KO0,25_KE26,52.htm?jl=1009412428316&utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic",
+                    "is_direct": true
+                },
+                {
+                    "publisher": "Teal",
+                    "apply_link": "https://www.tealhq.com/job/machine-learning-engineer_f6dc73cc-6b3d-4ff0-91ee-84cb8272c901?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic",
+                    "is_direct": false
+                },
+                {
+                    "publisher": "Ladders",
+                    "apply_link": "https://www.theladders.com/job-listing/machine-learning-engineer-william-c-brown-inc-springfield-va-_v2_-7-965892647.html?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic",
+                    "is_direct": false
+                },
+                {
+                    "publisher": "Karkidi",
+                    "apply_link": "https://www.karkidi.com/job-details/75978-machine-learning-engineer-job?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic",
+                    "is_direct": false
+                },
+                {
+                    "publisher": "Jobcase",
+                    "apply_link": "https://www.jobcase.com/jobs/view/n/U-120468887023?jlsrc=3&utm_term=Machine+Learning+Engineer&utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic",
+                    "is_direct": false
+                }
+            ],
+            "job_description": "WCBinc is looking for a Machine Learning Engineer to join our team to support our customer's. Here, you'll tailor cutting-edge solutions to the unique requirements of our clients. With a career in application development, you'll make the end user's experience your priority and we'll make your career growth ours. As a Machine Learning Engineer you will help ensure today is safe and tomorrow is smarter. Our work depends on TS/SCI cleared Machine Learning Engineer joining our team to support our intelligence customer in Springfield, VA.\n\nHOW A MACHINE LEARNING ENGINEER WILL MAKE AN IMPACT:\n\nOwn your opportunity to serve as a critical component of our nation's safety and security. Make an impact by using your expertise to protect our country from threats.\n\nJob Description\n• Rapidly prototype containerized multimodal deep learning solutions and associated data pipelines to enable GeoAI capabilities for improving analytic workflows and addressing key intelligence questions. You will be at the cutting edge of implementing State-of-the-Art (SOTA) Computer Vision (CV) and Vision Language Models (VLM) for conducting image retrieval, segmentation tasks, AI-assisted labeling, object detection, and visual question answering using geospatial datasets such as satellite and aerial imagery, full-motion video (FMV), ground photos, and OpenStreetMap.",
+            "job_is_remote": false,
+            "job_posted_at": "20 days ago",
+            "job_posted_at_timestamp": 1750896000,
+            "job_posted_at_datetime_utc": "2025-06-26T00:00:00.000Z",
+            "job_location": "Springfield, VA",
+            "job_city": "Springfield",
+            "job_state": "Virginia",
+            "job_country": "US",
+            "job_latitude": 38.7892801,
+            "job_longitude": -77.18720359999999,
+            "job_benefits": null,
+            "job_google_link": "https://www.google.com/search?q=jobs&gl=us&hl=en&udm=8#vhid=vt%3D20/docid%3DF2Yva8qD1SJlWF3vAAAAAA%3D%3D&vssid=jobs-detail-viewer",
+            "job_salary": null,
+            "job_min_salary": null,
+            "job_max_salary": null,
+            "job_salary_period": null,
+            "job_highlights": {
+                "Responsibilities": [
+                    "Rapidly prototype containerized multimodal deep learning solutions and associated data pipelines to enable GeoAI capabilities for improving analytic workflows and addressing key intelligence questions",
+                    "You will be at the cutting edge of implementing State-of-the-Art (SOTA) Computer Vision (CV) and Vision Language Models (VLM) for conducting image retrieval, segmentation tasks, AI-assisted labeling, object detection, and visual question answering using geospatial datasets such as satellite and aerial imagery, full-motion video (FMV), ground photos, and OpenStreetMap"
+                ]
+            },
+            "job_onet_soc": "15111100",
+            "job_onet_job_zone": "5"
+        }
+    ]
+}
