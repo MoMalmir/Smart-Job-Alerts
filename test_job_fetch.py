@@ -1,6 +1,12 @@
-from job_tracker import load_seen_jobs, save_seen_jobs, is_new_job
+#from job_tracker import load_seen_jobs, save_seen_jobs, is_new_job
 import json
-import requests
+#import requests
+from job_matcher import match_job_to_resume
+from utils import extract_text_from_pdf
+from email_utils import send_job_matches_email
+from job_tracker import load_seen_jobs, save_seen_jobs, is_new_job
+
+import os
 
 # url = "https://jsearch.p.rapidapi.com/search"
 
@@ -42,11 +48,13 @@ import requests
 
 
 
-# lets open the file kobs.json and read the the jobs from it and store it in a variable called extracted_jobs
+# --- Load test jobs from jobs.json ---
 with open("jobs.json", 'r', encoding='utf-8') as f:
     extracted_jobs = json.load(f)
 
-
+# --- Extract and score a specific job ---
+example = 4
+job = extracted_jobs["data"][example]
 
 def get_full_description(job):
     desc = job.get("job_description", "")
@@ -55,29 +63,41 @@ def get_full_description(job):
     responsibilities = " ".join(highlights.get("Responsibilities", []))
     return f"{desc}\nQualifications: {qualifications}\nResponsibilities: {responsibilities}"
 
+job_desc = get_full_description(job)
 
-example = 4
-job_desc = get_full_description(extracted_jobs["data"][example])
+print("Job Description:\n", job_desc)
 
-print("Job Description:", job_desc)
-
-
-# now let try out the similaritey function 
-from job_matcher import match_job_to_resume
-from utils import extract_text_from_pdf
-
-
+# --- Load and parse resume ---
 resume_pdf_path = "resume.pdf"
 resume_text = extract_text_from_pdf(resume_pdf_path)
-print("\n\n\n\n\n\n\n Resume Text:", resume_text)
+print("\nParsed Resume Text:\n", resume_text[:500])  # Just show first 500 chars
 
+# --- Check similarity score ---
+SIMILARITY_THRESHOLD = 0.3
+sender_email = os.environ["EMAIL_USERNAME"]
+sender_password = os.environ["EMAIL_PASSWORD"]
 
+score = match_job_to_resume(job_desc, resume_text, SIMILARITY_THRESHOLD)
+print("\nSimilarity Score:", score)
 
-score = match_job_to_resume(resume_text, job_desc)
-print ("\n\n\n\n The score is:", score)
+# --- Create mock match if relevant ---
+if score["match"]:
+    matched_jobs = [{
+        "job_keyword": "test-email",  # You can replace this with a real keyword if needed
+        "title": job["job_title"],
+        "employer": job["employer_name"],
+        "url": job["job_apply_link"],
+        "reason": score["reason"],
+    }]
 
-from job_summary import generate_summary
+    # --- Send email with matched job ---
+    send_job_matches_email(
+        sender_email=sender_email,
+        sender_password=sender_password,
+        receiver_email="malmir.edumail@gmail.com",
+        job_matches=matched_jobs
+    )
+    print("\n Email sent successfully!")
 
-summary = generate_summary(job_desc, resume_text)
-
-print(f"Summary: {summary}")
+else:
+    print("\n No match found — email not sent.")

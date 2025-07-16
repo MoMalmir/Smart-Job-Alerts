@@ -10,6 +10,8 @@ from utils import extract_text_from_pdf
 from email_utils import send_job_matches_email
 
 
+SIMILARITY_THRESHOLD = 0.3
+
 # Load environment variables from Codespaces secrets or .env
 load_dotenv()
 
@@ -78,7 +80,7 @@ for keyword in keywords:
         job_id = job["job_id"]
         if is_new_job(job_id, seen):
             job_desc = get_full_description(job)
-            result = match_job_to_resume(job_desc, resume_text)
+            result = match_job_to_resume(job_desc, resume_text, SIMILARITY_THRESHOLD)
             if result["match"]:
                 matched_jobs.append({
                 "job_keyword" : keyword,
