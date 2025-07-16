@@ -47,13 +47,17 @@ with open("jobs.json", 'r', encoding='utf-8') as f:
     extracted_jobs = json.load(f)
 
 
+
+def get_full_description(job):
+    desc = job.get("job_description", "")
+    highlights = job.get("job_highlights", {})
+    qualifications = " ".join(highlights.get("Qualifications", []))
+    responsibilities = " ".join(highlights.get("Responsibilities", []))
+    return f"{desc}\nQualifications: {qualifications}\nResponsibilities: {responsibilities}"
+
+
 example = 4
-# Print the first job title from the extracted jobs
-print(extracted_jobs["data"][example]["job_title"]) if extracted_jobs else print("No jobs found in the file.")
-
-# lets grap the first job "discription" and "Qualifications" and "Responsibilities" from the "job_highlights" section
-
-job_discription = extracted_jobs["data"][example]["job_description"] + "".join(extracted_jobs["data"][example]["job_highlights"]["Qualifications"]) + "".join(extracted_jobs["data"][example]["job_highlights"]["Responsibilities"])
+job_discription = get_full_description(extracted_jobs["data"][example])
 
 print("Job Description:", job_discription)
 

@@ -1,12 +1,11 @@
 blocked_employers:
-  - TieTalent
-  - Insight Global
-  - Robert Half
-  - CyberCoders
-  - TCS
-  - Cognizant
-  - TEKsystems
-  - Modis
-  - Experis
-  - Accenture
- 
+- Accenture
+- Cognizant
+- CyberCoders
+- Experis
+- Insight Global
+- Modis
+- Robert Half
+- TCS
+- TEKsystems
+- TieTalent
