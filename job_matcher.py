@@ -1,6 +1,6 @@
 from semantic_matcher import compute_similarity
 
-SIMILARITY_THRESHOLD = 0.3  # You can tune this later
+SIMILARITY_THRESHOLD = 0.4  # You can tune this later
 
 def match_job_to_resume(job_description: str, resume_text: str) -> dict:
     score = compute_similarity(resume_text, job_description)

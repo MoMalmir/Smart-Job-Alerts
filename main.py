@@ -6,7 +6,7 @@ from job_tracker import load_seen_jobs, save_seen_jobs, is_new_job
 from job_fetcher import fetch_jobs
 from job_matcher import match_job_to_resume
 from utils import extract_text_from_pdf
-from job_summary import generate_summary
+#from job_summary import generate_summary
 
 # Load environment variables from Codespaces secrets or .env
 load_dotenv()
@@ -77,8 +77,8 @@ for keyword in keywords:
                 print(f"job_id: {job_id}")
                 print(f"URL: {job['job_apply_link']}")
                 print(f"job_description: {job_desc}")
-                summary = generate_summary(job_desc, resume_text)
-                print(f"Summary: {summary}")
+                #summary = generate_summary(job_desc, resume_text)
+                #print(f"Summary: {summary}")
                 print("=" * 60)
             new_seen.add(job_id)
 

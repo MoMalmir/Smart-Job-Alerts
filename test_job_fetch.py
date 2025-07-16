@@ -57,9 +57,9 @@ def get_full_description(job):
 
 
 example = 4
-job_discription = get_full_description(extracted_jobs["data"][example])
+job_desc = get_full_description(extracted_jobs["data"][example])
 
-print("Job Description:", job_discription)
+print("Job Description:", job_desc)
 
 
 # now let try out the similaritey function 
@@ -73,5 +73,11 @@ print("\n\n\n\n\n\n\n Resume Text:", resume_text)
 
 
 
-score = match_job_to_resume(resume_text, job_discription)
+score = match_job_to_resume(resume_text, job_desc)
 print ("\n\n\n\n The score is:", score)
+
+from job_summary import generate_summary
+
+summary = generate_summary(job_desc, resume_text)
+
+print(f"Summary: {summary}")
