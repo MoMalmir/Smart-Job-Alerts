@@ -211,8 +211,7 @@ __marimo__/
 
 
 
-.sandbox/
-__dev__
+
 .env
 seen_jobs.json
 blocked_employers.yaml
