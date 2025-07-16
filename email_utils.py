@@ -4,7 +4,7 @@ from email.mime.multipart import MIMEMultipart
 
 def send_job_matches_email(sender_email, sender_password, receiver_email, job_matches, keyword):
     message = MIMEMultipart("alternative")
-    message["Subject"] = "Your Daily Matched Job Postings for : {keyword}"
+    message["Subject"] = f"Your Daily Matched Job Postings for : {keyword}"
     message["From"] = sender_email
     message["To"] = receiver_email
 
