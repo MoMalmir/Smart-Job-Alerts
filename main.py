@@ -1,3 +1,4 @@
+
 import yaml
 import os
 from pathlib import Path
@@ -9,15 +10,13 @@ from utils import extract_text_from_pdf
 #from job_summary import generate_summary
 from email_utils import send_job_matches_email
 
+# Ensure the required environment variables are set
+# Uncomment the line below if using a .env file instead of Codespaces secrets
+# load_dotenv()
 
-Similarity_Threshold = 0.2
-
-# Load environment variables from Codespaces secrets or .env
-load_dotenv()
-
+# Get environment variables
 RAPIDAPI_KEY = os.getenv("RAPIDAPI_KEY")
 RAPIDAPI_HOST = os.getenv("RAPIDAPI_HOST")
-
 sender_email = os.environ["EMAIL_USERNAME"]
 sender_password = os.environ["EMAIL_PASSWORD"]
 
@@ -34,6 +33,9 @@ location = config["location"]
 remote = config["remote_only"]
 date_posted = config["date_posted"]
 num_pages = config["num_pages"]
+Similarity_Threshold = config["Similarity_Threshold"]
+receiver_email = config["receiver_email"]
+
 
 # Load blocked employers
 blocklist_path = Path("blocked_employers.yaml")
@@ -46,7 +48,7 @@ else:
 # Load resume
 resume_pdf_path = "resume.pdf"
 resume_text = extract_text_from_pdf(resume_pdf_path)
-print (f"resume_text: {resume_text}")  # Print first 100 characters for debugging
+print (f"resume_text: {resume_text}")  
 # Load seen jobs
 seen = load_seen_jobs()
 new_seen = set(seen)
@@ -66,10 +68,11 @@ for keyword in keywords:
     jobs = fetch_jobs(RAPIDAPI_KEY, RAPIDAPI_HOST, keyword, location, remote, date_posted, num_pages)
     print(len(jobs), "jobs found")
 
-    for job in jobs:
+    # Collect matched jobs
+    matched_jobs = []
 
-        # Collect matched jobs
-        matched_jobs = []
+    for job in jobs:
+        
         employer = job["employer_name"].strip()
 
         # Skip blocked employers
@@ -97,18 +100,17 @@ for keyword in keywords:
                 print(f"job_id: {job_id}")
                 print(f"URL: {job['job_apply_link']}")
                 print(f"job_description: {job_desc}")
-                
                 print("=" * 60)
+
             new_seen.add(job_id)
     # Send the email
     if matched_jobs:
         send_job_matches_email(
             sender_email=sender_email,
             sender_password=sender_password,
-            receiver_email="malmir.edumail@gmail.com",
+            receiver_email=receiver_email,
             job_matches=matched_jobs,
-            keyword=keyword
-
+            keyword=keyword,
         )
         print("\n Email sent successfully!")
 

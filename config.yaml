@@ -6,6 +6,9 @@ job_keywords:
 
 location: "United States"
 remote_only: false
-date_posted: "7 days"
+date_posted: "week"
 num_pages: 1
 
+
+Similarity_Threshold: 0.3
+receiver_email: "malmir.edumail@gmail.com

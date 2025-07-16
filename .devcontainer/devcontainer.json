@@ -18,7 +18,8 @@
 				"ms-toolsai.jupyter",
 				"ms-azuretools.vscode-docker",
 				"GitHub.copilot",
-				"ms-vscode.makefile-tools"
+				"ms-vscode.makefile-tools",
+				"github.vscode-github-actions"
 			]
   		}
 	}
