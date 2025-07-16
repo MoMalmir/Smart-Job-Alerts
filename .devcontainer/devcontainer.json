@@ -8,7 +8,7 @@
 	},
 
 	
-	"postCreateCommand": "make install && source .venv/bin/activate && echo 'source .venv/bin/activate' >> ~/.bashrc",
+	"postCreateCommand": "make install && echo 'source .venv/bin/activate' >> ~/.zshrc",
 
 	// Configure tool-specific properties.
 	"customizations": {
