@@ -7,12 +7,18 @@ from job_fetcher import fetch_jobs
 from job_matcher import match_job_to_resume
 from utils import extract_text_from_pdf
 #from job_summary import generate_summary
+from email_utils import send_job_matches_email
+
 
 # Load environment variables from Codespaces secrets or .env
 load_dotenv()
 
 RAPIDAPI_KEY = os.getenv("RAPIDAPI_KEY")
 RAPIDAPI_HOST = os.getenv("RAPIDAPI_HOST")
+
+sender_email = os.environ["EMAIL_USERNAME"]
+sender_password = os.environ["EMAIL_PASSWORD"]
+
 
 if not RAPIDAPI_KEY or not RAPIDAPI_HOST:
     raise EnvironmentError("Missing RAPIDAPI_KEY or RAPIDAPI_HOST. Set them in Codespaces secrets or .env")
@@ -59,6 +65,9 @@ for keyword in keywords:
     print(len(jobs), "jobs found")
 
     for job in jobs:
+
+        # Collect matched jobs
+        matched_jobs = []
         employer = job["employer_name"].strip()
 
         # Skip blocked employers
@@ -71,6 +80,15 @@ for keyword in keywords:
             job_desc = get_full_description(job)
             result = match_job_to_resume(job_desc, resume_text)
             if result["match"]:
+                matched_jobs.append({
+                "job_keyword" : keyword,
+                "title": job['title'],
+                "employer": job['employer_name'],
+                "url": job['url'],
+                "reason": result['reason'],
+                })
+
+
                 print(f"\n MATCH: {job['job_title']}")
                 print(f"employer: {employer}")
                 print(f"Reason: {result['reason']}")
@@ -86,3 +104,12 @@ for keyword in keywords:
 save_seen_jobs(new_seen)
 
 
+
+# Send the email
+if matched_jobs:
+    send_job_matches_email(
+        sender_email=sender_email,
+        sender_password=sender_password,
+        receiver_email="malmir.edumail@gmail.com",
+        job_matches=matched_jobs
+    )
