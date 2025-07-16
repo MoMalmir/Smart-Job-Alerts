@@ -18,16 +18,20 @@ headers = {
 
 response = requests.get(url, headers=headers, params=querystring)
 
-seen = load_seen_jobs()
-new_seen = set(seen)
+# seen = load_seen_jobs()
+# new_seen = set(seen)
 
 
-for job in response.json()["data"][:10]:  # check top 10 jobs
-    url = job["job_apply_link"]
-    if is_new_job(url, seen):
-        print(f"NEW MATCH! {job['job_title']} at {job['employer_name']}")
-        print(f"URL: {url}")
-        print("=" * 50)
-        new_seen.add(url)
+# for job in response.json()["data"][:10]:  # check top 10 jobs
+#     url = job["job_apply_link"]
+#     if is_new_job(url, seen):
+#         print(f"NEW MATCH! {job['job_title']} at {job['employer_name']}")
+#         print(f"URL: {url}")
+#         print("=" * 50)
+#         new_seen.add(url)
 
-save_seen_jobs(new_seen)
+# save_seen_jobs(new_seen)
+
+
+# I want to save this jobs to a file called "jobs.json"
+jobs = response.json()["data"]

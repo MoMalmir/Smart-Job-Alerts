@@ -2,6 +2,9 @@ pylint
 pytest
 black
 
+ipython
+python-dotenv
+pyyaml
 pdfplumber
 sentence-transformers
 scikit-learn
