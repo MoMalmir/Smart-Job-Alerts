@@ -1,7 +1,6 @@
 job_keywords:
   - "machine learning engineer"
-  - "AI engineer"
-  - "data scientist"
+  
   
 
 location: "United States"
@@ -12,3 +11,7 @@ num_pages: 1
 
 Similarity_Threshold: 0.3
 receiver_email: "malmir.edumail@gmail.com"
+
+
+# - "AI engineer"
+# - "data scientist"
