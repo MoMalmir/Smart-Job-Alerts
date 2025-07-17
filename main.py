@@ -10,19 +10,18 @@ from app.email_utils import send_job_matches_email
 
 # Ensure the required environment variables are set
 # Uncomment the line below if using a .env file instead of Codespaces secrets
-# load_dotenv()
+load_dotenv()
 
 # Get environment variables
 RAPIDAPI_KEY = os.getenv("RAPIDAPI_KEY")
 RAPIDAPI_HOST = os.getenv("RAPIDAPI_HOST")
-sender_email = os.environ["EMAIL_USERNAME"]
-sender_password = os.environ["EMAIL_PASSWORD"]
+sender_email = os.getenv["EMAIL_USERNAME"]
+sender_password = os.getenv["EMAIL_PASSWORD"]
 
 
-if not RAPIDAPI_KEY or not RAPIDAPI_HOST:
-    raise EnvironmentError(
-        "Missing RAPIDAPI_KEY or RAPIDAPI_HOST. Set them in Codespaces secrets or .env"
-    )
+if not all([RAPIDAPI_KEY, RAPIDAPI_HOST, sender_email, sender_password]):
+    raise EnvironmentError("Missing one or more required environment variables.")
+
 
 # Load config
 with open("config.yaml", "r") as f:
@@ -46,7 +45,7 @@ else:
     blocked_employers = set()
 
 # Load resume
-resume_pdf_path = "resume.pdf"
+resume_pdf_path = "data/resume.pdf"
 resume_text = extract_text_from_pdf(resume_pdf_path)
 print(f"resume_text: {resume_text}")
 # Load seen jobs
