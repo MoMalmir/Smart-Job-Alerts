@@ -113,6 +113,10 @@ You also need:
    cd Smart-Job-Alerts
 
 
-Ready to automate your job hunt? 🚀
+2. **Set Up Files**
+```bash
+cp .env.example .env
+cp data/seen_jobs_example.json data/seen_jobs.json
+cp data/blocked_employers_example.yaml data/blocked_employers.yaml
 
 
