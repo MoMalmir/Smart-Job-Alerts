@@ -115,9 +115,9 @@ You also need:
 
 2. **Set Up Files**
   ```bash
-  cp .env.example .env
-  cp data/seen_jobs_example.json data/seen_jobs.json
-  cp data/blocked_employers_example.yaml data/blocked_employers.yaml
+    cp .env.example .env
+    cp data/seen_jobs_example.json data/seen_jobs.json
+    cp data/blocked_employers_example.yaml data/blocked_employers.yaml
   ```
 
 - Replace `data/resume_example.pdf` with your actual `resume.pdf`
