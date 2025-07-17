@@ -1,7 +1,7 @@
 import json
 from pathlib import Path
 
-SEEN_JOBS_FILE = "seen_jobs.json"
+SEEN_JOBS_FILE = "data/seen_jobs.json"
 
 
 def load_seen_jobs():

@@ -2,7 +2,7 @@ import yaml
 from pathlib import Path
 import click
 
-BLOCKLIST_FILE = Path("blocked_employers.yaml")
+BLOCKLIST_FILE = Path("data/blocked_employers.yaml")
 
 
 def load_blocklist(filepath=BLOCKLIST_FILE):

@@ -38,7 +38,7 @@ receiver_email = config["receiver_email"]
 
 
 # Load blocked employers
-blocklist_path = Path("blocked_employers.yaml")
+blocklist_path = Path("data/blocked_employers.yaml")
 if blocklist_path.exists():
     with open(blocklist_path, "r") as f:
         blocked_employers = set(yaml.safe_load(f).get("blocked_employers", []))
