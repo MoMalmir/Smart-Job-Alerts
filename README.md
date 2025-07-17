@@ -114,6 +114,7 @@ You also need:
 
 
 2. **Set Up Files**
+
   ```bash
     cp .env.example .env
     cp data/seen_jobs_example.json data/seen_jobs.json
