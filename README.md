@@ -1,6 +1,4 @@
-# Smart-Job-Alerts
-
- # 📬 Smart Job Alerts
+# 📬 Smart Job Alerts
 
 Automatically find and receive job alerts tailored to your resume and job preferences. This app scans job postings, compares them to your resume using an LLM (via OpenRouter), and emails you top matches with a match score and explanation.
 
