@@ -170,20 +170,17 @@ Once your setup is complete, go to:
 
 3. **Run the container**:
    ```bash
-  docker run \
-  --env-file .env \
-  -v $(pwd)/data:/app/data \
-  mossmalmir/smart-job-alerts
-
-
-
+   docker run \
+   --env-file .env \
+   -v $(pwd)/data:/app/data \
+   mossmalmir/smart-job-alerts
+  
 
 5. **(Optional) Edit configs inside the container**:
-
-```bash
-docker exec -it <container_id> bash
-nano config.yaml   # or use vi
-python main.py
+   ```bash
+   docker exec -it <container_id> bash
+   nano config.yaml   # or use vi
+   python main.py
 
 
 ---
@@ -215,3 +212,8 @@ MIT
 ## 🙋 Questions?
 
 Open an issue or contact the repo owner for help.
+
+📧 Email: [ms.malmir@gmail.com](mailto:ms.malmir@gmail.com)  
+🔗 GitHub: [github.com/msmalmir](https://github.com/msmalmir)
+🔗 LinkedIn: [https://www.linkedin.com/in/mostafa-malmir/](https://www.linkedin.com/in/mostafa-malmir/)
+
