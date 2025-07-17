@@ -115,7 +115,7 @@ You also need:
    
 
 
-3. **Set Up Files**
+2. **Set Up Files**
      ```bash
     cp .env.example .env
     cp data/seen_jobs_example.json data/seen_jobs.json
@@ -129,14 +129,15 @@ You also need:
 
 
 3. **Create GitHub Secrets**
-Go to your repo → Settings → Secrets → Actions and add:
+Go to your repo → **Settings** → **Secrets** → **Actions** and add:
+- EMAIL_USERNAME
+- EMAIL_PASSWORD
+- RAPIDAPI_KEY
+- RAPIDAPI_HOST
+- OPENROUTER_API_KEY
 
-EMAIL_USERNAME
 
-EMAIL_PASSWORD
 
-RAPIDAPI_KEY
 
-RAPIDAPI_HOST
 
-OPENROUTER_API_KEY
+
