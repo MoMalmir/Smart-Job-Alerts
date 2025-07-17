@@ -30,11 +30,16 @@ This app fetches job postings using JSearch, a powerful job listing API availabl
 
 ## 🎯 Goal
 
-Manually searching job boards is time-consuming. Smart Job Alerts automates this by:
+Manually searching through job boards is time-consuming and inefficient. 
+Even when using job alert features from platforms like LinkedIn or Indeed, results are often flooded with irrelevant listings — including posts from consulting firms, third-party recruiters, 
+or positions that don’t match your background. You still have to open each one manually to assess whether it's a real fit, which can be frustrating and overwhelming.
 
-- Fetching fresh job listings from the **JSearch API (via RapidAPI)**
-- Using your **resume** and a **prompt template** to assess relevance using **LLMs** (e.g., Moonshot/Kimi-K2 via OpenRouter)
-- Emailing you the top job matches with detailed feedback
+**Smart Job Alerts** automates this entire process by:
+- Fetching fresh job listings using the **JSearch API** (via RapidAPI)
+- Filtering out unwanted employers or jobs you’ve already seen
+- Evaluating relevance with your **resume** and a **custom prompt template**, scored using an LLM via OpenRouter (e.g., Moonshot, DeepSeek, or Kimi-K2)
+- Sending you only the top matches that exceed your configured score threshold
+- Including a short explanation for why each job was matched — giving you clarity and saving time
 
 ---
 
