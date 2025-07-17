@@ -194,12 +194,18 @@ You are a job-matching assistant. Given the resume below and a job description, 
 1. A match score between 0 and 1
 2. A 2–4 sentence explanation for the match
 
-
 Resume:
 {resume_text}
 
 Job Description:
 {job_desc}
+
+
+
+
+
+
+
 
 
 ---
