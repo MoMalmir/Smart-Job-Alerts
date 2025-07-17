@@ -4,7 +4,7 @@ from pathlib import Path
 from dotenv import load_dotenv
 from app.job_tracker import load_seen_jobs, save_seen_jobs, is_new_job
 from app.job_fetcher import fetch_jobs
-from app.job_matcher import match_job_to_resume
+from app.llm_matcher import query_openrouter_matcher
 from app.utils import extract_text_from_pdf
 from app.email_utils import send_job_matches_email
 
@@ -87,7 +87,8 @@ for keyword in keywords:
         job_id = job["job_id"]
         if is_new_job(job_id, seen):
             job_desc = get_full_description(job)
-            result = match_job_to_resume(job_desc, resume_text, Similarity_Threshold)
+            result = query_openrouter_matcher(job_desc, resume_text, Similarity_Threshold)
+
             if result["match"]:
                 matched_jobs.append(
                     {
@@ -96,6 +97,7 @@ for keyword in keywords:
                         "employer": job["employer_name"],
                         "url": job["job_apply_link"],
                         "reason": result["reason"],
+                        "score": result["score"],
                     }
                 )
 
