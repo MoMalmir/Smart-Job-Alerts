@@ -1,213 +1,107 @@
 # Smart-Job-Alerts
 
- 📬 Smart Job Alerts
+ # 📬 Smart Job Alerts
 
 Automatically find and receive job alerts tailored to your resume and job preferences. This app scans job postings, compares them to your resume using an LLM (via OpenRouter), and emails you top matches with a match score and explanation.
 
-🎯 Goal
+---
+
+## 📑 Table of Contents
+
+- [🎯 Goal](#-goal)
+- [🚀 Two Ways to Use This App](#-two-ways-to-use-this-app)
+- [🧠 How It Works](#-how-it-works)
+- [📦 Required Files & Configurations](#-required-files--configurations)
+- [📩 Step 1: Set Up API Access](#-step-1-set-up-api-access)
+- [⚙️ Option 1: GitHub Action Setup (Automatic Email Alerts)](#️-option-1-github-action-setup-automatic-email-alerts)
+- [🐳 Option 2: Run with Docker Locally (Manual Email Alerts)](#-option-2-run-with-docker-locally-manual-email-alerts)
+- [🛠 Example Prompt Template](#-example-prompt-template)
+- [🧪 Testing Locally](#-testing-locally)
+- [✉️ Example Alert Email](#️-example-alert-email)
+- [📜 License](#-license)
+- [🙋 Questions?](#-questions)
+
+---
+
+## 🎯 Goal
 
 Manually searching job boards is time-consuming. Smart Job Alerts automates this by:
 
-Fetching fresh job listings from the JSearch API (via RapidAPI)
+- Fetching fresh job listings from the **JSearch API (via RapidAPI)**
+- Using your **resume** and a **prompt template** to assess relevance using **LLMs** (e.g., Moonshot/Kimi-K2 via OpenRouter)
+- Emailing you the top job matches with detailed feedback
 
-Using your resume and a prompt template to assess relevance using LLMs (e.g., Moonshot/Kimi-K2 via OpenRouter)
+---
 
-Emailing you the top job matches with detailed feedback
+## 🚀 Two Ways to Use This App
 
-🚀 Two Ways to Use This App
-
-Option 1: Use GitHub Actions (Automatic Alerts)
+### Option 1: Use GitHub Actions (Automatic Alerts)
 
 Automatically run the job matching every day (or on schedule) using GitHub Actions.
 
-Option 2: Use Docker Locally (Manual Alerts)
+### Option 2: Use Docker Locally (Manual Alerts)
 
 Run the app manually using a Docker image. Recommended if you prefer CLI over GitHub automation.
 
-🧠 How It Works
+---
 
-You provide a resume (PDF) and a prompt template.
+## 🧠 How It Works
 
-Jobs are fetched from RapidAPI.
+1. You provide a **resume (PDF)** and a **prompt template**.
+2. Jobs are fetched from RapidAPI.
+3. For each job, the full job description + qualifications/responsibilities are passed to an LLM.
+4. The LLM scores each job and provides a justification.
+5. Matching jobs are emailed to you using Gmail SMTP.
 
-For each job, the full job description + qualifications/responsibilities are passed to an LLM.
+---
 
-The LLM scores each job and provides a justification.
-
-Matching jobs are emailed to you using Gmail SMTP.
-
-📦 Required Files & Configurations
+## 📦 Required Files & Configurations
 
 These files must exist before running the app:
 
-File
+| File                          | Description                                                                 |
+| ----------------------------- | --------------------------------------------------------------------------- |
+| `.env`                        | API keys and email credentials (based on `.env.example`)                    |
+| `data/resume.pdf`             | Your actual resume (PDF format)                                             |
+| `data/prompt_template.txt`    | LLM prompt template with placeholders like `{resume_text}` and `{job_desc}` |
+| `data/seen_jobs.json`         | Tracks which jobs you've already seen (starts as empty `[]`)                |
+| `data/blocked_employers.yaml` | Employers you want to skip (starts as `blocked_employers: []`)              |
+| `config.yaml`                 | Job search filters (keywords, location, email, thresholds, etc.)            |
 
-Description
+---
 
-.env
+## 📩 Step 1: Set Up API Access
 
-API keys and email credentials (based on .env.example)
+You need a **RapidAPI account** to fetch job data.
 
-data/resume.pdf
-
-Your actual resume (PDF format)
-
-data/prompt_template.txt
-
-LLM prompt template with placeholders like {resume_text} and {job_desc}
-
-data/seen_jobs.json
-
-Tracks which jobs you've already seen (starts as empty [])
-
-data/blocked_employers.yaml
-
-Employers you want to skip (starts as blocked_employers: [])
-
-config.yaml
-
-Job search filters (keywords, location, email, thresholds, etc.)
-
-📩 Step 1: Set Up API Access
-
-You need a RapidAPI account to fetch job data.
-
-Sign up at rapidapi.com
-
-Subscribe to the JSearch API (free tier available)
-
-Note your:
-
-RAPIDAPI_KEY
-
-RAPIDAPI_HOST (usually jsearch.p.rapidapi.com)
+1. Sign up at [rapidapi.com](https://rapidapi.com/)
+2. Subscribe to the **JSearch API** (free tier available)
+3. Note your:
+   - `RAPIDAPI_KEY`
+   - `RAPIDAPI_HOST` (usually `jsearch.p.rapidapi.com`)
 
 You also need:
 
-A Gmail account with App Password enabled (for sending alerts)
+- A Gmail account with **App Password** enabled (for sending alerts)
+- An account on [OpenRouter.ai](https://openrouter.ai) to get an API key for LLM access
 
-An account on OpenRouter.ai to get an API key for LLM access
+---
 
-⚙️ Option 1: GitHub Action Setup (Automatic Email Alerts)
+## ⚙️ Option 1: GitHub Action Setup (Automatic Email Alerts)
 
-🧬 Prerequisites
+### 🧬 Prerequisites
 
-GitHub account
+- GitHub account
+- Resume PDF & config files prepared
 
-Resume PDF & config files prepared
+### 🛠️ Step-by-Step:
 
-🛠️ Step-by-Step:
+1. **Clone the Repo**
 
-Clone the Repo
+   ```bash
+   git clone https://github.com/msmalmir/Smart-Job-Alerts.git
+   cd Smart-Job-Alerts
 
-git clone https://github.com/msmalmir/Smart-Job-Alerts.git
-cd Smart-Job-Alerts
-
-Set Up Files
-
-cp .env.example .env
-cp data/seen_jobs_example.json data/seen_jobs.json
-cp data/blocked_employers_example.yaml data/blocked_employers.yaml
-
-Replace data/resume_example.pdf with your actual resume.pdf
-
-Edit config.yaml to match your preferences
-
-Create GitHub Secrets Go to your repo → Settings → Secrets → Actions and add:
-
-EMAIL_USERNAME
-
-EMAIL_PASSWORD
-
-RAPIDAPI_KEY
-
-RAPIDAPI_HOST
-
-OPENROUTER_API_KEY
-
-Trigger the GitHub Action Go to Actions → Automatic Job Alert Runner → Run workflow to test it.
-
-The action will email you job alerts that match your resume.
-
-🐳 Option 2: Run with Docker Locally (Manual Email Alerts)
-
-⚠️ Note: This sends alerts only when you run it manually. Not scheduled.
-
-🔧 Setup:
-
-Pull Docker Image (once published)
-
-docker pull mossmalmir/smart-job-alerts
-
-Create required files in a new directory
-
-.env: add all credentials
-
-data/resume.pdf
-
-data/prompt_template.txt
-
-data/seen_jobs.json: []
-
-data/blocked_employers.yaml: blocked_employers: []
-
-config.yaml
-
-Run the container
-
-docker run \
-  --env-file .env \
-  -v $(pwd)/data:/app/data \
-  mossmalmir/smart-job-alerts
-
-(Optional) Enter the container to edit configs
-
-docker exec -it <container_id> bash
-nano config.yaml  # or vi
-python main.py
-
-🛠 Example Prompt Template
-
-data/prompt_template.txt:
-
-You are a job-matching assistant. Given the resume below and a job description, return:
-1. A match score between 0 and 1
-2. A 2–4 sentence explanation for the match
-
-Resume:
-{resume_text}
-
-Job Description:
-{job_desc}
-
-🧪 Testing Locally
-
-If not using Docker:
-
-python3 -m venv .venv
-source .venv/bin/activate
-make install
-python main.py
-
-✉️ Example Alert Email
-
-🔍  How the job match:
-
-✅ Match Score: 0.35
-
-📝 Job Title: Multimodal Machine Learning Engineer at Booz Allen Hamilton
-
-🔗 URL: https://www.clearancejobs.com/jobs/...
-
-💬 Reason: You demonstrate strong technical depth in ML/DL... (generated by the LLM)
-
-📜 License
-
-MIT
-
-🙋 Questions?
-
-Open an issue or contact the repo owner for support.
 
 Ready to automate your job hunt? 🚀
 
