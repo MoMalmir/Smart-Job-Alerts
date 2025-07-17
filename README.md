@@ -126,16 +126,91 @@ You also need:
 
 3. **Create GitHub Secrets**
    Go to your repo → **Settings** → **Secrets** → **Actions** and add:
-- EMAIL_USERNAME
-- EMAIL_PASSWORD
-- RAPIDAPI_KEY
-- RAPIDAPI_HOST
-- OPENROUTER_API_KEY
- 
+   - EMAIL_USERNAME
+   - EMAIL_PASSWORD
+   - RAPIDAPI_KEY
+   - RAPIDAPI_HOST
+   - OPENROUTER_API_KEY
 
 
+## ▶️ Trigger the GitHub Action
+
+Once your setup is complete, go to:
+
+**GitHub → Actions → Automatic Job Alert Runner → Run workflow**
+
+> The action will fetch job matches and send an email if any job exceeds your defined match threshold.
+
+---
+
+## 🐳 Option 2: Run with Docker Locally (Manual Email Alerts)
+
+⚠️ **Note**: This method sends alerts only when you run it manually. No automated scheduling like GitHub Actions.
+
+### 🔧 Setup Instructions
+
+1. **Pull Docker Image** (when published):
+
+   ```bash
+   docker pull mossmalmir/smart-job-alerts
 
 
+2. **Create required files in a directory**:
+
+| File                        | Description                                         |
+|-----------------------------|-----------------------------------------------------|
+| `.env`                      | Contains credentials and API keys                   |
+| `data/resume.pdf`           | Your actual resume                                  |
+| `data/prompt_template.txt`  | Prompt used by the LLM for evaluating matches       |
+| `data/seen_jobs.json`       | Initialize as `[]`                                  |
+| `data/blocked_employers.yaml` | Initialize as `blocked_employers: []`           |
+| `config.yaml`               | Job filters and preferences (keywords, email, etc)  |
+
+---
+
+3. **Run the container**:
+
+```bash
+docker run \
+  --env-file .env \
+  -v $(pwd)/data:/app/data \
+  mossmalmir/smart-job-alerts
 
 
+4. **(Optional) Edit configs inside the container**:
 
+```bash
+docker exec -it <container_id> bash
+nano config.yaml   # or use vi
+python main.py
+
+
+---
+
+## 🛠 Example Prompt Template
+
+**File:** `data/prompt_template.txt`
+
+```txt
+You are a job-matching assistant. Given the resume below and a job description, return:
+1. A match score between 0 and 1  
+2. A 2–4 sentence explanation for the match
+
+Resume:
+{resume_text}
+
+Job Description:
+{job_desc}
+
+
+---
+
+## 📜 License
+
+MIT
+
+---
+
+## 🙋 Questions?
+
+Open an issue or contact the repo owner for help.
