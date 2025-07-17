@@ -6,7 +6,6 @@ This app fetches job postings using JSearch, a powerful job listing API availabl
 <p align="center">
   <img src="./assets/smart_job_alerts.png" alt="Job Matching Flowchart" width="600"/>
 </p>
-%%![Smart Job Alert Flow](./assets/smart_job_alerts.png)
 
 
 ---
