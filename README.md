@@ -120,21 +120,21 @@ You also need:
     cp .env.example .env
     cp data/seen_jobs_example.json data/seen_jobs.json
     cp data/blocked_employers_example.yaml data/blocked_employers.yaml
-  ```
-
-
+    ```
 
 - Replace `data/resume_example.pdf` with your actual `resume.pdf`
-- Edit `config.yaml to match` your preferences
+- Edit `config.yaml` to match your preferences
 
 
 3. **Create GitHub Secrets**
-Go to your repo → **Settings** → **Secrets** → **Actions** and add:
+   Go to your repo → **Settings** → **Secrets** → **Actions** and add:
 - EMAIL_USERNAME
 - EMAIL_PASSWORD
 - RAPIDAPI_KEY
 - RAPIDAPI_HOST
 - OPENROUTER_API_KEY
+ 
+
 
 
 
