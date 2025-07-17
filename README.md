@@ -3,7 +3,9 @@
 This app fetches job postings using JSearch, a powerful job listing API available on RapidAPI. For each job, it uses your resume and a customizable LLM prompt to evaluate relevance via OpenRouter (supporting models like Moonshot or DeepSeek). It compares jobs against a user-defined match threshold and sends an email containing the top matches — each with a match score and a short summary explaining why the job does or doesn’t match.
 **You can run the app automatically using GitHub Actions to receive alerts on a regular schedule (e.g., once a day).**
 
-
+<p align="center">
+  <img src="assets/ea2f630f-b9ff-43ed-bfbe-1d2cf8c984b9.png" alt="Job Matching Flowchart" width="600"/>
+</p>
 ![Smart Job Alert Flow](./assets/smart_job_alerts.png)
 
 
