@@ -121,7 +121,7 @@ You also need:
      
 
 - Replace `data/resume_example.pdf` with your actual `resume.pdf`
-- Edit `config.yaml` to match your preferences and put the email you want to receive the emails
+- Edit `config.yaml` to match your preferences and insert the email you want to receive the emails
 
 
 3. **Create GitHub Secrets**
