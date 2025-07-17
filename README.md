@@ -85,7 +85,7 @@ These files must exist before running the app:
 You need a **RapidAPI account** to fetch job data.
 
 1. Sign up at [rapidapi.com](https://rapidapi.com/)
-2. Subscribe to the **JSearch API** (free tier available)
+2. Subscribe to the **JSearch API** (free tier available - 100 per day)
 3. Note your:
    - `RAPIDAPI_KEY`
    - `RAPIDAPI_HOST` (usually `jsearch.p.rapidapi.com`)
