@@ -169,15 +169,16 @@ Once your setup is complete, go to:
 ---
 
 3. **Run the container**:
-
-```bash
-docker run \
+   ```bash
+  docker run \
   --env-file .env \
   -v $(pwd)/data:/app/data \
   mossmalmir/smart-job-alerts
 
 
-4. **(Optional) Edit configs inside the container**:
+
+
+5. **(Optional) Edit configs inside the container**:
 
 ```bash
 docker exec -it <container_id> bash
