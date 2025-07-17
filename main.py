@@ -15,8 +15,8 @@ load_dotenv()
 # Get environment variables
 RAPIDAPI_KEY = os.getenv("RAPIDAPI_KEY")
 RAPIDAPI_HOST = os.getenv("RAPIDAPI_HOST")
-sender_email = os.getenv["EMAIL_USERNAME"]
-sender_password = os.getenv["EMAIL_PASSWORD"]
+sender_email = os.getenv("EMAIL_USERNAME")
+sender_password = os.getenv("EMAIL_PASSWORD")
 
 
 if not all([RAPIDAPI_KEY, RAPIDAPI_HOST, sender_email, sender_password]):
@@ -46,6 +46,9 @@ else:
 
 # Load resume
 resume_pdf_path = "data/resume.pdf"
+if not Path(resume_pdf_path).exists():
+    print("resume.pdf not found in 'data/'. Using example resume instead.")
+    resume_pdf_path = "data/resume_example.pdf"
 resume_text = extract_text_from_pdf(resume_pdf_path)
 print(f"resume_text: {resume_text}")
 # Load seen jobs
