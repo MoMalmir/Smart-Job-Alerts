@@ -1,32 +1,32 @@
-name: Automatic Job Alert Runner
+# name: Automatic Job Alert Runner
 
-on:
-  schedule:
-    - cron: "0 13 * * *"  # Runs daily at 13 PM UTC
-  workflow_dispatch:     # Allow manual trigger
+# on:
+#   schedule:
+#     - cron: "0 13 * * *"  # Runs daily at 13 PM UTC
+#   workflow_dispatch:     # Allow manual trigger
 
-jobs:
-  run-job-alert:
-    runs-on: ubuntu-latest
+# jobs:
+#   run-job-alert:
+#     runs-on: ubuntu-latest
 
-    env:
-      EMAIL_USERNAME: ${{ secrets.EMAIL_USERNAME }}
-      EMAIL_PASSWORD: ${{ secrets.EMAIL_PASSWORD }}
-      RAPIDAPI_KEY: ${{ secrets.RAPIDAPI_KEY }}
-      RAPIDAPI_HOST: ${{ secrets.RAPIDAPI_HOST }}
+#     env:
+#       EMAIL_USERNAME: ${{ secrets.EMAIL_USERNAME }}
+#       EMAIL_PASSWORD: ${{ secrets.EMAIL_PASSWORD }}
+#       RAPIDAPI_KEY: ${{ secrets.RAPIDAPI_KEY }}
+#       RAPIDAPI_HOST: ${{ secrets.RAPIDAPI_HOST }}
 
-    steps:
-      - name: Checkout repo
-        uses: actions/checkout@v3
+#     steps:
+#       - name: Checkout repo
+#         uses: actions/checkout@v3
 
-      - name: Set up Python
-        uses: actions/setup-python@v4
-        with:
-          python-version: 3.11
+#       - name: Set up Python
+#         uses: actions/setup-python@v4
+#         with:
+#           python-version: 3.11
 
-      - name: Install dependencies
-        run: |
-          pip install -r requirements.txt
+#       - name: Install dependencies
+#         run: |
+#           pip install -r requirements.txt
 
-      - name: Run job-alert script
-        run: python main.py
+#       - name: Run job-alert script
+#         run: python main.py
