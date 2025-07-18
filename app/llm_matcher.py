@@ -8,6 +8,7 @@ load_dotenv()
 with open("data/prompt_template.txt", "r", encoding="utf-8") as f:
     PROMPT_TEMPLATE = f.read()
 
+
 def query_openrouter_matcher(job_desc: str, resume_text: str, threshold: float) -> dict:
     prompt = PROMPT_TEMPLATE.format(resume_text=resume_text, job_desc=job_desc)
 
@@ -20,11 +21,13 @@ def query_openrouter_matcher(job_desc: str, resume_text: str, threshold: float) 
 
     data = {
         "model": "moonshotai/kimi-k2:free",
-        "messages": [{"role": "user", "content": prompt}]
+        "messages": [{"role": "user", "content": prompt}],
     }
 
     try:
-        response = requests.post("https://openrouter.ai/api/v1/chat/completions", headers=headers, json=data)
+        response = requests.post(
+            "https://openrouter.ai/api/v1/chat/completions", headers=headers, json=data
+        )
         result = response.json()
         content = result["choices"][0]["message"]["content"]
     except Exception as e:
@@ -38,4 +41,8 @@ def query_openrouter_matcher(job_desc: str, resume_text: str, threshold: float) 
         return {"match": score >= threshold, "score": score, "reason": reason}
     except Exception as e:
         print("❌ Parsing error:", e)
-        return {"match": False, "score": 0.0, "reason": "Failed to parse OpenRouter response."}
+        return {
+            "match": False,
+            "score": 0.0,
+            "reason": "Failed to parse OpenRouter response.",
+        }

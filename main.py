@@ -87,7 +87,9 @@ for keyword in keywords:
         job_id = job["job_id"]
         if is_new_job(job_id, seen):
             job_desc = get_full_description(job)
-            result = query_openrouter_matcher(job_desc, resume_text, Similarity_Threshold)
+            result = query_openrouter_matcher(
+                job_desc, resume_text, Similarity_Threshold
+            )
 
             if result["match"]:
                 matched_jobs.append(

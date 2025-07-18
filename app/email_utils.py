@@ -1,18 +1,20 @@
 import smtplib
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
+from datetime import datetime
 
+timestamp = datetime.now().strftime("%Y-%m-%d %H:%M")
 
 def send_job_matches_email(
     sender_email, sender_password, receiver_email, job_matches, keyword
 ):
     message = MIMEMultipart("alternative")
-    message["Subject"] = f"Your Daily Matched Job Postings for : {keyword}"
+    message["Subject"] = f"Your Daily Matched Job Postings for {keyword} – {timestamp}"
     message["From"] = sender_email
     message["To"] = receiver_email
 
     # Create HTML content
-        # Start HTML content
+    # Start HTML content
     html = f"<h2>🔍 Matching Results for Keyword: {keyword}</h2>"
     for job in job_matches:
         html += f"""
