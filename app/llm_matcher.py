@@ -13,14 +13,14 @@ def query_openrouter_matcher(job_desc: str, resume_text: str, threshold: float) 
     prompt = PROMPT_TEMPLATE.format(resume_text=resume_text, job_desc=job_desc)
 
     headers = {
-        "Authorization": f"Bearer {os.environ['OPENROUTER_API_KEY']}",
+        "Authorization": f"Bearer {os.getenv('OPENROUTER_API_KEY')}",
         "HTTP-Referer": "https://jobmatcher.parnian.dev",
         "X-Title": "Job Matcher",
         "Content-Type": "application/json",
     }
 
     data = {
-        "model": "moonshotai/kimi-k2:free",
+        "model": "moonshotai/kimi-k2",
         "messages": [{"role": "user", "content": prompt}],
     }
 
@@ -29,6 +29,10 @@ def query_openrouter_matcher(job_desc: str, resume_text: str, threshold: float) 
             "https://openrouter.ai/api/v1/chat/completions", headers=headers, json=data
         )
         result = response.json()
+        if "choices" not in result:
+            print("❌ Invalid API response:", result)
+            return {"match": False, "score": 0.0, "reason": "Invalid OpenRouter API response."}
+        
         content = result["choices"][0]["message"]["content"]
     except Exception as e:
         print("❌ API error:", e)
