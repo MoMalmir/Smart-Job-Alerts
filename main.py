@@ -186,6 +186,11 @@ Similarity_Threshold = config["Similarity_Threshold"]
 receiver_email = config["receiver_email"]
 max_pages = config["max_pages"]
 
+
+# Merge any manual exclude list
+exclude_publishers = set(config.get("exclude_job_publishers", []))
+
+
 # Load blocked employers
 blocked_employers = []
 if config.get("use_blocked_employers", False):
@@ -196,9 +201,16 @@ if config.get("use_blocked_employers", False):
     else:
         print("⚠️ blocked_employers.yaml not found — continuing without additional exclusions.")
 
-# Merge any manual exclude list
-exclude_publishers = set(config.get("exclude_job_publishers", []))
-exclude_publishers.update(blocked_employers)
+
+# Load preferred publishers from YAML file
+preferred_publishers = set()
+preferred_path = Path("data/preferred_publishers.yaml")
+if preferred_path.exists():
+    with open(preferred_path, "r") as f:
+        preferred_publishers = set(yaml.safe_load(f).get("preferred_publishers", []))
+else:
+    print("⚠️ preferred_publishers.yaml not found — all jobs will be considered untrusted.")
+
 
 # Load resume
 resume_pdf_path = "data/resume.pdf"
@@ -253,12 +265,38 @@ def process_jobs_for_keyword(keyword, max_matches):
         for job in jobs:
             if len(matched_jobs) >= max_matches:
                 break
+            
+            # Skip blocked employer names
+            employer_name = job.get("employer_name", "").strip()
+            if employer_name in blocked_employers:
+                print(f"⛔ Skipping blocked employer: {employer_name}")
+                continue
 
+            # Filter by preferred publisher or apply_options
+            job_publisher = job.get("job_publisher", "").strip()
+            final_apply_link = job.get("job_apply_link")
+            is_preferred = job_publisher in preferred_publishers
+
+            # Try to find a better apply link if publisher isn't trusted
+            better_option_found = False
+            for option in job.get("apply_options") or []:
+                option_publisher = option.get("publisher", "").strip()
+                option_link = option.get("apply_link", "").strip()
+                if option_publisher in preferred_publishers:
+                    final_apply_link = option_link
+                    better_option_found = True
+                    break
+
+            if not is_preferred and not better_option_found:
+                print(f"⛔ Skipping due to untrusted publisher and no good apply link: {job_publisher}")
+                continue
+
+            # Proceed to LLM matching
             job_id = job["job_id"]
             if is_new_job(job_id, seen):
                 job_desc = get_full_description(job)
                 result = query_openrouter_matcher(job_desc, resume_text, Similarity_Threshold)
-                time.sleep(1)  # Rate-limit OpenRouter API
+                time.sleep(1)
 
                 if result["reason"] not in [
                     "OpenRouter API call failed.",
@@ -266,43 +304,27 @@ def process_jobs_for_keyword(keyword, max_matches):
                     "Failed to parse OpenRouter response.",
                 ]:
                     new_seen.add(job_id)
-
                     if result["match"]:
-                        matched_jobs.append(
-                            {
-                                "job_keyword": keyword,
-                                "title": job["job_title"],
-                                "employer": job["employer_name"],
-                                "url": job["job_apply_link"],
-                                "reason": result["reason"],
-                                "score": result["score"],
-                            }
-                        )
+                        matched_jobs.append({
+                            "job_keyword": keyword,
+                            "title": job["job_title"],
+                            "employer": employer_name,
+                            "url": final_apply_link,
+                            "reason": result["reason"],
+                            "score": result["score"],
+                        })
 
-                        print(f"\n🎯 MATCH with score ({result["score"]}): {job['job_title']}")
-                        print(f"🏢 employer: {job['employer_name']}")
+                        print(f"\n🎯 MATCH with score ({result['score']}): {job['job_title']}")
+                        print(f"🏢 employer: {employer_name}")
                         print(f"🔍 Reason: {result['reason']}")
                         print(f"🆔 job_id: {job_id}")
-                        print(f"🔗 URL: {job['job_apply_link']}")
+                        print(f"🔗 URL: {final_apply_link}")
                         print(f"📝 job_description: {job_desc[0:500]}")
                         print("=" * 60)
                 else:
                     print(f"⚠️ Skipping job_id {job_id} — LLM failed or response was invalid.")
 
-        page += 1
-
-    print(f"\n📬 {len(matched_jobs)} matches found for keyword: {keyword}")
-    if matched_jobs:
-        send_job_matches_email(
-            sender_email=sender_email,
-            sender_password=sender_password,
-            receiver_email=receiver_email,
-            job_matches=matched_jobs,
-            keyword=keyword,
-        )
-        print("✅ Email sent successfully!")
-    else:
-        print("ℹ️ No match found — email not sent.")
+            
 
 
 # === Start Job Matching for All Keywords ===
@@ -314,3 +336,7 @@ for kw in keywords_config:
 
 # Save updated seen job list
 save_seen_jobs(new_seen)
+
+
+print("\n✅ All keywords processed.")
+print(f"🔒 Total new jobs added to seen list: {len(new_seen - seen)}")

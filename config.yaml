@@ -57,7 +57,22 @@ job_requirements:       # Comma-separated list: under_3_years_experience, more_t
 
 radius: 50              # Distance in kilometers (if query includes location)
 
-exclude_job_publishers: []  # Manually exclude specific publishers here, or use `use_blocked_employers`
+exclude_job_publishers:   # Manually exclude specific publishers here, or use `use_blocked_employers`
+  - Jobrapido
+  - Jooble
+  - CareerJet
+  - Trovit
+  - JobisJob
+  - Adzuna
+  - ZipRecruiter
+  - Joblift
+  - Monster
+  - Craigslist
+  - SimplyHired
+  - Lensa
+  - Jora
+  - MyJobHelper
+  - Workcircle
 
 fields: []              # Optional: list of fields to include (e.g., employer_name, job_title). Empty returns all.
 
