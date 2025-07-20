@@ -213,5 +213,5 @@ __marimo__/
 
 
 .env
-seen_jobs.json
-blocked_employers.yaml
+#seen_jobs.json
+#blocked_employers.yaml
