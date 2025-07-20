@@ -1,9 +1,11 @@
+
+
 name: Automatic Job Alert Runner
 
 on:
   schedule:
     - cron: "0 13 * * *"  # Runs daily at 13 PM UTC
-  workflow_dispatch:     # Allow manual trigger
+  workflow_dispatch:
 
 jobs:
   run-job-alert:
@@ -24,6 +26,14 @@ jobs:
         uses: actions/setup-python@v4
         with:
           python-version: 3.11
+
+      - name: Cache pip
+        uses: actions/cache@v3
+        with:
+          path: ~/.cache/pip
+          key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
+          restore-keys: |
+            ${{ runner.os }}-pip-
 
       - name: Install dependencies
         run: |
