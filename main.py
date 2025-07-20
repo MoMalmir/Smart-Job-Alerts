@@ -20,6 +20,7 @@ RAPIDAPI_KEY = os.getenv("RAPIDAPI_KEY")
 RAPIDAPI_HOST = os.getenv("RAPIDAPI_HOST")
 sender_email = os.getenv("EMAIL_USERNAME")
 sender_password = os.getenv("EMAIL_PASSWORD")
+openrouter_key = os.getenv("OPENROUTER_API_KEY")
 if not all([RAPIDAPI_KEY, RAPIDAPI_HOST, sender_email, sender_password]):
     raise EnvironmentError("Missing one or more required environment variables.")
 

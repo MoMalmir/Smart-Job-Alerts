@@ -36,14 +36,14 @@ query:                       # Required free-form query
     max_matches: 5
   - keyword: "data scientist"
     max_matches: 5
-  - keyword: "AI engineer"
-    max_matches: 5 
-  - keyword: "MLOps engineer"
-    max_matches: 3 
-  - keyword: "research software engineer"
-    max_matches: 3
-  - keyword: "clinical data scientist"
-    max_matches: 3
+  # - keyword: "AI engineer"
+  #   max_matches: 5 
+  # - keyword: "MLOps engineer"
+  #   max_matches: 3 
+  # - keyword: "research software engineer"
+  #   max_matches: 3
+  # - keyword: "clinical data scientist"
+  #   max_matches: 3
 
 # page: 1                 # (optional) Start page (default = 1), we defined it the main code in the loop
 num_pages: 1            # (optional) How many pages to return (max 50, default = 1)
@@ -89,7 +89,7 @@ fields: []              # Optional: list of fields to include (e.g., employer_na
 # =========================
 
 use_blocked_employers: true  # If true, loads additional publishers from blocked_employers.yaml
-max_pages: 10
+max_pages: 5
 llm_match_threshold: 0.4 # Minimum LLM match score to consider a job relevant
 
 
