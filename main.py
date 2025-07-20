@@ -174,7 +174,7 @@ def process_jobs_for_keyword(keyword, max_matches):
             
             if job_id in seen:
                 global_stats["skipped_seen_jobs"] += 1
-                print(f"⏭️ Skipping already seen job: {job_id}")
+                print(f"🕵️ Skipping already seen job: {job_id}")
                 continue
 
             
@@ -244,7 +244,7 @@ def process_jobs_for_keyword(keyword, max_matches):
         ⛔ Blocked employers skipped: {global_stats['blocked_employers_skipped']}
         🔎 Similarity-pre-filtered: {global_stats['similarity_filtered']}
         👔 Senior-level jobs skipped: {global_stats['senior_title_skipped']}
-        ⏭️ Seen jobs skipped: {global_stats['skipped_seen_jobs']}
+        🕵️ Seen jobs skipped: {global_stats['skipped_seen_jobs']}
         ⛔ Untrusted publishers skipped: {global_stats['untrusted_publisher_skipped']}
         ⚠️ LLM-filtered (no match): {global_stats['llm_filtered']}
         ❌ LLM failed completely: {global_stats['llm_failed']}
@@ -295,7 +295,7 @@ print(f"📄 Total JSearch API pages fetched: {total_stats['total_pages_fetched'
 print(f"⛔ Blocked employers skipped: {total_stats['blocked_employers_skipped']}")
 print(f"🔎 Similarity-pre-filtered: {total_stats['similarity_filtered']}")
 print(f"👔 Senior-level jobs skipped: {total_stats['senior_title_skipped']}")
-print(f"⏭️ Seen jobs skipped: {total_stats['skipped_seen_jobs']}")
+print(f"🕵️ Seen jobs skipped: {total_stats['skipped_seen_jobs']}")
 print(f"⛔ Untrusted publishers skipped: {total_stats['untrusted_publisher_skipped']}")
 print(f"⚠️ LLM-filtered (no match): {total_stats['llm_filtered']}")
 print(f"❌ LLM failed completely: {total_stats['llm_failed']}")
