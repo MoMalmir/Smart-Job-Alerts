@@ -34,7 +34,7 @@ def send_job_matches_email(
         <p><b>✅ Match Score:</b> {job.get('score', 'N/A')}</p>
         <p><b>📝 Job Title:</b> {job['title']} at {job['employer']}</p>
         <p><b>🔗 URL:</b> <a href="{job['url']}">{job['url']}</a></p>
-        <p><b>💬 Reason:</b> {job['reason']}</p>
+        <p style='font-size:16px;'><b>💬 Reason:</b> {job['reason']}</p>
         """
     if summary_text:
         html += "<hr><h3>📊 Summary</h3>"
