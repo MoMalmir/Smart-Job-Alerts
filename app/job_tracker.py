@@ -18,8 +18,8 @@ def save_seen_jobs(seen_jobs):
         json.dump(list(seen_jobs), f)
 
 
-def is_new_job(job_id, seen_jobs):
-    if job_id in seen_jobs:
-        print(f"🕵️ Skipping job {job_id} — already seen.")
-        return False
-    return True
+# def is_new_job(job_id, seen_jobs):
+#     if job_id in seen_jobs:
+#         print(f"🕵️ Skipping job {job_id} — already seen.")
+#         return False
+#     return True

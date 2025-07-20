@@ -2,7 +2,7 @@ import yaml
 import os
 from pathlib import Path
 from dotenv import load_dotenv
-from app.job_tracker import load_seen_jobs, save_seen_jobs, is_new_job
+from app.job_tracker import load_seen_jobs, save_seen_jobs
 from app.llm_matcher import query_openrouter_matcher
 from app.utils import extract_text_from_pdf
 from app.email_utils import send_job_matches_email
@@ -171,63 +171,68 @@ def process_jobs_for_keyword(keyword, max_matches):
                     global_stats["senior_title_skipped"] += 1
                     print(f"⛔ Skipping senior-level job: {title}")
                     continue
+            
+            if job_id in seen:
+                global_stats["skipped_seen_jobs"] += 1
+                print(f"⏭️ Skipping already seen job: {job_id}")
+                continue
 
-            if is_new_job(job_id, seen):
-                job_desc = get_full_description(job)
+            
+            job_desc = get_full_description(job)
 
-                # Optional: Pre-filter using semantic similarity
-                if config.get("use_similarity_filter", False):
-                    sim_result = match_job_to_resume(
-                        job_desc, resume_text, similarity_filter_threshold
-                    )
-                    if not sim_result["match"]:
-                        global_stats["similarity_filtered"] += 1
-                        print(
-                            f"⛔ Skipping due to low semantic similarity: {sim_result['reason']}"
-                        )
-                        continue
-
-                result = query_openrouter_matcher(
-                    job_desc, resume_text, llm_match_threshold
+            # Optional: Pre-filter using semantic similarity
+            if config.get("use_similarity_filter", False):
+                sim_result = match_job_to_resume(
+                    job_desc, resume_text, similarity_filter_threshold
                 )
-                time.sleep(1)
-
-                if result["reason"] not in [
-                    "OpenRouter API call failed.",
-                    "Invalid OpenRouter API response.",
-                    "Failed to parse OpenRouter response.",
-                ]:
-                    new_seen.add(job_id)
-                    if result["match"]:
-                        global_stats["matched"] += 1
-                        matched_jobs.append(
-                            {
-                                "job_keyword": keyword,
-                                "title": job["job_title"],
-                                "employer": employer_name,
-                                "url": final_apply_link,
-                                "reason": result["reason"],
-                                "score": result["score"],
-                            }
-                        )
-
-                        print(
-                            f"\n🎯 MATCH with score ({result['score']}): {job['job_title']}"
-                        )
-                        print(f"🏢 employer: {employer_name}")
-                        print(f"🔍 Reason: {result['reason']}")
-                        print(f"🆔 job_id: {job_id}")
-                        print(f"🔗 URL: {final_apply_link}")
-                        print(f"📝 job_description: {job_desc[0:500]}")
-                        print("=" * 60)
-                    else:
-                        global_stats["llm_filtered"] += 1
-                        print(f"⚠️ LLM scored low (no match) — job_id {job_id}")
-                else:
-                    global_stats["llm_failed"] += 1
+                if not sim_result["match"]:
+                    global_stats["similarity_filtered"] += 1
                     print(
-                        f"⚠️ Skipping job_id {job_id} — LLM failed or response was invalid."
+                        f"⛔ Skipping due to low semantic similarity: {sim_result['reason']}"
                     )
+                    continue
+
+            result = query_openrouter_matcher(
+                job_desc, resume_text, llm_match_threshold
+            )
+            time.sleep(1)
+
+            if result["reason"] not in [
+                "OpenRouter API call failed.",
+                "Invalid OpenRouter API response.",
+                "Failed to parse OpenRouter response.",
+            ]:
+                new_seen.add(job_id)
+                if result["match"]:
+                    global_stats["matched"] += 1
+                    matched_jobs.append(
+                        {
+                            "job_keyword": keyword,
+                            "title": job["job_title"],
+                            "employer": employer_name,
+                            "url": final_apply_link,
+                            "reason": result["reason"],
+                            "score": result["score"],
+                        }
+                    )
+
+                    print(
+                        f"\n🎯 MATCH with score ({result['score']}): {job['job_title']}"
+                    )
+                    print(f"🏢 employer: {employer_name}")
+                    print(f"🔍 Reason: {result['reason']}")
+                    print(f"🆔 job_id: {job_id}")
+                    print(f"🔗 URL: {final_apply_link}")
+                    print(f"📝 job_description: {job_desc[0:500]}")
+                    print("=" * 60)
+                else:
+                    global_stats["llm_filtered"] += 1
+                    print(f"⚠️ LLM scored low (no match) — job_id {job_id}")
+            else:
+                global_stats["llm_failed"] += 1
+                print(
+                    f"⚠️ Skipping job_id {job_id} — LLM failed or response was invalid."
+                )
 
         page += 1
 
@@ -239,6 +244,7 @@ def process_jobs_for_keyword(keyword, max_matches):
         ⛔ Blocked employers skipped: {global_stats['blocked_employers_skipped']}
         🔎 Similarity-pre-filtered: {global_stats['similarity_filtered']}
         👔 Senior-level jobs skipped: {global_stats['senior_title_skipped']}
+        ⏭️ Seen jobs skipped: {global_stats['skipped_seen_jobs']}
         ⛔ Untrusted publishers skipped: {global_stats['untrusted_publisher_skipped']}
         ⚠️ LLM-filtered (no match): {global_stats['llm_filtered']}
         ❌ LLM failed completely: {global_stats['llm_failed']}
@@ -289,6 +295,7 @@ print(f"📄 Total JSearch API pages fetched: {total_stats['total_pages_fetched'
 print(f"⛔ Blocked employers skipped: {total_stats['blocked_employers_skipped']}")
 print(f"🔎 Similarity-pre-filtered: {total_stats['similarity_filtered']}")
 print(f"👔 Senior-level jobs skipped: {total_stats['senior_title_skipped']}")
+print(f"⏭️ Seen jobs skipped: {total_stats['skipped_seen_jobs']}")
 print(f"⛔ Untrusted publishers skipped: {total_stats['untrusted_publisher_skipped']}")
 print(f"⚠️ LLM-filtered (no match): {total_stats['llm_filtered']}")
 print(f"❌ LLM failed completely: {total_stats['llm_failed']}")
