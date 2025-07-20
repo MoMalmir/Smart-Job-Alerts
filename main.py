@@ -168,6 +168,10 @@ from app.utils import extract_text_from_pdf
 from app.email_utils import send_job_matches_email
 from app.job_fetcher import fetch_jobs  # This must now use updated fetch_jobs logic
 import time
+from collections import defaultdict
+
+# Initialize global stats
+global_stats = defaultdict(int)
 
 # Load environment variables
 load_dotenv()
@@ -255,7 +259,8 @@ def process_jobs_for_keyword(keyword, max_matches):
             exclude_publishers=list(exclude_publishers),
             fields=config.get("fields", [])
         )
-
+        global_stats["total_pages_fetched"] += 1
+        global_stats["total_jobs_fetched"] += len(jobs)
         if not jobs:
             print("No jobs returned on this page.")
             break
@@ -269,6 +274,7 @@ def process_jobs_for_keyword(keyword, max_matches):
             # Skip blocked employer names
             employer_name = job.get("employer_name", "").strip()
             if employer_name in blocked_employers:
+                global_stats["blocked_employers_skipped"] += 1
                 print(f"⛔ Skipping blocked employer: {employer_name}")
                 continue
 
@@ -288,6 +294,7 @@ def process_jobs_for_keyword(keyword, max_matches):
                     break
 
             if not is_preferred and not better_option_found:
+                global_stats["untrusted_publisher_skipped"] += 1
                 print(f"⛔ Skipping due to untrusted publisher and no good apply link: {job_publisher}")
                 continue
 
@@ -305,6 +312,7 @@ def process_jobs_for_keyword(keyword, max_matches):
                 ]:
                     new_seen.add(job_id)
                     if result["match"]:
+                        global_stats["matched"] += 1
                         matched_jobs.append({
                             "job_keyword": keyword,
                             "title": job["job_title"],
@@ -321,12 +329,16 @@ def process_jobs_for_keyword(keyword, max_matches):
                         print(f"🔗 URL: {final_apply_link}")
                         print(f"📝 job_description: {job_desc[0:500]}")
                         print("=" * 60)
+                    else:
+                        global_stats["llm_filtered"] += 1
+                        print(f"⚠️ LLM scored low (no match) — job_id {job_id}")
                 else:
+                    global_stats["llm_failed"] += 1
                     print(f"⚠️ Skipping job_id {job_id} — LLM failed or response was invalid.")
 
                     
         page += 1
-        
+
     if matched_jobs:
         send_job_matches_email(
             sender_email=sender_email,
@@ -354,3 +366,13 @@ save_seen_jobs(new_seen)
 
 print("\n✅ All keywords processed.")
 print(f"🔒 Total new jobs added to seen list: {len(new_seen - seen)}")
+
+print("\n📊 === Statistics Summary ===")
+print(f"🧲 Total jobs fetched: {global_stats['total_jobs_fetched']}")
+print(f"📄 Total JSearch API pages fetched: {global_stats['total_pages_fetched']}")
+print(f"⛔ Blocked employers skipped: {global_stats['blocked_employers_skipped']}")
+print(f"⛔ Untrusted publishers skipped: {global_stats['untrusted_publisher_skipped']}")
+print(f"⚠️ LLM-filtered (no match): {global_stats['llm_filtered']}")
+print(f"❌ LLM failed completely: {global_stats['llm_failed']}")
+print(f"✅ Final matches (sent): {global_stats['matched']}")
+print(f"📬 Emails sent to: {receiver_email}")
