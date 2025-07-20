@@ -1,8 +1,6 @@
 # 📬 Smart Job Alerts
 
-**Automatically find and send job alerts tailored to your resume and job preferences.**
-This app fetches job postings using JSearch, a powerful job listing API available on RapidAPI. For each job, it uses your resume and a customizable LLM prompt to evaluate relevance via OpenRouter (supporting models like Moonshot or DeepSeek). It compares jobs against a user-defined match threshold and sends an email containing the top matches — each with a match score and a short summary explaining why the job does or doesn’t match.
-**You can run the app automatically using GitHub Actions to receive alerts on a regular schedule (e.g., once a day).**
+**Automatically find and send job alerts tailored to your resume and job preferences.** This app fetches job postings using JSearch, a powerful job listing API available on RapidAPI. For each job, it uses your resume and a customizable LLM prompt to evaluate relevance via OpenRouter (supporting models like Moonshot or DeepSeek). It compares jobs against a user-defined match threshold and sends an email containing the top matches — each with a match score and a short summary explaining why the job does or doesn’t match. **You can run the app automatically using GitHub Actions to receive alerts on a regular schedule (e.g., once a day).**
 
 
 <p align="center">
@@ -30,11 +28,10 @@ This app fetches job postings using JSearch, a powerful job listing API availabl
 
 ## 🎯 Goal
 
-Manually searching through job boards is time-consuming and inefficient. 
-Even when using job alert features from platforms like LinkedIn or Indeed, results are often flooded with irrelevant listings — including posts from consulting firms, third-party recruiters, 
-or positions that don’t match your background. You still have to open each one manually to assess whether it's a real fit, which can be frustrating and overwhelming.
+Manually searching through job boards is time-consuming and inefficient. Even when using job alert features from platforms like LinkedIn or Indeed, results are often flooded with irrelevant listings — including posts from consulting firms, third-party recruiters, or positions that don’t match your background. You still have to open each one manually to assess whether it's a real fit, which can be frustrating and overwhelming.
 
 **Smart Job Alerts** automates this entire process by:
+
 - Fetching fresh job listings using the **JSearch API** (via RapidAPI)
 - Filtering out unwanted employers or jobs you’ve already seen
 - Evaluating relevance with your **resume** and a **custom prompt template**, scored using an LLM via OpenRouter (e.g., Moonshot, DeepSeek, or Kimi-K2)
@@ -58,10 +55,12 @@ Run the app manually using a Docker image. Recommended if you prefer CLI over Gi
 ## 🧠 How It Works
 
 1. You provide a **resume (PDF)** and a **prompt template**.
-2. Jobs are fetched from RapidAPI.
-3. For each job, the full job description + qualifications/responsibilities are passed to an LLM.
-4. The LLM scores each job and provides a justification.
-5. Matching jobs are emailed to you using Gmail SMTP.
+2. Jobs are fetched from RapidAPI using filters and pagination.
+3. Similarity-based prefiltering is applied (if enabled).
+4. If passed, the full job description is evaluated with an LLM.
+5. A match score and reason are returned.
+6. Matching jobs are emailed to you using Gmail SMTP, along with detailed statistics.
+
 
 ---
 
@@ -69,14 +68,17 @@ Run the app manually using a Docker image. Recommended if you prefer CLI over Gi
 
 These files must exist before running the app:
 
-| File                          | Description                                                                 |
-| ----------------------------- | --------------------------------------------------------------------------- |
-| `.env`                        | API keys and email credentials (based on `.env.example`)                    |
-| `data/resume.pdf`             | Your actual resume (PDF format)                                             |
-| `data/prompt_template.txt`    | LLM prompt template with placeholders like `{resume_text}` and `{job_desc}` |
-| `data/seen_jobs.json`         | Tracks which jobs you've already seen (starts as empty `[]`)                |
-| `data/blocked_employers.yaml` | Employers you want to skip (starts as `blocked_employers: []`)              |
-| `config.yaml`                 | Job search filters (keywords, location, email, thresholds, etc.)            |
+These files must exist before running the app:
+
+| File                             | Description                                                                 |
+| -------------------------------- | --------------------------------------------------------------------------- |
+| `.env`                           | API keys and email credentials (based on `.env.example`)                    |
+| `data/resume.pdf`                | Your actual resume (PDF format)                                             |
+| `data/prompt_template.txt`       | LLM prompt template with placeholders like `{resume_text}` and `{job_desc}` |
+| `data/seen_jobs.json`            | Tracks which jobs you've already seen (starts as empty `[]`)                |
+| `data/blocked_employers.yaml`    | Employers you want to skip (starts as `blocked_employers: []`)              |
+| `data/preferred_publishers.yaml` | Ordered list of publishers to prioritize (e.g. LinkedIn, Indeed)            |
+| `config.yaml`                    | Job search filters (keywords, location, email, thresholds, etc.)            |
 
 ---
 
@@ -85,7 +87,7 @@ These files must exist before running the app:
 You need a **RapidAPI account** to fetch job data.
 
 1. Sign up at [rapidapi.com](https://rapidapi.com/)
-2. Subscribe to the **JSearch API** (free tier available - 100 per day)
+2. Subscribe to the **JSearch API** (free tier available - 200 per day)
 3. Note your:
    - `RAPIDAPI_KEY`
    - `RAPIDAPI_HOST` (usually `jsearch.p.rapidapi.com`)
@@ -124,22 +126,27 @@ You also need:
 - Edit `config.yaml` to match your preferences and insert the email you want to receive the emails
 
 
-3. **Create GitHub Secrets**
-   Go to your repo → **Settings** → **Secrets** → **Actions** and add:
-   - EMAIL_USERNAME
-   - EMAIL_PASSWORD
-   - RAPIDAPI_KEY
-   - RAPIDAPI_HOST
-   - OPENROUTER_API_KEY
+3. **Create GitHub Secrets** Go to your repo → **Settings** → **Secrets** → **Actions** and add:
+   - EMAIL\_USERNAME
+   - EMAIL\_PASSWORD
+   - RAPIDAPI\_KEY
+   - RAPIDAPI\_HOST
+   - OPENROUTER\_API\_KEY
 
 
 ## ▶️ Trigger the GitHub Action
 
-Once your setup is complete, go to:
+Once your setup is complete, you can test the process manually by going to:
 
 **GitHub → Actions → Automatic Job Alert Runner → Run workflow**
 
-> The action will fetch job matches and send an email if any job exceeds your defined match threshold.
+> This will immediately fetch job matches and send an email if any job exceeds your defined match threshold.
+
+After confirming it works, the Action will continue to run automatically based on the schedule defined in `.github/workflows/automatic-run.yaml`:
+
+```yaml
+schedule:
+  - cron: "0 13 * * *"  # Runs daily at 13:00 UTC (8:00 AM Central Time)
 
 ---
 
@@ -157,14 +164,15 @@ Once your setup is complete, go to:
 
 2. **Create required files in a directory**:
 
-| File                        | Description                                         |
-|-----------------------------|-----------------------------------------------------|
-| `.env`                      | Contains credentials and API keys                   |
-| `data/resume.pdf`           | Your actual resume                                  |
-| `data/prompt_template.txt`  | Prompt used by the LLM for evaluating matches       |
-| `data/seen_jobs.json`       | Initialize as `[]`                                  |
-| `data/blocked_employers.yaml` | Initialize as `blocked_employers: []`           |
-| `config.yaml`               | Job filters and preferences (keywords, email, etc)  |
+| File                             | Description                                        |
+| -------------------------------- | -------------------------------------------------- |
+| `.env`                           | Contains credentials and API keys                  |
+| `data/resume.pdf`                | Your actual resume                                 |
+| `data/prompt_template.txt`       | Prompt used by the LLM for evaluating matches      |
+| `data/seen_jobs.json`            | Initialize as `[]`                                 |
+| `data/blocked_employers.yaml`    | Initialize as `blocked_employers: []`              |
+| `data/preferred_publishers.yaml` | Ordered list of preferred apply platforms          |
+| `config.yaml`                    | Job filters and preferences (keywords, email, etc) |
 
 ---
 
@@ -202,10 +210,13 @@ Job Description:
 ```
 
 
+---
 
+## 📈 Example Email Screenshot
 
-
-
+<p align="center">
+  <img src="./assets/email_sample.png" alt="Job Matching Flowchart" width="600"/>
+</p>
 
 
 ---
