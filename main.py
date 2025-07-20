@@ -128,27 +128,35 @@ def process_jobs_for_keyword(keyword, max_matches):
                 print(f"⛔ Skipping blocked employer: {employer_name}")
                 continue
 
-            # Filter by preferred publisher or apply_options
+            # Get original publisher and apply link
             job_publisher = job.get("job_publisher", "").strip()
             final_apply_link = job.get("job_apply_link")
-            is_preferred = job_publisher in preferred_publishers
+            apply_options = job.get("apply_options") or []
 
-            # Try to find a better apply link if publisher isn't trusted
-            better_option_found = False
-            for option in job.get("apply_options") or []:
-                option_publisher = option.get("publisher", "").strip()
-                option_link = option.get("apply_link", "").strip()
-                if option_publisher in preferred_publishers:
-                    final_apply_link = option_link
-                    better_option_found = True
+            # Prepare preferred publisher list (from YAML)
+            preferred_order = list(preferred_publishers)  # preserves order
+            preferred_link_found = False
+            final_publisher = job_publisher if job_publisher in preferred_publishers else None
+            # Try to find a better apply link from preferred publishers
+            for preferred in preferred_order:
+                for option in apply_options:
+                    option_publisher = option.get("publisher", "").strip()
+                    option_link = option.get("apply_link", "").strip()
+                    if option_publisher == preferred:
+                        final_apply_link = option_link
+                        final_publisher = option_publisher
+                        preferred_link_found = True
+                        print(f"🔁 Swapped apply link to higher-priority publisher: {preferred}")
+                        break
+                if preferred_link_found:
                     break
 
-            if not is_preferred and not better_option_found:
+            # Validate publisher trust — skip if not trusted
+            if final_publisher not in preferred_publishers:
                 global_stats["untrusted_publisher_skipped"] += 1
-                print(
-                    f"⛔ Skipping due to untrusted publisher and no good apply link: {job_publisher}"
-                )
+                print(f"⛔ Skipping job — final publisher not trusted: {final_publisher}")
                 continue
+
 
             # Proceed to LLM matching
             job_id = job["job_id"]
