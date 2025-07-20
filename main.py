@@ -12,7 +12,7 @@ from collections import defaultdict
 from app.job_matcher import match_job_to_resume
 
 # Initialize global stats
-global_stats = defaultdict(int)
+total_stats = defaultdict(int)
 
 # Load environment variables
 load_dotenv()
@@ -88,6 +88,7 @@ def process_jobs_for_keyword(keyword, max_matches):
     print(f"\n🔍 Searching for: {keyword}")
     matched_jobs = []
     page = 1
+    global_stats = defaultdict(int)
 
     while len(matched_jobs) < max_matches and page <= max_pages:
         print(f"📄 Fetching page {page}...")
@@ -251,13 +252,20 @@ def process_jobs_for_keyword(keyword, max_matches):
     else:
         print(f"\n❌ No matching jobs found for keyword: {keyword} — email not sent.")
 
+    return global_stats
+
+ 
+
 
 # === Start Job Matching for All Keywords ===
 keywords_config = config["query"]
 for kw in keywords_config:
     keyword = kw["keyword"]
     max_matches = kw.get("max_matches", 3)
-    process_jobs_for_keyword(keyword, max_matches)
+    keyword_stats = process_jobs_for_keyword(keyword, max_matches)
+    for key in keyword_stats:
+        total_stats[key] += keyword_stats[key]
+
 
 # Save updated seen job list
 save_seen_jobs(new_seen)
@@ -267,13 +275,13 @@ print("\n✅ All keywords processed.")
 print(f"🔒 Total new jobs added to seen list: {len(new_seen - seen)}")
 
 print("\n📊 === Statistics Summary ===")
-print(f"🧲 Total jobs fetched: {global_stats['total_jobs_fetched']}")
-print(f"📄 Total JSearch API pages fetched: {global_stats['total_pages_fetched']}")
-print(f"⛔ Blocked employers skipped: {global_stats['blocked_employers_skipped']}")
-print(f"🔎 Similarity-pre-filtered: {global_stats['similarity_filtered']}")
-print(f"👔 Senior-level jobs skipped: {global_stats['senior_title_skipped']}")
-print(f"⛔ Untrusted publishers skipped: {global_stats['untrusted_publisher_skipped']}")
-print(f"⚠️ LLM-filtered (no match): {global_stats['llm_filtered']}")
-print(f"❌ LLM failed completely: {global_stats['llm_failed']}")
-print(f"✅ Final matches (sent): {global_stats['matched']}")
+print(f"🧲 Total jobs fetched: {total_stats['total_jobs_fetched']}")
+print(f"📄 Total JSearch API pages fetched: {total_stats['total_pages_fetched']}")
+print(f"⛔ Blocked employers skipped: {total_stats['blocked_employers_skipped']}")
+print(f"🔎 Similarity-pre-filtered: {total_stats['similarity_filtered']}")
+print(f"👔 Senior-level jobs skipped: {total_stats['senior_title_skipped']}")
+print(f"⛔ Untrusted publishers skipped: {total_stats['untrusted_publisher_skipped']}")
+print(f"⚠️ LLM-filtered (no match): {total_stats['llm_filtered']}")
+print(f"❌ LLM failed completely: {total_stats['llm_failed']}")
+print(f"✅ Final matches (sent): {total_stats['matched']}")
 print(f"📬 Emails sent to: {receiver_email}")

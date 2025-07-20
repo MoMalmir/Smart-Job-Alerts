@@ -10,3 +10,4 @@ sentence-transformers
 scikit-learn
 click
 PyMuPDF
+pytz
