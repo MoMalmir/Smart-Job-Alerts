@@ -324,7 +324,21 @@ def process_jobs_for_keyword(keyword, max_matches):
                 else:
                     print(f"⚠️ Skipping job_id {job_id} — LLM failed or response was invalid.")
 
-            
+                    
+        page += 1
+        
+    if matched_jobs:
+        send_job_matches_email(
+            sender_email=sender_email,
+            sender_password=sender_password,
+            receiver_email=receiver_email,
+            job_matches=matched_jobs,
+            keyword=keyword,
+        )
+        print(f"\n📨 Email sent with {len(matched_jobs)} matches for keyword: {keyword}")
+    else:
+        print(f"\n❌ No matching jobs found for keyword: {keyword} — email not sent.")
+        
 
 
 # === Start Job Matching for All Keywords ===
