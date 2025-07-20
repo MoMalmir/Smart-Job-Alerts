@@ -147,7 +147,7 @@ After confirming it works, the Action will continue to run automatically based o
 ```yaml
 schedule:
   - cron: "0 13 * * *"  # Runs daily at 13:00 UTC (8:00 AM Central Time)
-
+```
 ---
 
 ## 🐳 Option 2: Run with Docker Locally (Manual Email Alerts)
