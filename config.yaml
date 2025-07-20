@@ -83,14 +83,23 @@ fields: []              # Optional: list of fields to include (e.g., employer_na
 # =========================
 
 use_blocked_employers: true  # If true, loads additional publishers from blocked_employers.yaml
-
-
-
 max_pages: 5
-
-
-Similarity_Threshold: 0.4
+llm_match_threshold: 0.4 # Minimum LLM match score to consider a job relevant
 
 
 #receiver_email: "YOUR_EMAIL_WANT_TO_RECEIVE_THE_JOBS"
 receiver_email: "malmir.edumail@gmail.com"
+
+
+# Optional: basic similarity filter before calling LLM
+use_similarity_filter: true
+similarity_filter_threshold: 0.4 # Minimum similarity score to consider a job relevant
+# Optional: job titles to exclude
+excluded_title_keywords:
+  - lead
+  - manager
+  - senior
+  - staff
+  - principal
+  - director
+  - head

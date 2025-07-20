@@ -169,6 +169,7 @@ from app.email_utils import send_job_matches_email
 from app.job_fetcher import fetch_jobs  # This must now use updated fetch_jobs logic
 import time
 from collections import defaultdict
+from app.job_matcher import match_job_to_resume
 
 # Initialize global stats
 global_stats = defaultdict(int)
@@ -186,7 +187,8 @@ if not all([RAPIDAPI_KEY, RAPIDAPI_HOST, sender_email, sender_password]):
 with open("config.yaml", "r") as f:
     config = yaml.safe_load(f)
 
-Similarity_Threshold = config["Similarity_Threshold"]
+similarity_filter_threshold = config.get("similarity_filter_threshold", 0.3)
+llm_match_threshold = config.get("llm_match_threshold", 0.5)
 receiver_email = config["receiver_email"]
 max_pages = config["max_pages"]
 
@@ -300,9 +302,30 @@ def process_jobs_for_keyword(keyword, max_matches):
 
             # Proceed to LLM matching
             job_id = job["job_id"]
+
+            # Optional: Skip jobs with senior titles using config-defined keywords
+            if config.get("filter_senior_titles", False):
+                title = job.get("job_title", "").lower()
+                excluded_keywords = [kw.lower() for kw in config.get("excluded_title_keywords", [])]
+                if any(keyword in title for keyword in excluded_keywords):
+                    global_stats["senior_title_skipped"] += 1
+                    print(f"⛔ Skipping senior-level job: {title}")
+                    continue
+
             if is_new_job(job_id, seen):
                 job_desc = get_full_description(job)
-                result = query_openrouter_matcher(job_desc, resume_text, Similarity_Threshold)
+
+                # Optional: Pre-filter using semantic similarity
+                if config.get("use_similarity_filter", False):
+                    sim_result = match_job_to_resume(
+                        job_desc, resume_text, similarity_filter_threshold
+                    )
+                    if not sim_result["match"]:
+                        global_stats["similarity_filtered"] += 1
+                        print(f"⛔ Skipping due to low semantic similarity: {sim_result['reason']}")
+                        continue
+
+                result = query_openrouter_matcher(job_desc, resume_text, llm_match_threshold)
                 time.sleep(1)
 
                 if result["reason"] not in [
@@ -374,5 +397,7 @@ print(f"⛔ Blocked employers skipped: {global_stats['blocked_employers_skipped'
 print(f"⛔ Untrusted publishers skipped: {global_stats['untrusted_publisher_skipped']}")
 print(f"⚠️ LLM-filtered (no match): {global_stats['llm_filtered']}")
 print(f"❌ LLM failed completely: {global_stats['llm_failed']}")
+print(f"🔎 Similarity-pre-filtered: {global_stats['similarity_filtered']}")
+print(f"👔 Senior-level jobs skipped: {global_stats['senior_title_skipped']}")
 print(f"✅ Final matches (sent): {global_stats['matched']}")
 print(f"📬 Emails sent to: {receiver_email}")
