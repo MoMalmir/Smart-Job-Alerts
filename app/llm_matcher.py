@@ -31,8 +31,12 @@ def query_openrouter_matcher(job_desc: str, resume_text: str, threshold: float) 
         result = response.json()
         if "choices" not in result:
             print("❌ Invalid API response:", result)
-            return {"match": False, "score": 0.0, "reason": "Invalid OpenRouter API response."}
-        
+            return {
+                "match": False,
+                "score": 0.0,
+                "reason": "Invalid OpenRouter API response.",
+            }
+
         content = result["choices"][0]["message"]["content"]
     except Exception as e:
         print("❌ API error:", e)

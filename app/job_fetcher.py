@@ -27,8 +27,8 @@
 #         return []
 
 
-
 import requests
+
 
 def fetch_jobs(
     api_key,
@@ -43,7 +43,7 @@ def fetch_jobs(
     job_requirements=None,
     radius=None,
     exclude_publishers=None,
-    fields=None
+    fields=None,
 ):
     url = "https://jsearch.p.rapidapi.com/search"
 
@@ -52,7 +52,7 @@ def fetch_jobs(
         "page": page,
         "country": country,
         "date_posted": date_posted,
-        "num_pages": 1  # Only 1 page per request (your loop handles multiple)
+        "num_pages": 1,  # Only 1 page per request (your loop handles multiple)
     }
 
     if language:

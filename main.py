@@ -1,163 +1,3 @@
-# import yaml
-# import os
-# from pathlib import Path
-# from dotenv import load_dotenv
-# from app.job_tracker import load_seen_jobs, save_seen_jobs, is_new_job
-# from app.job_fetcher import fetch_jobs
-# from app.llm_matcher import query_openrouter_matcher
-# from app.utils import extract_text_from_pdf
-# from app.email_utils import send_job_matches_email
-# import time 
-
-# # Ensure the required environment variables are set
-# # Uncomment the line below if using a .env file instead of Codespaces secrets
-# load_dotenv()
-# # Get environment variables
-# RAPIDAPI_KEY = os.getenv("RAPIDAPI_KEY")
-# RAPIDAPI_HOST = os.getenv("RAPIDAPI_HOST")
-# sender_email = os.getenv("EMAIL_USERNAME")
-# sender_password = os.getenv("EMAIL_PASSWORD")
-
-# if not all([RAPIDAPI_KEY, RAPIDAPI_HOST, sender_email, sender_password]):
-#     raise EnvironmentError("Missing one or more required environment variables.")
-
-
-# # Load config
-# with open("config.yaml", "r") as f:
-#     config = yaml.safe_load(f)
-    
-# location = config["location"]
-# remote = config["remote_only"]
-# date_posted = config["date_posted"]
-# # num_pages = config["num_pages"]
-# Similarity_Threshold = config["Similarity_Threshold"]
-# receiver_email = config["receiver_email"]
-# max_pages = config["max_pages"]
-
-# # Load blocked employers
-# blocklist_path = Path("data/blocked_employers.yaml")
-# if blocklist_path.exists():
-#     with open(blocklist_path, "r") as f:
-#         blocked_employers = set(yaml.safe_load(f).get("blocked_employers", []))
-# else:
-#     blocked_employers = set()
-
-# # Load resume
-# resume_pdf_path = "data/resume.pdf"
-# if not Path(resume_pdf_path).exists():
-#     print("resume.pdf not found in 'data/'. Using example resume instead.")
-#     resume_pdf_path = "data/resume_example.pdf"
-# resume_text = extract_text_from_pdf(resume_pdf_path)
-# print(f"resume_text: {resume_text[0:500]}")
-
-
-# # Load seen jobs
-# seen = load_seen_jobs()
-# new_seen = set(seen)
-
-# def get_full_description(job):
-#     desc = job.get("job_description", "")
-#     highlights = job.get("job_highlights", {})
-#     qualifications = " ".join(highlights.get("Qualifications", []))
-#     responsibilities = " ".join(highlights.get("Responsibilities", []))
-#     return f"{desc}\nQualifications: {qualifications}\nResponsibilities: {responsibilities}"
-
-
-# # Process each keyword
-# def process_jobs_for_keyword(keyword, max_matches):
-#     print(f"\n Searching for: {keyword}")
-#     matched_jobs = []
-#     page = 1
-
-#     while len(matched_jobs) < max_matches and page <= max_pages:
-#         print(f"Fetching page {page}...")
-#         jobs = fetch_jobs(
-#             RAPIDAPI_KEY, RAPIDAPI_HOST, keyword, location, remote, date_posted, page
-#         )
-#         if not jobs:
-#             print("No more jobs returned.")
-#             break
-
-#         print(len(jobs), "jobs found on this page")
-
-#         for job in jobs:
-#             if len(matched_jobs) >= max_matches:
-#                 break
-
-#             employer = job["employer_name"].strip()
-
-#             if employer in blocked_employers:
-#                 print(f"Skipped blocked employer: {employer}")
-#                 continue
-
-#             job_id = job["job_id"]
-#             if is_new_job(job_id, seen):
-#                 job_desc = get_full_description(job)
-#                 result = query_openrouter_matcher(
-#                     job_desc, resume_text, Similarity_Threshold
-#                 )
-#                 time.sleep(1)  # Rate limiting for OpenRouter API
-#                 if result["reason"] not in [
-#                     "OpenRouter API call failed.",
-#                     "Invalid OpenRouter API response.",
-#                     "Failed to parse OpenRouter response.",
-#                 ]:
-#                     new_seen.add(job_id)
-
-#                     if result["match"]:
-#                         matched_jobs.append(
-#                             {
-#                                 "job_keyword": keyword,
-#                                 "title": job["job_title"],
-#                                 "employer": job["employer_name"],
-#                                 "url": job["job_apply_link"],
-#                                 "reason": result["reason"],
-#                                 "score": result["score"],
-#                             }
-#                         )
-
-#                         print(f"\n MATCH: {job['job_title']}")
-#                         print(f"employer: {employer}")
-#                         print(f"Reason: {result['reason']}")
-#                         print(f"job_id: {job_id}")
-#                         print(f"URL: {job['job_apply_link']}")
-#                         print(f"job_description: {job_desc[0:500]}")
-#                         print("=" * 60)
-#                 else:
-#                     print(f"⚠️ Skipping job_id {job_id} — LLM failed or response was invalid.")
-#         page += 1
-
-#     print(f"\n {len(matched_jobs)} matches found for keyword: {keyword}")
-#     print(f"\n sending the email of the matched jobs for keyword: {keyword}")
-#     if matched_jobs:
-#         send_job_matches_email(
-#             sender_email=sender_email,
-#             sender_password=sender_password,
-#             receiver_email=receiver_email,
-#             job_matches=matched_jobs,
-#             keyword=keyword,
-#         )
-#         print("\n Email sent successfully!")
-#     else:
-#         print("\n No match found — email not sent.")
-
-
-# # Save updated seen list
-# save_seen_jobs(new_seen)
-
-
-
-
-# keywords_config = config["job_keywords"]
-# for kw in keywords_config:
-#     keyword = kw["keyword"]
-#     max_matches = kw.get("max_matches", 3)  # fallback to 3 if not specified
-#     process_jobs_for_keyword(keyword, max_matches)
-
-
-
-
-
 import yaml
 import os
 from pathlib import Path
@@ -205,7 +45,9 @@ if config.get("use_blocked_employers", False):
         with open(blocklist_path, "r") as f:
             blocked_employers = yaml.safe_load(f).get("blocked_employers", [])
     else:
-        print("⚠️ blocked_employers.yaml not found — continuing without additional exclusions.")
+        print(
+            "⚠️ blocked_employers.yaml not found — continuing without additional exclusions."
+        )
 
 
 # Load preferred publishers from YAML file
@@ -215,7 +57,9 @@ if preferred_path.exists():
     with open(preferred_path, "r") as f:
         preferred_publishers = set(yaml.safe_load(f).get("preferred_publishers", []))
 else:
-    print("⚠️ preferred_publishers.yaml not found — all jobs will be considered untrusted.")
+    print(
+        "⚠️ preferred_publishers.yaml not found — all jobs will be considered untrusted."
+    )
 
 
 # Load resume
@@ -230,12 +74,14 @@ print(f"resume_text: {resume_text[0:500]}")
 seen = load_seen_jobs()
 new_seen = set(seen)
 
+
 def get_full_description(job):
     desc = job.get("job_description", "")
     highlights = job.get("job_highlights", {})
     qualifications = " ".join(highlights.get("Qualifications", []))
     responsibilities = " ".join(highlights.get("Responsibilities", []))
     return f"{desc}\nQualifications: {qualifications}\nResponsibilities: {responsibilities}"
+
 
 # === MAIN MATCHING LOOP PER KEYWORD ===
 def process_jobs_for_keyword(keyword, max_matches):
@@ -247,8 +93,8 @@ def process_jobs_for_keyword(keyword, max_matches):
         print(f"📄 Fetching page {page}...")
 
         jobs = fetch_jobs(
-            api_key = RAPIDAPI_KEY,
-            api_host = RAPIDAPI_HOST,
+            api_key=RAPIDAPI_KEY,
+            api_host=RAPIDAPI_HOST,
             query=keyword,
             page=page,
             country=config.get("country", "us"),
@@ -259,7 +105,7 @@ def process_jobs_for_keyword(keyword, max_matches):
             job_requirements=config.get("job_requirements", []),
             radius=config.get("radius", None),
             exclude_publishers=list(exclude_publishers),
-            fields=config.get("fields", [])
+            fields=config.get("fields", []),
         )
         global_stats["total_pages_fetched"] += 1
         global_stats["total_jobs_fetched"] += len(jobs)
@@ -272,7 +118,7 @@ def process_jobs_for_keyword(keyword, max_matches):
         for job in jobs:
             if len(matched_jobs) >= max_matches:
                 break
-            
+
             # Skip blocked employer names
             employer_name = job.get("employer_name", "").strip()
             if employer_name in blocked_employers:
@@ -297,7 +143,9 @@ def process_jobs_for_keyword(keyword, max_matches):
 
             if not is_preferred and not better_option_found:
                 global_stats["untrusted_publisher_skipped"] += 1
-                print(f"⛔ Skipping due to untrusted publisher and no good apply link: {job_publisher}")
+                print(
+                    f"⛔ Skipping due to untrusted publisher and no good apply link: {job_publisher}"
+                )
                 continue
 
             # Proceed to LLM matching
@@ -306,7 +154,9 @@ def process_jobs_for_keyword(keyword, max_matches):
             # Optional: Skip jobs with senior titles using config-defined keywords
             if config.get("filter_senior_titles", False):
                 title = job.get("job_title", "").lower()
-                excluded_keywords = [kw.lower() for kw in config.get("excluded_title_keywords", [])]
+                excluded_keywords = [
+                    kw.lower() for kw in config.get("excluded_title_keywords", [])
+                ]
                 if any(keyword in title for keyword in excluded_keywords):
                     global_stats["senior_title_skipped"] += 1
                     print(f"⛔ Skipping senior-level job: {title}")
@@ -322,10 +172,14 @@ def process_jobs_for_keyword(keyword, max_matches):
                     )
                     if not sim_result["match"]:
                         global_stats["similarity_filtered"] += 1
-                        print(f"⛔ Skipping due to low semantic similarity: {sim_result['reason']}")
+                        print(
+                            f"⛔ Skipping due to low semantic similarity: {sim_result['reason']}"
+                        )
                         continue
 
-                result = query_openrouter_matcher(job_desc, resume_text, llm_match_threshold)
+                result = query_openrouter_matcher(
+                    job_desc, resume_text, llm_match_threshold
+                )
                 time.sleep(1)
 
                 if result["reason"] not in [
@@ -336,16 +190,20 @@ def process_jobs_for_keyword(keyword, max_matches):
                     new_seen.add(job_id)
                     if result["match"]:
                         global_stats["matched"] += 1
-                        matched_jobs.append({
-                            "job_keyword": keyword,
-                            "title": job["job_title"],
-                            "employer": employer_name,
-                            "url": final_apply_link,
-                            "reason": result["reason"],
-                            "score": result["score"],
-                        })
+                        matched_jobs.append(
+                            {
+                                "job_keyword": keyword,
+                                "title": job["job_title"],
+                                "employer": employer_name,
+                                "url": final_apply_link,
+                                "reason": result["reason"],
+                                "score": result["score"],
+                            }
+                        )
 
-                        print(f"\n🎯 MATCH with score ({result['score']}): {job['job_title']}")
+                        print(
+                            f"\n🎯 MATCH with score ({result['score']}): {job['job_title']}"
+                        )
                         print(f"🏢 employer: {employer_name}")
                         print(f"🔍 Reason: {result['reason']}")
                         print(f"🆔 job_id: {job_id}")
@@ -357,23 +215,41 @@ def process_jobs_for_keyword(keyword, max_matches):
                         print(f"⚠️ LLM scored low (no match) — job_id {job_id}")
                 else:
                     global_stats["llm_failed"] += 1
-                    print(f"⚠️ Skipping job_id {job_id} — LLM failed or response was invalid.")
+                    print(
+                        f"⚠️ Skipping job_id {job_id} — LLM failed or response was invalid."
+                    )
 
-                    
         page += 1
 
     if matched_jobs:
+
+        summary_text = f"""
+        📄 Total API pages fetched: {global_stats['total_pages_fetched']}
+        🧲 Total jobs fetched: {global_stats['total_jobs_fetched']}
+        ⛔ Blocked employers skipped: {global_stats['blocked_employers_skipped']}
+        🔎 Similarity-pre-filtered: {global_stats['similarity_filtered']}
+        👔 Senior-level jobs skipped: {global_stats['senior_title_skipped']}
+        ⛔ Untrusted publishers skipped: {global_stats['untrusted_publisher_skipped']}
+        ⚠️ LLM-filtered (no match): {global_stats['llm_filtered']}
+        ❌ LLM failed completely: {global_stats['llm_failed']}
+        ✅ Final matches (sent): {global_stats['matched']}
+        📬 Email sent to: {receiver_email}
+        """
+
         send_job_matches_email(
             sender_email=sender_email,
             sender_password=sender_password,
             receiver_email=receiver_email,
             job_matches=matched_jobs,
             keyword=keyword,
+            summary_text=summary_text
         )
-        print(f"\n📨 Email sent with {len(matched_jobs)} matches for keyword: {keyword}")
+
+        print(
+            f"\n📨 Email sent with {len(matched_jobs)} matches for keyword: {keyword}"
+        )
     else:
         print(f"\n❌ No matching jobs found for keyword: {keyword} — email not sent.")
-        
 
 
 # === Start Job Matching for All Keywords ===
@@ -394,10 +270,10 @@ print("\n📊 === Statistics Summary ===")
 print(f"🧲 Total jobs fetched: {global_stats['total_jobs_fetched']}")
 print(f"📄 Total JSearch API pages fetched: {global_stats['total_pages_fetched']}")
 print(f"⛔ Blocked employers skipped: {global_stats['blocked_employers_skipped']}")
+print(f"🔎 Similarity-pre-filtered: {global_stats['similarity_filtered']}")
+print(f"👔 Senior-level jobs skipped: {global_stats['senior_title_skipped']}")
 print(f"⛔ Untrusted publishers skipped: {global_stats['untrusted_publisher_skipped']}")
 print(f"⚠️ LLM-filtered (no match): {global_stats['llm_filtered']}")
 print(f"❌ LLM failed completely: {global_stats['llm_failed']}")
-print(f"🔎 Similarity-pre-filtered: {global_stats['similarity_filtered']}")
-print(f"👔 Senior-level jobs skipped: {global_stats['senior_title_skipped']}")
 print(f"✅ Final matches (sent): {global_stats['matched']}")
 print(f"📬 Emails sent to: {receiver_email}")
