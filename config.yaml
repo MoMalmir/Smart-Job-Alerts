@@ -1,47 +1,19 @@
-# job_keywords:
-#   - keyword: "machine learning engineer"
-#     max_matches: 3
-#   - keyword: "data scientist"
-#     max_matches: 2
-#   - keyword: "AI engineer"
-#     max_matches: 3
-
-# location: "United States"
-# remote_only: false
-# date_posted: "week"
-# num_pages: 1
-# max_pages: 5
-
-
-# Similarity_Threshold: 0.1
-
-
-# #receiver_email: "YOUR_EMAIL_WANT_TO_RECEIVE_THE_JOBS"
-# receiver_email: "malmir.edumail@gmail.com"
-
-
-
-
-
-
-
-
 
 # =========================
 # JSearch Query Parameters
 # =========================
 
 query:                       # Required free-form query
-  # - keyword: "machine learning engineer"
-  #   max_matches: 5
-  # - keyword: "data scientist"
-  #   max_matches: 5
-  # - keyword: "AI engineer"
-  #   max_matches: 5 
-  # - keyword: "MLOps engineer"
-  #   max_matches: 3 
-  # - keyword: "research software engineer"
-  #   max_matches: 3
+  - keyword: "machine learning engineer"
+    max_matches: 5
+  - keyword: "data scientist"
+    max_matches: 5
+  - keyword: "AI engineer"
+    max_matches: 5 
+  - keyword: "MLOps engineer"
+    max_matches: 3 
+  - keyword: "research software engineer"
+    max_matches: 3
   - keyword: "clinical data scientist"
     max_matches: 3
   - keyword: "LLM engineer"
@@ -91,7 +63,7 @@ fields: []              # Optional: list of fields to include (e.g., employer_na
 # =========================
 
 use_blocked_employers: true  # If true, loads additional publishers from blocked_employers.yaml
-max_pages: 5
+max_pages: 10
 llm_match_threshold: 0.4 # Minimum LLM match score to consider a job relevant
 
 
@@ -107,7 +79,7 @@ excluded_title_keywords:
   - lead
   - manager
   - senior
-  - staff
+  #- staff
   - principal
   - director
   - head
