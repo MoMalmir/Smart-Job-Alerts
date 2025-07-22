@@ -110,7 +110,7 @@ You also need:
 
 1. **Clone the Repo**
    ```bash
-   git clone https://github.com/msmalmir/Smart-Job-Alerts.git
+   git clone https://github.com/momalmir/Smart-Job-Alerts.git
    cd Smart-Job-Alerts
    ```
 
@@ -159,7 +159,7 @@ schedule:
 1. **Pull Docker Image** (when published):
 
    ```bash
-   docker pull mossmalmir/smart-job-alerts
+   docker pull momalmir/smart-job-alerts
 
 
 2. **Create required files in a directory**:
@@ -181,7 +181,7 @@ schedule:
    docker run \
    --env-file .env \
    -v $(pwd)/data:/app/data \
-   mossmalmir/smart-job-alerts
+   momalmir/smart-job-alerts
   
 
 5. **(Optional) Edit configs inside the container**:
@@ -232,6 +232,6 @@ MIT
 Open an issue or contact the repo owner for help.
 
 📧 Email: [ms.malmir@gmail.com](mailto:ms.malmir@gmail.com)  
-🔗 GitHub: [github.com/msmalmir](https://github.com/msmalmir)
+🔗 GitHub: [github.com/momalmir](https://github.com/momalmir)
 🔗 LinkedIn: [https://www.linkedin.com/in/mostafa-malmir/](https://www.linkedin.com/in/mostafa-malmir/)
 
