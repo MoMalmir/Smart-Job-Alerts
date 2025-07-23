@@ -79,7 +79,8 @@ excluded_title_keywords:
   - lead
   - manager
   - senior
-  #- staff
+  - sr
+  - staff
   - principal
   - director
   - head
