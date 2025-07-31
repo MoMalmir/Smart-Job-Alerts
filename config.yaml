@@ -12,10 +12,6 @@ query:                       # Required free-form query
     max_matches: 5 
   - keyword: "MLOps engineer"
     max_matches: 5 
-  # - keyword: "research software engineer"
-  #   max_matches: 3
-  # - keyword: "clinical data scientist"
-  #   max_matches: 3
   - keyword: "LLM engineer and GenAI"
     max_matches: 5
 
@@ -78,8 +74,6 @@ similarity_filter_threshold: 0.3 # Minimum similarity score to consider a job re
 excluded_title_keywords:
   - lead
   - manager
-  # - senior
-  # - sr
   - staff
   - principal
   - director
