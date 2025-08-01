@@ -22,7 +22,7 @@ num_pages: 1            # (optional) How many pages to return (max 50, default =
 country: "us"           # ISO 3166-1 alpha-2 code (e.g., us, de, ca)
 language: ""            # ISO 639-1 language code (e.g., en, de) or empty for default
 
-date_posted: "week"     # Options: all, today, 3days, week, month
+date_posted: "3days"     # Options: all, today, 3days, week, month
 work_from_home: false    # Only return remote jobs (true/false)
 
 employment_types:       # Comma-separated list: FULLTIME, CONTRACTOR, PARTTIME, INTERN
