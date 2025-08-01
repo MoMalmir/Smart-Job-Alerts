@@ -5,11 +5,11 @@
 
 query:                       # Required free-form query
   - keyword: "machine learning engineer"
-    max_matches: 5
+    max_matches: 10
   - keyword: "data scientist"
-    max_matches: 5
+    max_matches: 10
   - keyword: "AI engineer"
-    max_matches: 5 
+    max_matches: 10 
   - keyword: "MLOps engineer"
     max_matches: 5 
   - keyword: "LLM engineer and GenAI"
