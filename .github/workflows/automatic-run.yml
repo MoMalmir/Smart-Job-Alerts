@@ -42,10 +42,12 @@ jobs:
       - name: Run job-alert script
         run: python main.py
 
+  
       - name: Commit seen_jobs updates
         run: |
           git config --global user.name 'github-actions[bot]'
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+          git remote set-url origin https://x-access-token:${{ secrets.GH_PAT }}@github.com/${{ github.repository }}.git
           git add data/seen_jobs.json
           git commit -m "Update seen jobs list" || echo "No changes to commit"
-          git push https://x-access-token:${{ secrets.GH_PAT }}@github.com/${{ github.repository }}.git HEAD:main
+          git push origin HEAD:main
