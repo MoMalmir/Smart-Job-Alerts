@@ -9,11 +9,15 @@
 	},
 
 	
-	"postCreateCommand": "python3 -m venv .venv && source .venv/bin/activate && pip install --upgrade pip && pip install -r requirements.txt && echo 'source .venv/bin/activate'  >> ~/.bashrc",
+	"postCreateCommand": "python3 -m venv .venv && . .venv/bin/activate && pip install --upgrade pip && pip install -r requirements.txt",
+	"postStartCommand": "echo 'source .venv/bin/activate' >> ~/.bash_profile && echo 'source .venv/bin/activate' >> ~/.bashrc",
 
 	// Configure tool-specific properties.
 	"customizations": {
 		"vscode": {
+			"settings": {
+				"python.pythonPath": ".venv/bin/python"
+			},
 			"extensions": [
 				"ms-python.python",
 				"ms-toolsai.jupyter",
