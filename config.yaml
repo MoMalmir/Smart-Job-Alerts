@@ -6,14 +6,14 @@
 query:                       # Required free-form query
   - keyword: "machine learning engineer"
     max_matches: 10
-  # - keyword: "data scientist"
-  #   max_matches: 10
-  # - keyword: "AI engineer"
-  #   max_matches: 10 
-  # - keyword: "MLOps engineer"
-  #   max_matches: 5 
-  # - keyword: "LLM engineer and GenAI"
-  #   max_matches: 5
+  - keyword: "data scientist"
+    max_matches: 10
+  - keyword: "AI engineer"
+    max_matches: 10 
+  - keyword: "MLOps engineer"
+    max_matches: 5 
+  - keyword: "LLM engineer and GenAI"
+    max_matches: 5
 
 # page: 1                 # (optional) Start page (default = 1), we defined it the main code in the loop
 num_pages: 1            # (optional) How many pages to return (max 50, default = 1)
