@@ -72,12 +72,12 @@ use_similarity_filter: true
 similarity_filter_threshold: 0.3 # Minimum similarity score to consider a job relevant
 # Optional: job titles to exclude
 excluded_title_keywords:
-  - lead
-  - manager
-  - staff
-  - principal
-  - director
-  - head
+  - Lead
+  - Manager
+  - Staff
+  - Principal
+  - Director
+  - Head
 
 timezone: 
   "America/Chicago"
